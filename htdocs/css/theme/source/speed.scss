@@ -1,0 +1,241 @@
+/**
+ * Faster Fonts for Speed Fanatics presentation theme styles.
+ * By Jeremy L. Wagner, https://jeremywagner.me
+ **/
+
+// Default mixins and settings
+@import "../template/mixins";
+@import "../template/settings";
+
+// Font imports
+@import "fonts.scss";
+
+// Theme-specific variables
+$white: #fbfef9;
+$purple: #754668;
+$darkPurple: darken($purple, 25%);
+$red: #f0544f;
+$darkRed: darken($red, 25%);
+$blue: #507dbc;
+$darkBlue: darken($blue, 25%);
+
+// Theme overrides
+$mainColor: $white;
+$headingColor: $white;
+$mainFontSize: 42px;
+$mainFont: "Economica", sans-serif;
+$headingFont: "Economica", sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$linkColor: #42affa;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+// Heading Sizes
+$heading1Size: 2em;
+$heading2Size: 1.5278838808em;
+$heading3Size: 1.1672145766em;
+$heading4Size: .8916841685em;
+$heading5Size: .6811949339em;
+$heading6Size: .5203933796em;
+
+// Theme template
+@import "../template/theme";
+
+// Theme-specific styles here
+.reveal{
+  code,
+  pre{
+    font-family: "Operator Mono", "Consolas", monospace;
+  }
+
+  .slides{
+    section{
+      .fragment{
+        transition: none;
+      }
+    }
+  }
+
+  section{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      line-height: 1.2;
+      font-weight: 700;
+      text-shadow: .0375em .0375em 0 $darkPurple;
+    }
+
+    h4,
+    h5,
+    h6{
+      font-weight: 400;
+    }
+
+    h3{
+      & + pre.fragment{
+        margin: 1em 0 0;
+      }
+    }
+
+    h5{
+      font-size: $heading5Size;
+
+      & + h6{
+        margin-top: 1em;
+      }
+    }
+
+    h6{
+      font-size: $heading6Size;
+    }
+
+    blockquote{
+      background: none;
+      color: $headingColor;
+      text-align: left;
+      width: 90%;
+
+      q{
+        text-align: right;
+        display: block;
+        word-break: keep-all;
+      }
+    }
+
+    ul{
+      align-self: center;
+      list-style: none;
+
+      li{
+        margin: 0.6666666667em 0;
+
+        &:last-child{
+          margin: 0;
+        }
+      }
+    }
+
+    li{
+      font-family: $mainFont;
+      line-height: 1.2;
+      text-align: center;
+      color: $mainColor;
+    }
+
+    img,
+    video{
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    video{
+      max-width: 75%;
+      width: 100%;
+
+      & + h4{
+        margin-top: 16px;
+      }
+    }
+
+    .smaller{
+      max-width: 55%;
+    }
+
+    .smallest{
+      max-width: percentage(1 / 3);
+    }
+
+    .big{
+      width: 100%;
+      max-width: none;
+    }
+
+    .no-shadow{
+      box-shadow: none;
+    }
+
+    .centered{
+      text-align: center;
+    }
+
+    .invisible{
+      visibility: hidden;
+    }
+
+    .flex-image-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-content: flex-start;
+
+      &.extra-wide{
+        width: 125%;
+        margin-left: -12.5%;
+      }
+
+      & > *{
+        width: 48.75%;
+        height: auto;
+      }
+    }
+  }
+
+  .section-title-slide{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      transform: skewY(-1.5deg);
+    }
+  }
+}
+
+.purple body{
+  background: $purple;
+  background: linear-gradient(45deg, $darkPurple 0%, $purple 100%);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    text-shadow: .0375em .0375em 0 $darkPurple;
+  }
+}
+
+.red body{
+  background: $red;
+  background: linear-gradient(45deg, $darkRed 0%, $red 100%);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    text-shadow: .0375em .0375em 0 $darkRed;
+  }
+}
+
+.blue body{
+  background: $blue;
+  background: linear-gradient(45deg, $darkBlue 0%, $blue 100%);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    text-shadow: .0375em .0375em 0 $darkBlue;
+  }
+}

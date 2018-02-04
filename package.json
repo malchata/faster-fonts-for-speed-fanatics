@@ -1,0 +1,43 @@
+{
+  "name": "faster-fonts-for-speed-fanatics",
+  "version": "1.0.0",
+  "description": "Slide deck for CSSConf AU 2018 talk.",
+  "main": "http.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "watch": "npx gulp",
+    "build": "npx gulp build",
+    "present": "npx gulp buildCSS&&node http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malchata/faster-fonts-for-speed-fanatics.git"
+  },
+  "author": "Jeremy L. Wagner <jeremy.l.wagner@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/malchata/faster-fonts-for-speed-fanatics/issues"
+  },
+  "homepage": "https://github.com/malchata/faster-fonts-for-speed-fanatics#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "autorem": "^0.1.1",
+    "cssnano": "^3.10.0",
+    "express": "^4.16.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
