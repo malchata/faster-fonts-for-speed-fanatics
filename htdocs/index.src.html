@@ -20,32 +20,33 @@
         </section>
         <!-- [1.0] - How Browsers Render Fonts -->
         <section>
+          <!-- [1.1] - How Browsers Render Fonts -->
           <section data-state="red" class="section-title-slide">
             <h1>How Browsers Render Fonts</h1>
             <h3>A lesson in priorities</h3>
           </section>
-          <!-- [1.1] - CSS Priority -->
+          <!-- [1.2] - CSS Priority -->
           <section data-state="blue">
             <h1>CSS</h1>
             <img data-src="/images/css-priority.png" alt="Chrome dev tools network request readout, showing priority of a CSS asset.">
             <h2>High Priority*</h2>
             <h4 class="fragment">*It Depends&trade;</h4>
           </section>
-          <!-- [1.2] - JS Priority -->
+          <!-- [1.3] - JS Priority -->
           <section data-state="blue">
             <h1>JavaScript</h1>
             <img data-src="/images/js-priority.png" alt="Chrome dev tools network request readout, showing priority of a JavaScript asset.">
             <h2>Low Priority*</h2>
             <h4 class="fragment">*It Depends&trade;</h4>
           </section>
-          <!-- [1.3] - Image Priority -->
+          <!-- [1.4] - Image Priority -->
           <section data-state="blue">
             <h1>Image</h1>
             <img data-src="/images/img-priority.png" alt="Chrome dev tools network request readout, showing priority of an image asset.">
             <h2>Low Priority*</h2>
             <h4 class="fragment">*It Depends&trade;</h4>
           </section>
-          <!-- [1.4] - Things That Affect Priority -->
+          <!-- [1.5] - Things That Affect Priority -->
           <section data-state="blue">
             <h1>Things That Affect Priority</h1>
             <ul>
@@ -54,29 +55,82 @@
               <li class="fragment">Use of <code>rel=preload</code></li>
             <ul>
           </section>
-          <!-- [1.5] - Font Priority -->
+          <!-- [1.6] - Font Priority -->
           <section data-state="blue">
             <h1>Font Priority</h1>
             <img data-src="/images/font-priority.png" alt="Chrome dev tools network request readout, showing priority of an image asset.">
-            <h2>Highest Priority*</h2>
+            <h2>High Priority*</h2>
             <h4 class="fragment">*It Depends&trade;</h4>
           </section>
-          <!-- [1.6] How Web Fonts Render -->
+          <!-- [1.7] - How Web Fonts Render -->
           <section data-state="blue">
             <h1>How Web Fonts Render</h1>
             <ul>
               <li class="fragment">The document is requested</li>
               <li class="fragment">CSS is requested</li>
               <li class="fragment">Rendering is blocked</li>
+              <li class="fragment">Rendering begins</li>
               <li class="fragment">The document's text nodes are analyzed</li>
               <li class="fragment">Text rendering is blocked <span class="fragment">(for a time)</span></li>
-              <li class="fragment">Web fonts are applied</li>
+              <li class="fragment">Web fonts are (finally) applied</li>
             </ul>
           </section>
-          <!-- [1.7] How Font Rendering Looks -->
+          <!-- [1.8] - How Font Rendering Looks -->
           <section data-state="blue">
             <h1>How Font Rendering Looks</h1>
             <img src="/images/font-rendering.png" alt="A screenshot roll of page rendering in Chrome.">
+          </section>
+          <!-- [1.9] - Font Rendering is Complex -->
+          <section data-state="blue">
+            <h1>Font Rendering is Complicated</h1>
+            <h3 class="fragment">And sometimes slow</h3>
+          </section>
+        </section>
+        <!-- [2.0] - Host Your Own Fonts -->
+        <section>
+          <!-- [2.1] - Host Your Own Fonts -->
+          <section data-state="red" class="section-title-slide">
+            <h1>Host Your Own Fonts</h1>
+          </section>
+          <!-- [2.2] - Why Host Your Own Fonts? -->
+          <section data-state="blue">
+              <h1>Why Host Your Own Fonts?</h1>
+          </section>
+        </section>
+        <!-- [3.0] - `font-display` for More Flexible Rendering -->
+        <section>
+          <!-- [3.1] - `font-display` for More Flexible Font Rendering -->
+          <section data-state="red" class="section-title-slide">
+            <h1><code>font-display</code></h1>
+            <h3>For more flexible font rendering</h3>
+          </section>
+        </section>
+        <!-- [4.0] - `rel=preload` to Accelerate Rendering -->
+        <section>
+          <!-- [4.1] - `rel=preload` to Accelerate Rendering -->
+          <section data-state="red" class="section-title-slide">
+            <h1><code>rel=preload</code></h1>
+            <h3>to Accelerate Font Rendering</h3>
+          </section>
+        </section>
+        <!-- [5.0] - Subset to The Extreme -->
+        <section>
+          <!-- [5.1] - Subset to The Extreme -->
+          <section data-state="red" class="section-title-slide">
+            <h1>Subset to The Extreme!</h1>
+          </section>
+          <!-- [5.2] - Aggressive Subsetting: When Is It Appropriate? -->
+          <section data-state="blue">
+            <h1>Aggressive Subsetting</h1>
+            <h3>When Is It Appropriate?</h3>
+          </section>
+        </section>
+        <!-- [6.0] - Cull Unnecessary Fonts with `Save-Data` -->
+        <section>
+          <!-- [6.1] - Cull Unnecessary Fonts with `Save-Data` -->
+          <section data-state="red" class="section-title-slide">
+            <h1>Cull Unnecessary Fonts</h1>
+            <h3>with <code>Save-Data</code></h3>
           </section>
         </section>
       </div>

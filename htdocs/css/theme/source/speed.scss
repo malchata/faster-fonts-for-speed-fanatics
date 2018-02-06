@@ -13,11 +13,11 @@
 // Theme-specific variables
 $white: #fbfef9;
 $purple: #754668;
-$darkPurple: darken($purple, 25%);
+$darkPurple: darken($purple, 35%);
 $red: #f0544f;
-$darkRed: darken($red, 25%);
+$darkRed: darken($red, 35%);
 $blue: #507dbc;
-$darkBlue: darken($blue, 25%);
+$darkBlue: darken($blue, 35%);
 
 // Theme overrides
 $mainColor: $white;
@@ -28,9 +28,6 @@ $headingFont: "Economica", sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
-$linkColor: #42affa;
-$linkColorHover: lighten($linkColor, 15%);
-$selectionBackgroundColor: lighten($linkColor, 25%);
 
 // Heading Sizes
 $heading1Size: 2em;
@@ -67,7 +64,12 @@ $heading6Size: .5203933796em;
     h6{
       line-height: 1.2;
       font-weight: 700;
-      text-shadow: .0375em .0375em 0 $darkPurple;
+      text-shadow: .05em .05em 0 $darkPurple;
+
+      code{
+        font-weight: 400;
+        text-transform: none;
+      }
     }
 
     h4,
@@ -112,10 +114,14 @@ $heading6Size: .5203933796em;
       list-style: none;
 
       li{
-        margin: 0.6666666667em 0;
+        margin: .5em 0;
+
+        &:first-child{
+          margin-top: 0;
+        }
 
         &:last-child{
-          margin: 0;
+          margin-bottom: 0;
         }
       }
     }
@@ -208,7 +214,7 @@ $heading6Size: .5203933796em;
   h4,
   h5,
   h6{
-    text-shadow: .0375em .0375em 0 $darkPurple;
+    text-shadow: .05em .05em 0 $darkPurple;
   }
 }
 
@@ -222,7 +228,7 @@ $heading6Size: .5203933796em;
   h4,
   h5,
   h6{
-    text-shadow: .0375em .0375em 0 $darkRed;
+    text-shadow: .05em .05em 0 $darkRed;
   }
 }
 
@@ -236,6 +242,6 @@ $heading6Size: .5203933796em;
   h4,
   h5,
   h6{
-    text-shadow: .0375em .0375em 0 $darkBlue;
+    text-shadow: .05em .05em 0 $darkBlue;
   }
 }
