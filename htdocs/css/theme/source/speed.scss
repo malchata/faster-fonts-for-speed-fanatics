@@ -144,6 +144,13 @@ $heading6Size: .5203933796em;
       border: 0;
       background: transparent;
       box-shadow: none;
+
+      &.large{
+        max-width: none;
+        max-height: none;
+        width: 104%;
+        margin-left: -2%;
+      }
     }
 
     video{
@@ -185,19 +192,14 @@ $heading6Size: .5203933796em;
     }
   }
 
-  .skew-headings{
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6{
-      transform: skewY(-1.5deg);
-    }
-  }
-
   .rotate{
     transform: rotate(-1.5deg);
+  }
+
+  .lowercase{
+    text-transform: lowercase;
+    font-size: .8em;
+    font-weight: 400;
   }
 }
 
@@ -236,6 +238,7 @@ body{
   h5,
   h6{
     text-shadow: .05em .05em 0 $darkRed;
+    transform: skewY(-1.5deg);
   }
 }
 
