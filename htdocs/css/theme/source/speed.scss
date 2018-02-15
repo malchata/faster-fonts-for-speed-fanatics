@@ -11,13 +11,15 @@
 @import "fonts.scss";
 
 // Theme-specific variables
-$white: #fbfef9;
 $purple: #754668;
 $darkPurple: darken($purple, 35%);
 $red: #f0544f;
 $darkRed: darken($red, 35%);
 $blue: #507dbc;
 $darkBlue: darken($blue, 35%);
+$white: #fbfef9;
+$lightGrey: #d5d6d4;
+$darkGrey: #4c4c4c;
 
 // Theme overrides
 $mainColor: $white;
@@ -41,6 +43,10 @@ $heading6Size: .5203933796em;
 @import "../template/theme";
 
 // Theme-specific styles here
+*{
+  font-variant-ligatures: none;
+}
+
 .reveal{
   code,
   pre{
@@ -149,19 +155,6 @@ $heading6Size: .5203933796em;
       }
     }
 
-    .smaller{
-      max-width: 55%;
-    }
-
-    .smallest{
-      max-width: percentage(1 / 3);
-    }
-
-    .big{
-      width: 100%;
-      max-width: none;
-    }
-
     .no-shadow{
       box-shadow: none;
     }
@@ -192,7 +185,7 @@ $heading6Size: .5203933796em;
     }
   }
 
-  .section-title-slide{
+  .skew-headings{
     h1,
     h2,
     h3,
@@ -200,6 +193,20 @@ $heading6Size: .5203933796em;
     h5,
     h6{
       transform: skewY(-1.5deg);
+    }
+  }
+
+  .rotate{
+    transform: rotate(-1.5deg);
+  }
+}
+
+body{
+  background: $white;
+
+  .reveal{
+    .slides{
+      z-index: 2;
     }
   }
 }
@@ -243,5 +250,40 @@ $heading6Size: .5203933796em;
   h5,
   h6{
     text-shadow: .05em .05em 0 $darkBlue;
+  }
+}
+
+.white body{
+  &:before{
+    background: linear-gradient(45deg, $lightGrey 0%, $white 100%);
+    background-blend-mode: multiply;
+    background-size: 412px 300px;
+    display: block;
+    z-index: 1;
+    width: 125%;
+    height: 125%;
+    top: -12.5%;
+    left: -12.5%;
+    content: "";
+    position: absolute;
+    transform: rotate(-1.5deg);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    color: $darkGrey;
+    text-shadow: .05em .05em 0 $lightGrey;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
+  .white body{
+    &:before{
+      background-image: url("/img/lined-paper-2x.png");
+    }
   }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>reveal.js</title>
+    <title>Faster Fonts for Speed Fanatics</title>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/speed.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -16,80 +16,102 @@
       <div class="slides">
         <!-- [0.0] - Title Card -->
         <section data-state="purple">
-          <img class="stretch" src="/images/title-card.svg">
+          <img class="stretch" src="/img/title-card.svg" alt="Faster Fonts for Speed Fanatics">
         </section>
         <!-- [1.0] - How Browsers Render Fonts -->
         <section>
           <!-- [1.1] - How Browsers Render Fonts -->
-          <section data-state="red" class="section-title-slide">
+          <section data-state="blue" class="skew-headings">
             <h1>How Browsers Render Fonts</h1>
-            <h3>A lesson in priorities</h3>
           </section>
-          <!-- [1.2] - CSS Priority -->
-          <section data-state="blue">
-            <h1>CSS</h1>
-            <img data-src="/images/css-priority.png" alt="Chrome dev tools network request readout, showing priority of a CSS asset.">
-            <h2>High Priority*</h2>
-            <h4 class="fragment">*It Depends&trade;</h4>
+          <!-- [1.2] - The truth about font rendering -->
+          <section data-state="blue" class="skew-headings">
+             <h3>The truth about font rendering:</h3>
+             <h1>Fonts don't load like other resources do!</h1>
           </section>
-          <!-- [1.3] - JS Priority -->
-          <section data-state="blue">
-            <h1>JavaScript</h1>
-            <img data-src="/images/js-priority.png" alt="Chrome dev tools network request readout, showing priority of a JavaScript asset.">
-            <h2>Low Priority*</h2>
-            <h4 class="fragment">*It Depends&trade;</h4>
+          <!-- [1.3] - A story about resource loading -->
+          <section data-state="white" class="skew-headings">
+            <h3>But first,</h3>
+            <h1>A brief story about resource loading</h1>
           </section>
-          <!-- [1.4] - Image Priority -->
-          <section data-state="blue">
-            <h1>Image</h1>
-            <img data-src="/images/img-priority.png" alt="Chrome dev tools network request readout, showing priority of an image asset.">
-            <h2>Low Priority*</h2>
-            <h4 class="fragment">*It Depends&trade;</h4>
+          <!-- [1.4] - A story about page rendering -->
+          <section data-state="white" class="skew-headings">
+            <h3>Meet</h3>
+            <h1>The players</h1>
           </section>
-          <!-- [1.5] - Things That Affect Priority -->
-          <section data-state="blue">
-            <h1>Things That Affect Priority</h1>
-            <ul>
-              <li class="fragment">Position of asset reference in document</li>
-              <li class="fragment">Whether a resource is lazy-loaded</li>
-              <li class="fragment">Use of <code>rel=preload</code></li>
-            <ul>
+          <!-- [1.5] - Web server -->
+          <section data-state="white">
+            <div class="rotate">
+              <img src="/img/server.svg" alt="A cartoony drawing of a web server.">
+              <h3>Web server</h3>
+            </div>
           </section>
-          <!-- [1.6] - Font Priority -->
-          <section data-state="blue">
-            <h1>Font Priority</h1>
-            <img data-src="/images/font-priority.png" alt="Chrome dev tools network request readout, showing priority of an image asset.">
-            <h2>High Priority*</h2>
-            <h4 class="fragment">*It Depends&trade;</h4>
+          <!-- [1.6] - Browser -->
+          <section data-state="white">
+            <div class="rotate">
+              <img src="/img/browser.svg" alt="A cartoony drawing of a browser.">
+              <h3>Browser</h3>
+            </div>
           </section>
-          <!-- [1.7] - How Web Fonts Render -->
-          <section data-state="blue">
-            <h1>How Web Fonts Render</h1>
-            <ul>
-              <li class="fragment">The document is requested</li>
-              <li class="fragment">CSS is requested</li>
-              <li class="fragment">Rendering is blocked</li>
-              <li class="fragment">Rendering begins</li>
-              <li class="fragment">The document's text nodes are analyzed</li>
-              <li class="fragment">Text rendering is blocked <span class="fragment">(for a time)</span></li>
-              <li class="fragment">Web fonts are (finally) applied</li>
-            </ul>
+          <!-- [1.7] - Resource -->
+          <section data-state="white">
+            <div class="rotate">
+              <img src="/img/resource.svg" alt="A cartoony drawing of a page resource.">
+              <h3>Resource</h3>
+            </div>
           </section>
-          <!-- [1.8] - How Font Rendering Looks -->
-          <section data-state="blue">
-            <h1>How Font Rendering Looks</h1>
-            <img src="/images/font-rendering.png" alt="A screenshot roll of page rendering in Chrome.">
+          <!-- [1.8] - Witness the action -->
+          <section data-state="white" class="skew-headings">
+            <h3>Witness</h3>
+            <h1>The action</h1>
           </section>
-          <!-- [1.9] - Font Rendering is Complex -->
-          <section data-state="blue">
-            <h1>Font Rendering is Complicated</h1>
-            <h3 class="fragment">And sometimes slow</h3>
+          <!-- [1.9] - The browser requests a resource -->
+          <section data-state="white">
+            <div class="rotate">
+              <img src="/img/request.svg" alt="A cartoony drawing of a browser requesting a resource.">
+              <h3>
+                The Browser<br>
+                requests a resource
+              </h3>
+            </div>
+          </section>
+          <!-- [1.10] - Server responds -->
+          <section data-state="white">
+            <div class="rotate">
+              <img src="/img/response.svg" alt="A cartoony drawing of a web server sending a response.">
+              <h3>Web server responds</h3>
+            </div>
+          </section>
+          <!-- [1.11] - Intermission -->
+          <section data-state="white" class="skew-headings">
+            <h1>Intermission</h1>
+            <h3>Render blocking in progress...</h3>
+          </section>
+          <!-- [1.12] - The page begins painting -->
+          <section data-state="white">
+            <div class="rotate">
+              <img src="/img/paint.svg" alt="A cartoony drawing of a browser holding up a paint brush.">
+              <h3>The page begins painting</h3>
+            </div>
+          </section>
+          <!-- [1.13] - A matter of priorities -->
+          <section data-state="blue" class="skew-headings">
+            <h3>Render blocking is a matter of</h3>
+            <h1>Priorities</h1>
+          </section>
+          <!-- [1.14] - Asset priorities -->
+          <section data-state="blue" class="skew-headings">
+            <h1>High priority assets</h1>
+            <h2>block rendering</h2>
+          </section>
+          <!-- [1.15] - durr -->
+          <section data-state="blue" class="skew-headings">
           </section>
         </section>
         <!-- [2.0] - Host Your Own Fonts -->
         <section>
           <!-- [2.1] - Host Your Own Fonts -->
-          <section data-state="red" class="section-title-slide">
+          <section data-state="red" class="skew-headings">
             <h1>Host Your Own Fonts</h1>
           </section>
           <!-- [2.2] - Why Host Your Own Fonts? -->
@@ -100,7 +122,7 @@
         <!-- [3.0] - `font-display` for More Flexible Rendering -->
         <section>
           <!-- [3.1] - `font-display` for More Flexible Font Rendering -->
-          <section data-state="red" class="section-title-slide">
+          <section data-state="red" class="skew-headings">
             <h1><code>font-display</code></h1>
             <h3>For more flexible font rendering</h3>
           </section>
@@ -108,7 +130,7 @@
         <!-- [4.0] - `rel=preload` to Accelerate Rendering -->
         <section>
           <!-- [4.1] - `rel=preload` to Accelerate Rendering -->
-          <section data-state="red" class="section-title-slide">
+          <section data-state="red" class="skew-headings">
             <h1><code>rel=preload</code></h1>
             <h3>to Accelerate Font Rendering</h3>
           </section>
@@ -116,19 +138,19 @@
         <!-- [5.0] - Subset to The Extreme -->
         <section>
           <!-- [5.1] - Subset to The Extreme -->
-          <section data-state="red" class="section-title-slide">
+          <section data-state="red" class="skew-headings">
             <h1>Subset to The Extreme!</h1>
           </section>
           <!-- [5.2] - Aggressive Subsetting: When Is It Appropriate? -->
           <section data-state="blue">
             <h1>Aggressive Subsetting</h1>
-            <h3>When Is It Appropriate?</h3>
+            <h3>When is it Appropriate?</h3>
           </section>
         </section>
         <!-- [6.0] - Cull Unnecessary Fonts with `Save-Data` -->
         <section>
           <!-- [6.1] - Cull Unnecessary Fonts with `Save-Data` -->
-          <section data-state="red" class="section-title-slide">
+          <section data-state="red" class="skew-headings">
             <h1>Cull Unnecessary Fonts</h1>
             <h3>with <code>Save-Data</code></h3>
           </section>
@@ -144,7 +166,7 @@
         transition: "none",
         progress: false,
         viewDistance: 2,
-        help: false,
+        help: false/*,
         dependencies: [{
             src: 'plugin/notes/notes.js',
             async: true
@@ -152,12 +174,12 @@
           {
             src: 'plugin/highlight/highlight.js',
             async: true,
-            callback: function() {
+            callback: function(){
               hljs.initHighlightingOnLoad();
             }
           }
-        ]});
+        ]*/});
     </script>
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery.js"></script>
   </body>
 </html>
