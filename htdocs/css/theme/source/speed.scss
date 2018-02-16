@@ -70,7 +70,6 @@ $heading6Size: .5203933796em;
     h6{
       line-height: 1.2;
       font-weight: 700;
-      text-shadow: .05em .05em 0 $darkPurple;
 
       code{
         font-weight: 400;
@@ -102,22 +101,10 @@ $heading6Size: .5203933796em;
       font-size: $heading6Size;
     }
 
-    blockquote{
-      background: none;
-      color: $headingColor;
-      text-align: left;
-      width: 90%;
-
-      q{
-        text-align: right;
-        display: block;
-        word-break: keep-all;
-      }
-    }
-
     ul{
       align-self: center;
       list-style: none;
+      margin: 0;
 
       li{
         margin: .5em 0;
@@ -144,13 +131,10 @@ $heading6Size: .5203933796em;
       border: 0;
       background: transparent;
       box-shadow: none;
+    }
 
-      &.large{
-        max-width: none;
-        max-height: none;
-        width: 104%;
-        margin-left: -2%;
-      }
+    svg.stretch{
+      transform: scale(1.04);
     }
 
     video{
@@ -204,9 +188,21 @@ $heading6Size: .5203933796em;
 }
 
 body{
-  background: $white;
+  background: $blue;
+  background: linear-gradient(45deg, $darkBlue 0%, $blue 100%);
 
   .reveal{
+    section{
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6{
+        text-shadow: .05em .05em 0 $darkBlue;
+      }
+    }
+
     .slides{
       z-index: 2;
     }
@@ -231,32 +227,24 @@ body{
   background: $red;
   background: linear-gradient(45deg, $darkRed 0%, $red 100%);
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-    text-shadow: .05em .05em 0 $darkRed;
-    transform: skewY(-1.5deg);
-  }
-}
-
-.blue body{
-  background: $blue;
-  background: linear-gradient(45deg, $darkBlue 0%, $blue 100%);
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-    text-shadow: .05em .05em 0 $darkBlue;
+  .reveal{
+    section{
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6{
+        text-shadow: .05em .05em 0 $darkRed;
+        transform: skewY(-1.5deg);
+      }
+    }
   }
 }
 
 .white body{
+  background: $white;
+
   &:before{
     background: linear-gradient(45deg, $lightGrey 0%, $white 100%);
     background-blend-mode: multiply;
@@ -272,14 +260,18 @@ body{
     transform: rotate(-1.5deg);
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-    color: $darkGrey;
-    text-shadow: .05em .05em 0 $lightGrey;
+  .reveal{
+    section{
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6{
+        color: $darkGrey;
+        text-shadow: .05em .05em 0 $lightGrey;
+      }
+    }
   }
 }
 
@@ -287,6 +279,16 @@ body{
   .white body{
     &:before{
       background-image: url("/img/lined-paper-2x.png");
+    }
+  }
+}
+
+@media (orientation: landscape){
+  .reveal{
+    section{
+      svg.stretch{
+        transform: scale(1.08);
+      }
     }
   }
 }

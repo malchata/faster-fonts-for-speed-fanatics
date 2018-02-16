@@ -25,7 +25,7 @@
             <h1>How Browsers Render Fonts</h1>
           </section>
           <!-- [1.2] - The truth about font rendering -->
-          <section data-state="blue">
+          <section>
              <h3>The truth about font rendering:</h3>
              <h1>Fonts don't load like other resources do!</h1>
           </section>
@@ -103,23 +103,23 @@
             </div>
           </section>
           <!-- [1.13] - A matter of priorities -->
-          <section data-state="blue">
+          <section>
             <h3>Render blocking is a matter of</h3>
             <h1>Priorities</h1>
           </section>
           <!-- [1.14] - Browser speculate about fonts -->
-          <section data-state="blue">
-            <h3>When it comes to fonts</h3>
+          <section>
+            <h3>When it comes to font loading,</h3>
             <h1>Browsers speculate!</h1>
           </section>
-          <!-- [1.15] - Speculation is a browser optimization -->
-          <section data-state="blue">
+          <!-- [1.15] - The font loading process -->
+          <section>
             <h2>The font loading process</h2>
             <svg id="Layer_1" class="stretch" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="8.8in" height="1.9in" viewBox="0 0 633.6 136.8"><defs><style>.cls-1,.cls-4{font-size:12px;font-family:Economica-Bold,Economica;font-weight:700}.cls-1,.cls-2,.cls-4{fill:#fbfef9}.cls-3,.cls-4{opacity:.75}.cls-5{fill:none;stroke:#fbfef9;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}</style></defs><title>font-loading</title><text class="cls-1" transform="translate(5.3 14.8)">BROWSER REQUESTS<tspan x="19.9" y="14.4">DOCUMENT</tspan></text><text class="cls-1" transform="translate(118 14.8)">BROWSER PARSES<tspan x="15.1" y="14.4">DOCUMENT</tspan></text><text class="cls-1" transform="translate(546.6 14.8)">DOCUMENT FINISHES<tspan x="22.8" y="14.4">LOADING</tspan></text><text class="cls-1" transform="translate(552.3 65.2)">PAGE RENDERING<tspan x="11.6" y="14.4">COMPLETES</tspan></text><text class="cls-1" transform="translate(121.8 65.2)">BROWSER FINDS<tspan x="-5.5" y="14.4">AND REQUESTS CSS</tspan></text><text class="cls-1" transform="translate(226 65.2)">BROWSER PARSES<tspan x="7.2" y="14.4">CSS RESOURCE</tspan></text><text class="cls-1" transform="translate(229.8 115.6)">BROWSER FINDS<tspan x="5.7" y="14.4">@FONT-FACES</tspan></text><text class="cls-1" transform="translate(330.1 115.6)">BROWSER EXAMINES<tspan x="17.3" y="14.4">TEXT NODES</tspan></text><path class="cls-2" d="M518.4 102.8a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V108a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V108a7.2 7.2 0 0 0-7.2-7.2zm-108 2a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V108a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V108a7.2 7.2 0 0 0-7.2-7.2zM86.4 2a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 28.8V7.2A5.2 5.2 0 0 1 7.2 2h79.2m0-2H7.2A7.2 7.2 0 0 0 0 7.2v21.6A7.2 7.2 0 0 0 7.2 36h79.2a7.2 7.2 0 0 0 7.2-7.2V7.2A7.2 7.2 0 0 0 86.4 0zm108 2a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V7.2a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V7.2a7.2 7.2 0 0 0-7.2-7.2zm0 52.4a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V57.6a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V57.6a7.2 7.2 0 0 0-7.2-7.2zm108 2a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V57.6a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V57.6a7.2 7.2 0 0 0-7.2-7.2zm108 2a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V57.6a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V57.6a7.2 7.2 0 0 0-7.2-7.2zm-108 52.4a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V108a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V108a7.2 7.2 0 0 0-7.2-7.2zM626.4 2a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V7.2a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V7.2a7.2 7.2 0 0 0-7.2-7.2zm0 52.4a5.2 5.2 0 0 1 5.2 5.2v21.6a5.2 5.2 0 0 1-5.2 5.2h-79.2a5.2 5.2 0 0 1-5.2-5.2V57.6a5.2 5.2 0 0 1 5.2-5.2h79.2m0-2h-79.2a7.2 7.2 0 0 0-7.2 7.2v21.6a7.2 7.2 0 0 0 7.2 7.2h79.2a7.2 7.2 0 0 0 7.2-7.2V57.6a7.2 7.2 0 0 0-7.2-7.2z"/><text class="cls-1" transform="translate(437.3 115.6)">BROWSER REQUESTS<tspan x="7.5" y="14.4">FONT RESOURCES</tspan></text><text class="cls-1" transform="translate(333.2 65.2)">BROWSER APPLIES<tspan x="1" y="14.4">CSS TO DOCUMENT</tspan></text><g class="cls-3"><path class="cls-2" d="M415.6 2v32H326V2h89.6m2-2H324v36h93.6V0z"/></g><text class="cls-4" transform="translate(340.8 14.8)">OTHER STUFF™<tspan x="11.2" y="14.4">HAPPENS</tspan></text><path class="cls-5" d="M93.6 18H108l-6.1-6.1m0 12.2L108 18m93.6 50.4H216l-6.1-6.1m0 12.2l6.1-6.1"/><g class="cls-3"><path class="cls-5" d="M201.6 18H324l-6.1-6.1m0 12.2L324 18"/></g><g class="cls-3"><path class="cls-5" d="M417.6 18H540l-6.1-6.1m0 12.2L540 18"/></g><path class="cls-5" d="M417.6 68.4H540l-6.1-6.1m0 12.2l6.1-6.1m40.7 24.1l6.1-6.1m0 0l6.1 6.1M309.6 68.4H324l-6.1-6.1m0 12.2l6.1-6.1m93.6 50.4H432l-6.1-6.1m0 12.2l6.1-6.1m155.4-68.4V36l-6.1 6.1m12.2 0l-6.1-6.1m-277.8 82.8H324l-6.1-6.1m0 12.2l6.1-6.1m-61.2-32.4v14.4l6.1-6.1m-12.2 0l6.1 6.1M154.8 36v14.4l6.1-6.1m-12.2 0l6.1 6.1m370.8 68.4h61.2V86.4"/></svg>
             <h4 class="fragment">If it seems complicated, that's because it is.</h4>
           </section>
           <!-- [1.16] - Font loading in pictures (Pt. I) -->
-          <section data-state="blue">
+          <section>
             <h1>Font loading in pictures</h1>
             <picture>
               <source srcset="/img/font-loading-01.webp" type="image/webp">
@@ -128,7 +128,7 @@
             <h2>1.89 s</h2>
           </section>
           <!-- [1.17] - Font loading in pictures (Pt. II) -->
-          <section data-state="blue">
+          <section>
             <h1>Font loading in pictures</h1>
             <picture>
               <source srcset="/img/font-loading-02.webp" type="image/webp">
@@ -137,7 +137,7 @@
             <h2>2.31 s</h2>
           </section>
           <!-- [1.18] - Font loading in pictures (Pt. III) -->
-          <section data-state="blue">
+          <section>
             <h1>Font loading in pictures</h1>
             <picture>
               <source srcset="/img/font-loading-03.webp" type="image/webp">
@@ -153,46 +153,84 @@
             <h1>Host Your Own Fonts</h1>
           </section>
           <!-- [2.2] - Self hosting is about performance and control -->
-          <section data-state="blue">
-              <h3>Self hosting is about</h3>
+          <section>
+              <h3>Self hosting offers better</h3>
               <h1>Performance <span class="lowercase">and</span> control</h1>
           </section>
           <!-- [2.3] - Self-hosting = less cross origin requests -->
-          <section data-state="blue">
+          <section>
+            <h1>Less cross origins requests</h1>
+            <h2><code>==</code></h2>
+            <h1>Less potential latency</h1>
           </section>
         </section>
-        <!-- [3.0] - `font-display` for More Flexible Rendering -->
+        <!-- [3.0] - `font-display` -->
         <section>
-          <!-- [3.1] - `font-display` for More Flexible Font Rendering -->
-          <section data-state="blue">
+          <!-- [3.1] - `font-display` For better font rendering control -->
+          <section data-state="red">
             <h1><code>font-display</code></h1>
-            <h3>For more flexible font rendering</h3>
+            <h3>For better font rendering control</h3>
           </section>
         </section>
         <!-- [4.0] - `rel=preload` to Accelerate Rendering -->
         <section>
           <!-- [4.1] - `rel=preload` to Accelerate Rendering -->
-          <section data-state="blue">
+          <section>
             <h1><code>rel=preload</code></h1>
             <h3>to Accelerate Font Rendering</h3>
           </section>
         </section>
-        <!-- [5.0] - Subset to The Extreme -->
+        <!-- [5.0] - Extreme subbseting -->
         <section>
-          <!-- [5.1] - Subset to The Extreme -->
-          <section data-state="blue">
-            <h1>Subset to The Extreme!</h1>
+          <!-- [5.1] - Subset to The Extreme! -->
+          <section data-state="red">
+            <h1>Subset to the extreme!</h1>
           </section>
           <!-- [5.2] - Aggressive Subsetting: When Is It Appropriate? -->
-          <section data-state="blue">
-            <h1>Aggressive Subsetting</h1>
-            <h3>When is it Appropriate?</h3>
+          <section>
+            <h1>Aggressive subsetting</h1>
+            <h2><code>==</code></h2>
+            <h1>Less bytes over the wire</h1>
+          </section>
+          <!-- [5.3] - Aggressive subsetting can backfire -->
+          <section>
+            <h1>Beware!</h1>
+            <h2>Aggressive subsetting can backfire:</h2>
+            <div class="flex-image-container">
+              <div>
+                <picture>
+                  <source srcset="/img/good-subsetting.webp" type="image/webp">
+                  <img src="/img/good-subsetting.png" alt="Regular font subsetting">
+                </picture>
+                <h3>Good subsetting</h3>
+              </div>
+              <div>
+                <picture>
+                  <source srcset="/img/bad-subsetting.webp" type="image/webp">
+                  <img src="/img/bad-subsetting.png" alt="An example of how extreme subsetting can backfire.">
+                </picture>
+                <h3>Bad subsetting</h3>
+              </div>
+            </div>
+          </section>
+          <!-- [5.4] - When is aggressive subsetting appropriate? -->
+          <section>
+            <h3>
+              Where aggressive subsetting is appropriate:
+            </h3>
+            <h1 class="fragment">
+              Static text nodes
+            </h1>
+            <h4 class="fragment">That's pretty much it</h4>
+          </section>
+          <!-- [5.5] - -->
+          <section>
           </section>
         </section>
         <!-- [6.0] - Cull Unnecessary Fonts with `Save-Data` -->
         <section>
           <!-- [6.1] - Cull Unnecessary Fonts with `Save-Data` -->
-          <section data-state="blue">
+          <section>
             <h1>Cull Unnecessary Fonts</h1>
             <h3>with <code>Save-Data</code></h3>
           </section>
