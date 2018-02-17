@@ -152,6 +152,15 @@
           <section data-state="red">
             <h1>Host Your Own Fonts</h1>
           </section>
+          <!-- [2.2] - Grab 'n go -->
+          <section data-state="raccoon">
+            <h2>Most developers:</h2>
+            <video muted id="raccoon">
+              <source src="/video/raccoon.webm" type="video/webm">
+              <source src="/video/raccoon.mp4" type="video/mp4">
+              <source src="/video/raccoon.ogv" type="video/ogg">
+            </video>
+          </section>
           <!-- [2.2] - Self hosting is about performance and control -->
           <section>
               <h3>Self hosting offers better</h3>
@@ -162,6 +171,22 @@
             <h1>Less cross origins requests</h1>
             <h2><code>==</code></h2>
             <h1>Less potential latency</h1>
+          </section>
+          <!-- [2.x] - Cross-origin font requests -->
+          <section>
+            <h2>Cross origin font requests:</h2>
+            <picture>
+              <source srcset="/img/cross-origin-fonts.webp" type="image/webp">
+              <img src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross origin font requests.">
+            </picture>
+          </section>
+          <!-- [2.x] - Cross-origin font requests -->
+          <section>
+            <h2>Same origin font requests:</h2>
+            <picture>
+              <source srcset="/img/same-origin-fonts.webp" type="image/webp">
+              <img src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing same origin font requests.">
+            </picture>
           </section>
         </section>
         <!-- [3.0] - `font-display` -->
@@ -175,9 +200,28 @@
         <!-- [4.0] - `rel=preload` to Accelerate Rendering -->
         <section>
           <!-- [4.1] - `rel=preload` to Accelerate Rendering -->
-          <section>
+          <section data-state="red">
             <h1><code>rel=preload</code></h1>
             <h3>to Accelerate Font Rendering</h3>
+          </section>
+          <!-- [4.2] - What is `preload`? -->
+          <section>
+            <h2>What is <code>rel=preload</code> for?</h2>
+            <blockquote cite="https://www.w3.org/TR/preload/#early-fetch-and-application-defined-execution">
+              &quot;...most resource declarations specified within JavaScript and CSS are 'hidden' from the speculative parsers and incur a performance penalty. To address this, the application can use a <code>preload</code> link to declaratively specify which resources the user agent must fetch early to improve page performance.&quot;
+            </blockquote>
+          </section>
+          <!-- [4.3] - In other words... -->
+          <section>
+            <h4>In other words...</h4>
+            <h2><code>rel=preload</code> initiates an early fetch for a resource before the browser knows it even needs it.</h2>
+          </section>
+          <!-- [4.4] - A change of priorities -->
+          <section>
+            <h1><code>rel=preload</code> affects resource priority:</h1>
+            <div>
+              <h3>Without <code>rel=preload</code></h3>
+            </div>
           </section>
         </section>
         <!-- [5.0] - Extreme subbseting -->
@@ -186,45 +230,98 @@
           <section data-state="red">
             <h1>Subset to the extreme!</h1>
           </section>
-          <!-- [5.2] - Aggressive Subsetting: When Is It Appropriate? -->
+          <!-- [5.2] - Aggressive subsetting benefits -->
           <section>
             <h1>Aggressive subsetting</h1>
             <h2><code>==</code></h2>
             <h1>Less bytes over the wire</h1>
           </section>
-          <!-- [5.3] - Aggressive subsetting can backfire -->
-          <section>
-            <h1>Beware!</h1>
-            <h2>Aggressive subsetting can backfire:</h2>
-            <div class="flex-image-container">
-              <div>
-                <picture>
-                  <source srcset="/img/good-subsetting.webp" type="image/webp">
-                  <img src="/img/good-subsetting.png" alt="Regular font subsetting">
-                </picture>
-                <h3>Good subsetting</h3>
-              </div>
-              <div>
-                <picture>
-                  <source srcset="/img/bad-subsetting.webp" type="image/webp">
-                  <img src="/img/bad-subsetting.png" alt="An example of how extreme subsetting can backfire.">
-                </picture>
-                <h3>Bad subsetting</h3>
-              </div>
-            </div>
-          </section>
-          <!-- [5.4] - When is aggressive subsetting appropriate? -->
+          <!-- [5.3] - When is aggressive subsetting appropriate? -->
           <section>
             <h3>
               Where aggressive subsetting is appropriate:
             </h3>
             <h1 class="fragment">
-              Static text nodes
+              Static text nodes that don't change often
             </h1>
-            <h4 class="fragment">That's pretty much it</h4>
+            <h4 class="fragment">(That's pretty much it)</h4>
           </section>
-          <!-- [5.5] - -->
+          <!-- [5.4] - Aggressive subsetting example -->
           <section>
+            <h2>Aggressive subsetting example:</h2>
+            <picture>
+              <source srcset="/img/aggressive-subset-example.webp" type="image/webp">
+              <img src="/img/aggressive-subset-example.png" alt='Picture of a blog page heading, with the text "Web Dev Blog" in a highly decorative font.'>
+            </picture>
+          </section>
+          <!-- [5.5] - Unique text -->
+          <section>
+            <h2><code>WEB DEV BLOG</code></h2>
+            <div class="fragment">
+              <h3>⬇</h3>
+              <h2><code>WEB DVLOG</code></h2>
+            </div>
+            <div class="fragment">
+              <h3>⬇</h3>
+              <h2><code>U+20,U+42,U+44,U+45,U+47,U+4C,U+4F,U+56,U+57</code></h2>
+            </div>
+          </section>
+          <!-- [5.6] - Running the subsetter -->
+          <section>
+            <pre><code class="bash">pyftsubset monoton.ttf \
+  --unicodes='U+20,U+42,U+44,U+45,U+47,U+4C,U+4F,U+56,U+57' \
+  --output-file=monoton-subset.ttf \
+  --name-IDs='*'</code></pre>
+          </section>
+          <!-- [5.7] - Savings table -->
+          <section>
+            <h2>Aggressive subsetting gains</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Format</th>
+                  <th class="right">Latin (KB)</th>
+                  <th class="right">Aggressive (KB)</th>
+                  <th class="right">Reduction</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WOFF2</td>
+                  <td class="right">16.02</td>
+                  <td class="right">1.86</td>
+                  <td class="right bold">-88%</td>
+                </tr>
+                <tr>
+                  <td>WOFF2</td>
+                  <td class="right">20.75</td>
+                  <td class="right">2.55</td>
+                  <td class="right bold">-87%</td>
+                </tr>
+                <tr>
+                  <td>TTF</td>
+                  <td class="right">38.57</td>
+                  <td class="right">3.36</td>
+                  <td class="right bold">-91%</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [5.8] - If it goes well... -->
+          <section>
+            <h2>If it goes well, you'll say</h2>
+            <picture class="fragment">
+              <source srcset="/img/good-subsetting.webp" type="image/webp">
+              <img src="/img/good-subsetting.png" alt="An image showing proper font subsetting.">
+            </picture>
+          </section>
+          <!-- [5.9] - If it backfires... -->
+          <section>
+            <h2>If it backfires, you'll say</h2>
+            <picture class="fragment">
+              <source srcset="/img/bad-subsetting.webp" type="image/webp">
+              <img src="/img/bad-subsetting.png" alt="An image showing faulty font subsetting.">
+            </picture>
           </section>
         </section>
         <!-- [6.0] - Cull Unnecessary Fonts with `Save-Data` -->
@@ -250,15 +347,20 @@
         dependencies: [{
             src: 'plugin/notes/notes.js',
             async: true
-          }/*,
+          },
           {
             src: 'plugin/highlight/highlight.js',
             async: true,
             callback: function(){
               hljs.initHighlightingOnLoad();
             }
-          }*/
+          }
         ]});
+
+        Reveal.addEventListener("raccoon", function(){
+          console.log("event hit!");
+          document.getElementById("raccoon").play();
+        });
     </script>
     <script src="/js/jquery.js"></script>
   </body>

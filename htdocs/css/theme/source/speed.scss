@@ -20,6 +20,7 @@ $darkBlue: darken($blue, 35%);
 $white: #fbfef9;
 $lightGrey: #d5d6d4;
 $darkGrey: #4c4c4c;
+$warningRed: #1a0908;
 
 // Theme overrides
 $mainColor: $white;
@@ -138,7 +139,7 @@ $heading6Size: .5203933796em;
     }
 
     video{
-      max-width: 75%;
+      max-width: 50%;
       width: 100%;
 
       & + h4{
@@ -184,6 +185,25 @@ $heading6Size: .5203933796em;
     text-transform: lowercase;
     font-size: .8em;
     font-weight: 400;
+  }
+
+  .right{
+    text-align: right;
+  }
+
+  .bold{
+    font-weight: 700;
+  }
+
+  blockquote{
+    background: none;
+    color: $headingColor;
+    text-align: left;
+    width: 100%;
+
+    code{
+      font-style: normal;
+    }
   }
 }
 
