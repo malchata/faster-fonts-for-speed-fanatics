@@ -123,7 +123,7 @@
             <h1>Font loading in pictures</h1>
             <picture>
               <source srcset="/img/font-loading-01.webp" type="image/webp">
-              <img src="/img/font-loading-01.png" alt="A web browser loading fonts on a page, with no text visible yet.">
+              <img src="/img/font-loading-01.jpg" alt="A web browser loading fonts on a page, with no text visible yet.">
             </picture>
             <h2>1.89 s</h2>
           </section>
@@ -132,7 +132,7 @@
             <h1>Font loading in pictures</h1>
             <picture>
               <source srcset="/img/font-loading-02.webp" type="image/webp">
-              <img src="/img/font-loading-02.png" alt="A web browser loading fonts on a page, with only heading text visible (but not body copy).">
+              <img src="/img/font-loading-02.jpg" alt="A web browser loading fonts on a page, with only heading text visible (but not body copy).">
             </picture>
             <h2>2.31 s</h2>
           </section>
@@ -141,7 +141,7 @@
             <h1>Font loading in pictures</h1>
             <picture>
               <source srcset="/img/font-loading-03.webp" type="image/webp">
-              <img src="/img/font-loading-03.png" alt="A web browser after loading all fonts on a page, with all text now visible.">
+              <img src="/img/font-loading-03.jpg" alt="A web browser after loading all fonts on a page, with all text now visible.">
             </picture>
             <h2>2.42 s</h2>
           </section>
@@ -154,25 +154,25 @@
           </section>
           <!-- [2.2] - Grab 'n go -->
           <section data-state="raccoon">
-            <h2>Most developers:</h2>
+            <h2>Developers and font providers:</h2>
             <video muted id="raccoon">
               <source src="/video/raccoon.webm" type="video/webm">
               <source src="/video/raccoon.mp4" type="video/mp4">
               <source src="/video/raccoon.ogv" type="video/ogg">
             </video>
           </section>
-          <!-- [2.2] - Self hosting is about performance and control -->
+          <!-- [2.3] - Self hosting is about performance and control -->
           <section>
               <h3>Self hosting offers better</h3>
               <h1>Performance <span class="lowercase">and</span> control</h1>
           </section>
-          <!-- [2.3] - Self-hosting = less cross origin requests -->
+          <!-- [2.4] - Self-hosting = less cross origin requests -->
           <section>
             <h1>Less cross origins requests</h1>
-            <h2><code>==</code></h2>
+            <h2>means</h2>
             <h1>Less potential latency</h1>
           </section>
-          <!-- [2.x] - Cross-origin font requests -->
+          <!-- [2.5] - Cross-origin font requests -->
           <section>
             <h2>Cross origin font requests:</h2>
             <picture>
@@ -180,12 +180,33 @@
               <img src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross origin font requests.">
             </picture>
           </section>
-          <!-- [2.x] - Cross-origin font requests -->
+          <!-- [2.6] - Cross-origin font requests -->
           <section>
             <h2>Same origin font requests:</h2>
             <picture>
               <source srcset="/img/same-origin-fonts.webp" type="image/webp">
-              <img src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing same origin font requests.">
+              <img src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing reducing latency with same origin font requests.">
+            </picture>
+          </section>
+          <!-- [2.7] - If you can't self-host, use `rel=preconnect` -->
+          <section>
+            <h3>If you can't self host,</h3>
+            <h1>Use <code>rel=preconnect</code></h1>
+          </section>
+          <!-- [2.8] - Without `rel=preconnect` -->
+          <section>
+            <h2>Without <code>rel=preconnect</code>:</h2>
+            <picture>
+              <source srcset="/img/no-preconnect.webp" type="image/webp">
+              <img src="/img/no-preconnect.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
+            </picture>
+          </section>
+          <!-- [2.9] - With `rel=preconnect` -->
+          <section>
+            <h2>With <code>rel=preconnect</code>:</h2>
+            <picture>
+              <source srcset="/img/preconnect.webp" type="image/webp">
+              <img src="/img/preconnect.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
             </picture>
           </section>
         </section>
