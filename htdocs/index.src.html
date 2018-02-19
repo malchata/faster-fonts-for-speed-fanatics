@@ -19,6 +19,49 @@
         [1.4] - Meet the crew
         [1.5] - Web server
         [1.6] - Browser
+        [1.7] - Resource
+        [1.8] - Witness the action
+        [1.9] - The browser requests a resource
+        [1.10] - Server responds
+        [1.11] - Intermission
+        [1.12] - The page begins painting
+        [1.13] - Rendering block is a matter of priorities
+        [1.14] - Browser speculate about fonts
+        [1.15] - The font loading process
+        [1.16] - Font loading in pictures (Pt. I)
+        [1.17] - Font loading in pictures (Pt. II)
+        [1.18] - Font loading in pictures (Pt. III)
+      [2.0] - Hosting your own fonts
+        [2.1] - Hosting your own fonts
+        [2.2] - What we _usually_ do
+        [2.3] - Hosting your own fonts can offer better performance
+        [2.4] - Less cross-origin requests can mean less latency
+        [2.5] - Cross-origin font requests
+        [2.6] - Same-origin font requests
+        [2.7] - If you can't host your own fonts, use `rel=preconnect`
+        [2.8] - Using `rel=preconnect`
+        [2.9] - Without `rel=preconnect`
+        [2.10] - With `rel=preconnect`
+        [2.11] - WARNING: `crossorigin` is weird
+        [2.12] - `rel=preconnect` Support
+        [2.13] - Nothing bad will happen
+        [2.14] - `rel=dns-prefetch` is an option, too!
+        [2.15] - `rel=dns-prefetch` Support
+        [2.16] - Hosting your own fonts offers more control
+        [2.17] - What you retain control of when you host your own fonts
+        [2.18] - Mind the EULAs!
+      [3.0] - `font-display`
+        [3.1] - `font-display` for easy control over font rendering
+        [3.2] - What is `font-display`?
+        [3.3] - `font-display` can override default browser rendering strategies
+        [3.4] - Quick `font-display` example
+        [3.5] - `font-display: auto`
+        [3.6] - `font-display: swap`
+        [3.7] - FOIT vs. FOUT
+        [3.8] - Embrace the FOUT
+        [3.9] Improvement stats
+        [3.10] - Considerations when using `swap`
+      [4.0] - `rel=preload`
     -->
     <div class="reveal">
       <div class="slides">
@@ -113,7 +156,7 @@
               <h3 class="uppercase">The page paints</h3>
             </div>
           </section>
-          <!-- [1.13] - A matter of priorities -->
+          <!-- [1.13] - Rendering block is a matter of priorities -->
           <section>
             <h3>Render blocking is a matter of</h3>
             <h1 class="uppercase">Priorities</h1>
@@ -157,15 +200,15 @@
             <h2>2.42 s</h2>
           </section>
         </section>
-        <!-- [2.0] - Host Your Own Fonts -->
+        <!-- [2.0] - Hosting your own fonts-->
         <section>
-          <!-- [2.1] - Host Your Own Fonts -->
+          <!-- [2.1] - Hosting your own fonts -->
           <section data-state="title-slide">
-            <h1>Host Your Own Fonts</h1>
+            <h1>Hosting your own fonts</h1>
           </section>
-          <!-- [2.2] - What developers usually do -->
+          <!-- [2.2] - What we _usually_ do -->
           <section data-state="raccoon">
-            <h2>What developers usually do</h2>
+            <h2>What we <em>usually</em> do</h2>
             <video muted id="raccoon">
               <source src="/video/raccoon.webm" type="video/webm">
               <source src="/video/raccoon.mp4" type="video/mp4">
@@ -175,31 +218,31 @@
           <!-- [2.3] - Hosting your own fonts can offer better performance -->
           <section>
               <h2>Hosting your own fonts can offer</h2>
-              <h1 class="uppercase">better performance</h1>
+              <h1 class="uppercase">better <u>performance</u></h1>
           </section>
-          <!-- [2.4] - Self-hosting = less cross origin requests -->
+          <!-- [2.4] - Less cross-origin requests can mean less latency -->
           <section>
-            <h1 class="uppercase">Less cross origins requests</h1>
-            <h2>means</h2>
-            <h1 class="uppercase">Less potential latency</h1>
+            <h1 class="uppercase">Less cross-origin requests</h1>
+            <h2>can mean</h2>
+            <h1 class="uppercase">Less latency</h1>
           </section>
           <!-- [2.5] - Cross-origin font requests -->
           <section>
-            <h2>Cross origin font requests:</h2>
+            <h2>Cross-origin font requests:</h2>
             <picture>
               <source srcset="/img/cross-origin-fonts.webp" type="image/webp">
-              <img src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross origin font requests.">
+              <img src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross-origin font requests.">
             </picture>
           </section>
-          <!-- [2.6] - Cross-origin font requests -->
+          <!-- [2.6] - Same-origin font requests -->
           <section>
-            <h2>Same origin font requests:</h2>
+            <h2>Same-origin font requests:</h2>
             <picture>
               <source srcset="/img/same-origin-fonts.webp" type="image/webp">
               <img src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing reducing latency with same origin font requests.">
             </picture>
           </section>
-          <!-- [2.7] - If you can't self-host, use `rel=preconnect` -->
+          <!-- [2.7] - If you can't host your own fonts, use `rel=preconnect` -->
           <section>
             <h2>If you can't host your own fonts,</h2>
             <h1>try <code>rel=preconnect</code></h1>
@@ -231,13 +274,13 @@
               <img class="stretch" src="/img/preconnect-1x.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
             </picture>
           </section>
-          <!-- [2.11] - WARNING: Don't forget `crossorigin`! -->
+          <!-- [2.11] - WARNING: `crossorigin` is weird -->
           <section data-state="warning">
             <img src="/img/skull.svg" alt="A demonic skull. Beware!">
             <h1>WARNING</h1>
-            <h3>Don't forget <code>crossorigin</code>!</h3>
+            <h3><code>crossorigin</code> is weird</h3>
           </section>
-          <!-- [2.12] - rel=preconnect Support -->
+          <!-- [2.12] - `rel=preconnect` Support -->
           <section>
             <h2><code>rel=preconnect</code> support:</h2>
             <picture>
@@ -246,12 +289,12 @@
               <img src="/img/preconnect-support-1x.png" alt="Browser suppport matrix for rel=preconnect on caniuse.com">
             </picture>
           </section>
-          <!-- [2.13] - Nothing -->
+          <!-- [2.13] - Nothing bad will happen -->
           <section>
             <h3>If a browser doesn't support <code>rel=preconnect</code>,</h3>
             <h1 class="uppercase">nothing bad will happen!</h1>
           </section>
-          <!-- [2.14] - `dns-prefetch` shoutout -->
+          <!-- [2.14] - `rel=dns-prefetch` is an option, too! -->
           <section>
             <h2><code>rel=dns-prefetch</code> is an option, too!</h2>
             <h3>HTML <code>&lt;link&gt;</code> element:</h3>
@@ -260,7 +303,7 @@
             <h3>As an HTTP <code>Link</code> response header:</h3>
             <pre><code class="http">Link: &lt;https://fonts.googleapis.com/&gt;; rel=dns-prefetch, &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</code></pre>
           </section>
-          <!-- [2.15] - rel=preconnect Support -->
+          <!-- [2.15] - `rel=dns-prefetch` Support -->
           <section>
             <h2><code>rel=dns-prefetch</code> support:</h2>
             <picture>
@@ -278,36 +321,42 @@
           <section>
             <h2>What you retain control of when you host your own fonts:</h2>
             <ul>
-              <li>Use of anything within a <code>@font-face</code></li>
-              <li><code>unicode-range</code></li>
-              <li><code>font-display</code></li>
-              <li>Subsetting</li>
-              <li>Easier use of <code>rel=preload</code></li>
+              <li class="fragment">Use of anything within a <code>@font-face</code></li>
+              <li class="fragment"><code>unicode-range</code></li>
+              <li class="fragment"><code>font-display</code></li>
+              <li class="fragment">Subsetting</li>
+              <li class="fragment">Easier use of <code>rel=preload</code></li>
               <li>
             </ul>
+          </section>
+          <!-- [2.18] - Mind the EULAs! -->
+          <section data-state="warning">
+            <img src="/img/skull.svg" alt="A demonic skull. Beware!">
+            <h1>WARNING</h1>
+            <h3>Mind the EULAs!</h3>
           </section>
         </section>
         <!-- [3.0] - `font-display` -->
         <section>
-          <!-- [3.1] - `font-display` for effortless font rendering control -->
+          <!-- [3.1] - `font-display` for easy control over font rendering -->
           <section data-state="title-slide">
             <h1><code>font-display</code></h1>
-            <h2>For effortless font rendering control</h2>
+            <h2>for easy control over font rendering</h2>
           </section>
           <!-- [3.2] - What is `font-display`? -->
           <section>
             <h2>What is <code>font-display</code>?</h2>
             <blockquote cite="https://www.w3.org/TR/css-fonts-4/#font-display-desc">
               &quot;The font-display descriptor for @font-face determines how a font face is displayed, based on whether and when it is downloaded and ready to use.&quot;<br>
-              <cite>&mdash; <a href="https://www.w3.org/TR/css-fonts-4/">CSS Fonts Module Level 4 Specification</a></cite>
+              <cite>&mdash; <a href="https://www.w3.org/TR/css-fonts-4/" rel="noopener">CSS Fonts Module Level 4 Specification</a></cite>
             </blockquote>
           </section>
-          <!-- [3.3] - In other words -->
+          <!-- [3.3] - `font-display` can override default browser rendering strategies -->
           <section>
             <h3>In other words,</h3>
-            <h2><code>font-display</code> allows developers to override default browser rendering strategies of custom type faces.</h2>
+            <h2><code>font-display</code> overrides default browser rendering strategies of custom type faces.</h2>
           </section>
-          <!-- [3.4] - Quick font face example -->
+          <!-- [3.4] - Quick `font-display` example -->
           <section>
             <h2>A quick <code>font-display</code> example</h2>
             <pre><code class="css">@font-face {
@@ -317,8 +366,89 @@
   src: url("../fonts/economica-regular.woff2") format("woff2"),
        url("../fonts/economica-regular.woff") format("woff"),
        url("../fonts/economica-regular.ttf") format("truetype");
-  font-display: swap;
+  font-display: swap; /* &lt;-- One-liners FTW! */
 }</code></pre>
+          </section>
+          <!-- [3.5] - `font-display: auto` -->
+          <section>
+            <h1><code>font-display: auto;</code></h1>
+            <h3>Default. The browser does what the browser does.</h3>
+          </section>
+          <!-- [3.6] - `font-display: swap` -->
+          <section>
+            <h1><code>font-display: swap;</code></h1>
+            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack, then swaps in custom typeface after it loads.</h3>
+          </section>
+          <!-- [3.7] - FOIT vs. FOUT -->
+          <section data-state="foit-vs-fout">
+            <h1>FOIT vs. FOUT</h1>
+            <div class="flex-item-container">
+              <div>
+                <video muted loop id="foit">
+                  <source src="/video/foit.webm" type="video/webm">
+                  <source src="/video/foit.mp4" type="video/mp4">
+                  <source src="/video/foit.ogv" type="video/ogg">
+                </video>
+                <h3>FOIT</h3>
+              </div>
+              <div>
+                <video muted loop id="fout">
+                  <source src="/video/fout.webm" type="video/webm">
+                  <source src="/video/fout.mp4" type="video/mp4">
+                  <source src="/video/fout.ogv" type="video/ogg">
+                </video>
+                <h3>FOUT</h3>
+              </div>
+            </div>
+          </section>
+          <!-- [3.8] - Embrace the FOUT -->
+          <section>
+            <h1>Embrace the FOUT</h1>
+            <ul>
+              <li class="fragment">Text is never blocked from being read.</li>
+              <li class="fragment">If fonts fail to download, text won't be blocked until the FOIT timeout.</li>
+              <li class="fragment">First meaningful paint and Speed Index of a page can be boosted.</li>
+            </ul>
+          </section>
+          <!-- [3.9] Improvement stats -->
+          <section>
+            <h3>First Meaningful Paint (FMP) and Speed Index improvements</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th><code>font-display:</code></th>
+                  <th>FMP</th>
+                  <th>Speed Index</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>auto</code></td>
+                  <td>3,126</td>
+                  <td>2,509</td>
+                </tr>
+                <tr>
+                  <td><code>swap</code></td>
+                  <td>1,645</td>
+                  <td>2,439</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <!-- [3.10] - Considerations when using `swap` -->
+          <section>
+            <h2>Considerations when using <code>swap</code></h2>
+            <ul>
+              <li class="fragment">Typeface swapping causes layout shifting.</li>
+              <li class="fragment">Layout shifting causes reflows/repaints.</li>
+              <li class="fragment">Don't use it for icon fonts.</li>
+              <li class="fragment">(Don't use icon fonts.)</li>
+            </ul>
+          </section>
+          <!-- [3.11] - `font-display: optional` -->
+          <section>
+            <h1><code>font-display: optional;</code></h1>
+            <h3>The typeface will be invisible (FOIT) for an extremely short period of time, and depending on the connection, the browser may opt to not download it.</h3>
           </section>
         </section>
         <!-- [4.0] - `rel=preload` -->
@@ -358,110 +488,19 @@
               </picture>
             </div>
           </section>
-        </section>
-        <!-- [5.0] - Aggressive subbseting -->
-        <section>
-          <!-- [5.1] - Subset to The Extreme! -->
-          <section data-state="title-slide">
-            <h1>Subset to the extreme!</h1>
-          </section>
-          <!-- [5.2] - Aggressive subsetting benefits -->
+          <!-- [4.5] - `rel=preload` support -->
           <section>
-            <h1 class="uppercase">Aggressive subsetting</h1>
-            <h2>means</h2>
-            <h1 class="uppercase">Less bytes sent to users</h1>
-          </section>
-          <!-- [5.3] - When is aggressive subsetting appropriate? -->
-          <section>
-            <h3>
-              Where aggressive subsetting is appropriate:
-            </h3>
-            <h1 class="uppercase fragment">
-              Static text nodes<br>
-              that <u>don't change</u>
-            </h1>
-          </section>
-          <!-- [5.4] - Aggressive subsetting example -->
-          <section>
-            <h2>Aggressive subsetting example:</h2>
+            <h2><code>rel=preload</code> support:</h2>
             <picture>
-              <source srcset="/img/aggressive-subset-example.webp" type="image/webp">
-              <img src="/img/aggressive-subset-example.png" alt='Picture of a blog page heading, with the text "Web Dev Blog" in a highly decorative font.'>
-            </picture>
-          </section>
-          <!-- [5.5] - Unique text -->
-          <section>
-            <h2><code>WEB DEV BLOG</code></h2>
-            <div class="fragment">
-              <h3>⬇</h3>
-              <h2><code>WEB DVLOG</code></h2>
-            </div>
-            <div class="fragment">
-              <h3>⬇</h3>
-              <h2><code>U+20,U+42,U+44,U+45,U+47,U+4C,U+4F,U+56,U+57</code></h2>
-            </div>
-          </section>
-          <!-- [5.6] - Running the subsetter -->
-          <section>
-            <pre><code class="bash">pyftsubset monoton.ttf \
-  --unicodes='U+20,U+42,U+44,U+45,U+47,U+4C,U+4F,U+56,U+57' \
-  --output-file=monoton-subset.ttf \
-  --name-IDs='*'</code></pre>
-          </section>
-          <!-- [5.7] - Savings table -->
-          <section>
-            <h2>Aggressive subsetting gains</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Format</th>
-                  <th class="right">Latin (KB)</th>
-                  <th class="right">Aggressive (KB)</th>
-                  <th class="right">Reduction</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>WOFF2</td>
-                  <td class="right">16.02</td>
-                  <td class="right">1.86</td>
-                  <td class="right bold">-88%</td>
-                </tr>
-                <tr>
-                  <td>WOFF2</td>
-                  <td class="right">20.75</td>
-                  <td class="right">2.55</td>
-                  <td class="right bold">-87%</td>
-                </tr>
-                <tr>
-                  <td>TTF</td>
-                  <td class="right">38.57</td>
-                  <td class="right">3.36</td>
-                  <td class="right bold">-91%</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <!-- [5.8] - If it goes well... -->
-          <section>
-            <h2>If it goes well, you'll say</h2>
-            <picture class="fragment">
-              <source srcset="/img/good-subsetting.webp" type="image/webp">
-              <img src="/img/good-subsetting.png" alt="An image showing proper font subsetting.">
-            </picture>
-          </section>
-          <!-- [5.9] - If it backfires... -->
-          <section>
-            <h2>If it backfires, you'll say</h2>
-            <picture class="fragment">
-              <source srcset="/img/bad-subsetting.webp" type="image/webp">
-              <img src="/img/bad-subsetting.png" alt="An image showing faulty font subsetting.">
+              <source srcset="/img/preload-support-2x.webp 2x, /img/preload-support-1x.webp 1x" type="image/webp">
+              <source srcset="/img/preload-support-2x.png 2x, /img/preload-support-1x.png 1x" type="image/png">
+              <img src="/img/preload-support-1x.png" alt="Browser suppport matrix for rel=preload on caniuse.com">
             </picture>
           </section>
         </section>
-        <!-- [6.0] - In other words,ecessary Fonts with `Save-Data` -->
+        <!-- [5.0] - `Save-Data` -->
         <section>
-          <!-- [6.1] - Cull Unnecessary Fonts with `Save-Data` -->
+          <!-- [5.1] - Cull Unnecessary Fonts with `Save-Data` -->
           <section data-state="title-slide">
             <h1>Cull Unnecessary Fonts</h1>
             <h2>with <code>Save-Data</code></h2>
@@ -493,8 +532,12 @@
         ]});
 
         Reveal.addEventListener("raccoon", function(){
-          console.log("event hit!");
           document.getElementById("raccoon").play();
+        });
+
+        Reveal.addEventListener("foit-vs-fout", function(){
+          document.getElementById("foit").play();
+          document.getElementById("fout").play();
         });
     </script>
     <script src="/js/jquery.js"></script>

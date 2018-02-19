@@ -159,16 +159,11 @@ $heading6Size: .5203933796em;
       }
     }
 
-    .flex-image-container{
+    .flex-item-container{
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: flex-start;
       align-content: flex-start;
-
-      &.extra-wide{
-        width: 125%;
-        margin-left: -12.5%;
-      }
 
       & > *{
         width: 48.75%;
@@ -214,6 +209,12 @@ $heading6Size: .5203933796em;
     cite{
       text-align: right;
       display: block;
+    }
+  }
+
+  th{
+    code{
+      font-weight: 400;
     }
   }
 }
