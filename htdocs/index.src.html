@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -52,7 +52,7 @@
         [2.18] - Mind the EULAs!
       [3.0] - `font-display`
         [3.1] - `font-display` for easy control over font rendering
-        [3.2] - What is `font-display`?
+        [3.2] - What is `font-display` for?
         [3.3] - `font-display` can override default browser rendering strategies
         [3.4] - Quick `font-display` example
         [3.5] - `font-display: auto`
@@ -260,8 +260,8 @@
           <section>
             <h2>Without <code>rel=preconnect</code>:</h2>
             <picture>
-              <source srcset="/img/no-preconnect-2x.webp 2x, /img/no-preconnect-2x.webp 2x" type="image/webp">
-              <source srcset="/img/no-preconnect-2x.png 2x, /img/no-preconnect-2x.png 2x" type="image/png">
+              <source srcset="/img/no-preconnect-2x.webp 2x, /img/no-preconnect-1x.webp 1x" type="image/webp">
+              <source srcset="/img/no-preconnect-2x.png 2x, /img/no-preconnect-1x.png 1x" type="image/png">
               <img class="stretch" src="/img/no-preconnect-1x.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
             </picture>
           </section>
@@ -343,9 +343,9 @@
             <h1><code>font-display</code></h1>
             <h2>for easy control over font rendering</h2>
           </section>
-          <!-- [3.2] - What is `font-display`? -->
+          <!-- [3.2] - What is `font-display` for? -->
           <section>
-            <h2>What is <code>font-display</code>?</h2>
+            <h2>What is <code>font-display</code> for?</h2>
             <blockquote cite="https://www.w3.org/TR/css-fonts-4/#font-display-desc">
               &quot;The font-display descriptor for @font-face determines how a font face is displayed, based on whether and when it is downloaded and ready to use.&quot;<br>
               <cite>&mdash; <a href="https://www.w3.org/TR/css-fonts-4/" rel="noopener">CSS Fonts Module Level 4 Specification</a></cite>
@@ -495,6 +495,51 @@
               <source srcset="/img/preload-support-2x.webp 2x, /img/preload-support-1x.webp 1x" type="image/webp">
               <source srcset="/img/preload-support-2x.png 2x, /img/preload-support-1x.png 1x" type="image/png">
               <img src="/img/preload-support-1x.png" alt="Browser suppport matrix for rel=preload on caniuse.com">
+            </picture>
+          </section>
+          <!-- [4.6] - Using `rel=preload` -->
+          <section>
+            <h2>Using <code>rel=preload</code></h2>
+            <h3>HTML <code>&lt;link&gt;</code> element:</h3>
+            <pre><code class="html">&lt;link rel=&quot;preload&quot; href=&quot;/css/styles.css&quot; rel=&quot;preload&quot; as=&quot;style&quot; type=&quot;text/css&quot;&gt;
+&lt;link rel=&quot;preload&quot; href=&quot;/css/fonts/firasans-regular.woff2&quot; rel=&quot;preload&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</code></pre>
+            <h3>As an HTTP <code>Link</code> response header:</h3>
+            <pre><code class="http">Link: &lt;/css/styles.css&gt;; rel=preload; as=style; type=text/css; nopush, &lt;/css/fonts/firasans-regular.woff2&gt;; rel=preload; as=font; type=font/woff2; crossorigin=anonymous; nopush,</code></pre>
+          </section>
+          <!-- [4.7] - A critical request chain without `rel=preload` -->
+          <section>
+            <h2>A critical request chain without <code>rel=preload</code>:</h2>
+            <picture>
+              <source srcset="/img/crp-no-preload-2x.webp 2x, /img/crp-no-preload-1x.webp 1x" type="image/webp">
+              <source srcset="/img/crp-no-preload-2x.png 2x, /img/crp-no-preload-1x.png 1x" type="image/png">
+              <img class="stretch" src="/img/crp-no-preload-1x.png" alt="A suboptimal critical request chain as audited by Lighthouse.">
+            </picture>
+          </section>
+          <!-- [4.8] - A critical request chain with `rel=preload` -->
+          <section>
+            <h2>A critical request chain with <code>rel=preload</code>:</h2>
+            <picture>
+              <source srcset="/img/crp-preload-2x.webp 2x, /img/crp-preload-1x.webp 1x" type="image/webp">
+              <source srcset="/img/crp-preload-2x.png 2x, /img/crp-preload-1x.png 1x" type="image/png">
+              <img class="stretch" src="/img/crp-preload-1x.png" alt="An optimized critical request chain as audited by Lighthouse.">
+            </picture>
+          </section>
+          <!-- [4.9] - Normal downloading of font assets without `rel=preload` -->
+          <section>
+            <h2>Normal downloading of font assets without <code>rel=preload</code>:</h2>
+            <picture>
+              <source srcset="/img/waterfall-no-preload-2x.webp 2x, /img/waterfall-no-preload-1x.webp 1x" type="image/webp">
+              <source srcset="/img/waterfall-no-preload-2x.png 2x, /img/waterfall-no-preload-1x.png 1x" type="image/png">
+              <img class="stretch" src="/img/waterfall-no-preload-1x.png" alt="A resource waterfall graph of a page with fonts downloaded in their natural order.">
+            </picture>
+          </section>
+          <!-- [4.10] - Font assets reprioritized with `rel=preload` -->
+          <section>
+            <h2>Font assets reprioritized with <code>rel=preload</code>:</h2>
+            <picture>
+              <source srcset="/img/waterfall-preload-2x.webp 2x, /img/waterfall-preload-1x.webp 1x" type="image/webp">
+              <source srcset="/img/waterfall-preload-2x.png 2x, /img/waterfall-preload-1x.png 1x" type="image/png">
+              <img class="stretch" src="/img/waterfall-preload-1x.png" alt="A resource waterfall graph of a page with fonts effectively reprioritized using `rel=preload`.">
             </picture>
           </section>
         </section>
