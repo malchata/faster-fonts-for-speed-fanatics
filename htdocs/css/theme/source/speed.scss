@@ -21,7 +21,7 @@ $black: #000;
 $white: #fbfef9;
 $lightGrey: #d5d6d4;
 $darkGrey: #4c4c4c;
-$warningRed: #1a0908;
+$warningRed: darken($red, 56%);
 
 // Theme overrides
 $mainColor: $white;
@@ -216,6 +216,10 @@ $heading6Size: .4943737106em;
   .cursor{
     animation: blink 333ms infinite;
   }
+
+  .pulsate{
+    animation: pulsate 5s infinite;
+  }
 }
 
 @keyframes blink{
@@ -229,6 +233,17 @@ $heading6Size: .4943737106em;
 
   100%{
     opacity: 0;
+  }
+}
+
+@keyframes pulsate{
+  0%,
+  100%{
+    opacity: (2 / 3);
+  }
+
+  83.33333333%{
+    opacity: 1;
   }
 }
 

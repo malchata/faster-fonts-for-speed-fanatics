@@ -147,7 +147,7 @@
           <!-- [1.14] - Browser speculate about fonts -->
           <section>
             <h3>When it comes to font loading,</h3>
-            <h1>Browsers speculate</h1>
+            <h1>browsers speculate</h1>
           </section>
           <!-- [1.15] - The font loading process -->
           <section>
@@ -268,7 +268,7 @@
           <!-- [2.11] - WARNING: `crossorigin` is weird -->
           <section data-state="warning">
             <img src="/img/skull.svg" alt="A demonic skull. Beware!">
-            <h1>WARNING</h1>
+            <h1 class="pulsate">WARNING</h1>
             <h3><code>crossorigin</code> is weird</h3>
           </section>
           <!-- [2.12] - `rel=preconnect` Support -->
@@ -325,10 +325,10 @@
               <li>
             </ul>
           </section>
-          <!-- [2.18] - Mind the EULAs! -->
+          <!-- [2.18] - WARNING: Mind the EULAs! -->
           <section data-state="warning">
             <img src="/img/skull.svg" alt="A demonic skull. Beware!">
-            <h1>WARNING</h1>
+            <h1 class="pulsate">WARNING</h1>
             <h3>Mind the EULAs!</h3>
           </section>
         </section>
@@ -367,17 +367,18 @@
           </section>
           <!-- [3.5] - `font-display: auto` -->
           <section>
-            <h1><code>font-display: auto;</code></h1>
-            <h3>Default. The browser does what the browser does.</h3>
+            <h2><code>font-display: auto;</code></h2>
+            <h3>The browser does what the browser does</h3>
           </section>
           <!-- [3.6] - `font-display: swap` -->
           <section>
-            <h1><code>font-display: swap;</code></h1>
-            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack, then swaps in custom typeface after it loads.</h3>
+            <h2><code>font-display: swap;</code></h2>
+            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack, then swaps in custom typeface after it loads</h3>
           </section>
           <!-- [3.7] - FOIT vs. FOUT -->
           <section data-state="foit-vs-fout">
-            <h1>FOIT vs. FOUT</h1>
+            <h2>FOIT versus FOUT</h2>
+            <hr>
             <div class="flex-item-container">
               <div>
                 <video muted loop id="foit">
@@ -401,9 +402,9 @@
           <section>
             <h1>Embrace the FOUT</h1>
             <ul>
-              <li class="fragment">Text is never blocked from being read.</li>
-              <li class="fragment">If fonts fail to download, text won't be blocked until the FOIT timeout.</li>
-              <li class="fragment">First meaningful paint and Speed Index of a page can be boosted.</li>
+              <li class="fragment">Text is never blocked from being read</li>
+              <li class="fragment">If fonts fail to download, text won't be blocked until the FOIT timeout</li>
+              <li class="fragment">First meaningful paint and Speed Index of a page can be boosted</li>
             </ul>
           </section>
           <!-- [3.9] Improvement stats -->
@@ -437,8 +438,8 @@
             <ul>
               <li class="fragment">Typeface swapping causes layout shifting</li>
               <li class="fragment">Layout shifting causes reflows/repaints</li>
-              <li class="fragment">Don't use it for icon fonts</li>
-              <li class="fragment">(Don't use icon fonts)</li>
+              <li class="fragment">Don't use it for icon fonts (use <code>block</code>)</li>
+              <li class="fragment"><a href="https://www.sarasoueidan.com/blog/icon-fonts-to-svg/" rel="noopener">Don't use icon fonts</a></li>
             </ul>
           </section>
           <!-- [3.11] - `font-display: optional` -->
@@ -456,8 +457,9 @@
           <!-- [4.2] - What is `rel=preload`? -->
           <section>
             <h2>What is <code>rel=preload</code> for?</h2>
-            <blockquote cite="https://www.w3.org/TR/preload/#early-fetch-and-application-defined-execution">
+            <blockquote cite="https://www.w3.org/TR/preload/#early-fetch-of-critical-resources">
               &quot;...most resource declarations specified within JavaScript and CSS are 'hidden' from the speculative parsers and incur a performance penalty. To address this, the application can use a preload link to declaratively specify which resources the user agent must fetch early to improve page performance.&quot;
+              <cite>&mdash; <a href="https://www.w3.org/TR/preload/#early-fetch-of-critical-resources" rel="noopener">Preload Specification, &sect; A.1</a></cite>
             </blockquote>
           </section>
           <!-- [4.3] - In other words -->
