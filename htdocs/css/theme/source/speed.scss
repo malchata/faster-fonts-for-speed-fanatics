@@ -12,11 +12,11 @@
 
 // Theme-specific variables
 $purple: #754668;
-$darkPurple: darken($purple, 35%);
+$darkPurple: darken($purple, 30%);
 $red: #f0544f;
-$darkRed: darken($red, 35%);
+$darkRed: darken($red, 30%);
 $blue: #507dbc;
-$darkBlue: darken($blue, 35%);
+$darkBlue: darken($blue, 30%);
 $black: #000;
 $white: #fbfef9;
 $lightGrey: #d5d6d4;
@@ -27,32 +27,27 @@ $warningRed: #1a0908;
 $mainColor: $white;
 $headingColor: $white;
 $mainFontSize: 42px;
-$mainFont: "Economica", sans-serif;
-$headingFont: "Economica", sans-serif;
+$mainFont: "Nunito", sans-serif;
+$headingFont: "Nunito", sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 
 // Heading Sizes
-$heading1Size: 2em;
-$heading2Size: 1.5278838808em;
-$heading3Size: 1.1672145766em;
-$heading4Size: .8916841685em;
-$heading5Size: .6811949339em;
-$heading6Size: .5203933796em;
+$heading1Size: 1.9em;
+$heading2Size: 1.4514896868em;
+$heading3Size: 1.1088538478em;
+$heading4Size: .8470999601em;
+$heading5Size: .6471351872em;
+$heading6Size: .4943737106em;
 
 // Theme template
 @import "../template/theme";
 
-// Theme-specific styles here
-*{
-  font-variant-ligatures: none;
-}
-
 .reveal{
   code,
   pre{
-    font-family: "Operator Mono", "Consolas", monospace;
+    font-family: "Consolas", monospace;
   }
 
   pre{
@@ -70,7 +65,11 @@ $heading6Size: .5203933796em;
   section{
     a{
       color: $lightGrey;
-      text-decoration: underline;
+      text-decoration: underline;,
+
+      &:hover{
+        color: $white;
+      }
     }
 
     h1,
@@ -84,21 +83,12 @@ $heading6Size: .5203933796em;
       text-transform: none;
 
       code{
-        font-weight: 400;
         text-transform: none;
       }
     }
 
-    h4,
-    h5,
-    h6{
-      font-weight: 400;
-    }
-
-    h3{
-      & + pre.fragment{
-        margin: 1em 0 0;
-      }
+    h3  + pre{
+      margin: 0 0 2em;
     }
 
     h5{
@@ -111,6 +101,12 @@ $heading6Size: .5203933796em;
 
     h6{
       font-size: $heading6Size;
+    }
+
+    hr{
+      background: $lightGrey;
+      border: 0;
+      height: 0.03333em;
     }
 
     ul{
@@ -144,6 +140,10 @@ $heading6Size: .5203933796em;
       border: 0;
       background: transparent;
       box-shadow: none;
+
+      &.stretch.larger{
+        max-width: 60%;
+      }
     }
 
     svg.stretch{
@@ -178,14 +178,6 @@ $heading6Size: .5203933796em;
     }
   }
 
-  .rotate{
-    transform: rotate(-1.5deg);
-  }
-
-  .uppercase{
-    text-transform: uppercase;
-  }
-
   .right{
     text-align: right;
   }
@@ -196,10 +188,11 @@ $heading6Size: .5203933796em;
 
   blockquote{
     background: none;
-    color: $headingColor;
+    color: $lightGrey;
     text-align: left;
     width: 100%;
     box-shadow: none;
+    font-style: normal;
 
     code,
     cite{
@@ -209,6 +202,8 @@ $heading6Size: .5203933796em;
     cite{
       text-align: right;
       display: block;
+      font-size: 0.8333333333em;
+      margin: 0.3333333333em 0 0;
     }
   }
 
@@ -216,6 +211,24 @@ $heading6Size: .5203933796em;
     code{
       font-weight: 400;
     }
+  }
+
+  .cursor{
+    animation: blink 333ms infinite;
+  }
+}
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+  }
+
+  60%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
   }
 }
 
@@ -230,7 +243,10 @@ body{
       h3,
       h4,
       h5,
-      h6{
+      h6,
+      p,
+      blockquote,
+      li{
         text-shadow: .05em .05em 0 $darkBlue;
       }
     }
@@ -252,7 +268,10 @@ body{
       h3,
       h4,
       h5,
-      h6{
+      h6,
+      p,
+      blockquote,
+      li{
         color: $red;
         text-shadow: .05em .05em 0 $darkRed;
       }
@@ -283,29 +302,15 @@ body{
       h4,
       h5,
       h6{
-        text-transform: uppercase;
         text-shadow: .05em .05em 0 $darkRed;
-        transform: skewY(-1.5deg);
       }
     }
   }
 }
 
 .white body{
-  &:before{
-    background-image: url("/img/lined-paper.png");
-    background-blend-mode: multiply;
-    background-size: 412px 300px;
-    display: block;
-    z-index: 1;
-    width: 125%;
-    height: 125%;
-    top: -12.5%;
-    left: -12.5%;
-    content: "";
-    position: absolute;
-    transform: rotate(-1.5deg);
-  }
+  background: $white;
+  background: linear-gradient(45deg, $lightGrey 0%, $white 100%);
 
   .reveal{
     section{
@@ -314,18 +319,13 @@ body{
       h3,
       h4,
       h5,
-      h6{
+      h6,
+      p,
+      blockquote,
+      li{
         color: $darkGrey;
         text-shadow: .05em .05em 0 $lightGrey;
       }
-    }
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi){
-  .white body{
-    &:before{
-      background-image: url("/img/lined-paper-2x.png");
     }
   }
 }
