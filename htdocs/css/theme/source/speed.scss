@@ -141,13 +141,23 @@ $heading6Size: .4943737106em;
       background: transparent;
       box-shadow: none;
 
-      &.stretch.larger{
-        max-width: 60%;
+      &.diagram{
+        transform: scale(1.04);
       }
-    }
 
-    svg.stretch{
-      transform: scale(1.04);
+      &.full{
+        width: 100%;
+      }
+
+      &.stretch{
+        &.large{
+          max-width: 40%;
+        }
+
+        &.larger{
+          max-width: 60%;
+        }
+      }
     }
 
     video{
@@ -348,7 +358,7 @@ body{
 @media (orientation: landscape){
   .reveal{
     section{
-      svg.stretch{
+      img.diagram{
         transform: scale(1.08);
       }
     }
