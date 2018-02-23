@@ -1,17 +1,31 @@
 @font-face{
-  font-family: "Nunito";
+  font-family: "Homemade Apple";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/nunito-regular.woff2") format("woff2"),
-       url("/fonts/nunito-regular.woff") format("woff"),
-       url("/fonts/nunito-regular.ttf") format("truetype");
+  src: local("Homemade Apple Regular"),
+       local("HomemadeApple-Regular"),
+       url("/fonts/homemade-apple.woff2") format("woff2"),
+       url("/fonts/homemade-apple.woff") format("woff"),
+       url("/fonts/homemade-apple.ttf") format("truetype");
+  font-display: fallback;
 }
 
 @font-face{
-  font-family: "Nunito";
+  font-family: "Barlow Semi Condensed";
   font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/nunito-bold.woff2") format("woff2"),
-       url("/fonts/nunito-bold.woff") format("woff"),
-       url("/fonts/nunito-bold.ttf") format("truetype");
+  font-weight: 400;
+  src: url("/fonts/barlow-semi-condensed-regular.woff2") format("woff2"),
+       url("/fonts/barlow-semi-condensed-regular.woff") format("woff"),
+       url("/fonts/barlow-semi-condensed-regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Barlow Semi Condensed";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/barlow-semi-condensed-italic.woff2") format("woff2"),
+       url("/fonts/barlow-semi-condensed-italic.woff") format("woff"),
+       url("/fonts/barlow-semi-condensed-italic.ttf") format("truetype");
+  font-display: swap;
 }

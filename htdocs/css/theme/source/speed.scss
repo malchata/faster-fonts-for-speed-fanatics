@@ -12,34 +12,29 @@
 
 // Theme-specific variables
 $purple: #754668;
-$darkPurple: darken($purple, 30%);
-$red: #f0544f;
-$darkRed: darken($red, 30%);
-$blue: #507dbc;
-$darkBlue: darken($blue, 30%);
-$black: #000;
-$white: #fbfef9;
+$spaceCadet: #1d3461;
+$darkCoral: #cf5c36;
+$onyx: #3a2e39;
+$white: #fcfaf9;
 $lightGrey: #d5d6d4;
 $darkGrey: #4c4c4c;
-$warningRed: darken($red, 56%);
 
 // Theme overrides
 $mainColor: $white;
 $headingColor: $white;
 $mainFontSize: 42px;
-$mainFont: "Nunito", sans-serif;
-$headingFont: "Nunito", sans-serif;
+$mainFont: "Barlow Semi Condensed", sans-serif;
+$headingFont: "Barlow Semi Condensed", sans-serif;
+$accentFont: "Homemade Apple", cursive;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 
 // Heading Sizes
-$heading1Size: 1.9em;
-$heading2Size: 1.4514896868em;
-$heading3Size: 1.1088538478em;
-$heading4Size: .8470999601em;
-$heading5Size: .6471351872em;
-$heading6Size: .4943737106em;
+$heading1Size: 2.309em;
+$heading2Size: 1.7639419404em;
+$heading3Size: 1.3475492287em;
+$heading4Size: 1.0294493726em;
 
 // Theme template
 @import "../template/theme";
@@ -56,6 +51,8 @@ $heading6Size: .4943737106em;
 
   .slides{
     section{
+      text-align: left;
+
       .fragment{
         transition: none;
       }
@@ -64,8 +61,8 @@ $heading6Size: .4943737106em;
 
   section{
     a{
-      color: $lightGrey;
-      text-decoration: underline;,
+      color: $darkCoral;
+      text-decoration: underline;
 
       &:hover{
         color: $white;
@@ -75,32 +72,29 @@ $heading6Size: .4943737106em;
     h1,
     h2,
     h3,
-    h4,
-    h5,
-    h6{
+    h4{
       line-height: 1.2;
-      font-weight: 700;
-      text-transform: none;
+      text-align: left;
+      font-weight: 400;
+      margin: 0;
 
       code{
         text-transform: none;
       }
     }
 
+    .accent{
+      font-family: $accentFont;
+      text-transform: none;
+      color: $darkCoral;
+    }
+
+    .accent-color{
+      color: $darkCoral;
+    }
+
     h3  + pre{
       margin: 0 0 2em;
-    }
-
-    h5{
-      font-size: $heading5Size;
-
-      & + h6{
-        margin-top: 1em;
-      }
-    }
-
-    h6{
-      font-size: $heading6Size;
     }
 
     hr{
@@ -198,14 +192,12 @@ $heading6Size: .4943737106em;
 
   blockquote{
     background: none;
-    color: $lightGrey;
+    color: $white;
     text-align: left;
     width: 100%;
     box-shadow: none;
-    font-style: normal;
 
-    code,
-    cite{
+    code{
       font-style: normal;
     }
 
@@ -224,132 +216,75 @@ $heading6Size: .4943737106em;
   }
 
   .cursor{
-    animation: blink 333ms infinite;
-  }
-
-  .pulsate{
-    animation: pulsate 5s infinite;
+    animation: blink 1s infinite;
   }
 }
 
 @keyframes blink{
-  0%{
-    opacity: 0;
-  }
-
-  60%{
-    opacity: 1;
-  }
-
-  100%{
-    opacity: 0;
-  }
-}
-
-@keyframes pulsate{
   0%,
-  100%{
-    opacity: (2 / 3);
+  49%{
+    opacity: 0;
   }
 
-  83.33333333%{
+  50%,
+  99%{
     opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
   }
 }
 
 body{
-  background: $blue;
-  background: linear-gradient(45deg, $darkBlue 0%, $blue 100%);
+  background: $spaceCadet;
+}
+
+.section-slide body{
+  background: $darkCoral;
+
+  .accent{
+    color: $onyx;
+  }
+}
+
+.blackboard body{
+  background: $onyx;
+
+  h1,
+  h2,
+  h3,
+  h4{
+    color: $white;
+
+    & + img{
+      margin-top: 1.2em;
+    }
+  }
+
+  img + h3{
+    margin-top: .2em;
+  }
+
+  .accent{
+    color: $white;
+  }
+}
+
+.centered body{
+  h1,
+  h2,
+  h3,
+  h4,
+  li,
+  p{
+    text-align: center;
+  }
 
   .reveal{
-    section{
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      blockquote,
-      li{
-        text-shadow: .05em .05em 0 $darkBlue;
-      }
-    }
-
     .slides{
-      z-index: 2;
-    }
-  }
-}
-
-.warning body{
-  background: $black;
-  background: linear-gradient(45deg, $black 0%, $warningRed 100%);
-
-  .reveal{
-    section{
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      blockquote,
-      li{
-        color: $red;
-        text-shadow: .05em .05em 0 $darkRed;
-      }
-    }
-  }
-}
-
-.title-card{
-  body{
-    background: $purple;
-    background: linear-gradient(45deg, $darkPurple 0%, $purple 100%);
-  }
-
-  .stretch{
-    transform: scale(1.1);
-  }
-}
-
-.title-slide body{
-  background: $red;
-  background: linear-gradient(45deg, $darkRed 0%, $red 100%);
-
-  .reveal{
-    section{
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6{
-        text-shadow: .05em .05em 0 $darkRed;
-      }
-    }
-  }
-}
-
-.white body{
-  background: $white;
-  background: linear-gradient(45deg, $lightGrey 0%, $white 100%);
-
-  .reveal{
-    section{
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6,
-      p,
-      blockquote,
-      li{
-        color: $darkGrey;
-        text-shadow: .05em .05em 0 $lightGrey;
+      section{
+        text-align: center;
       }
     }
   }
