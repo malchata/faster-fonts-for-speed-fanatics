@@ -14,10 +14,9 @@
 $purple: #754668;
 $spaceCadet: #1d3461;
 $darkCoral: #cf5c36;
+$darkTerraCotta: #db5461;
 $onyx: #3a2e39;
 $white: #fcfaf9;
-$lightGrey: #d5d6d4;
-$darkGrey: #4c4c4c;
 
 // Theme overrides
 $mainColor: $white;
@@ -93,27 +92,19 @@ $heading4Size: 1.0294493726em;
       color: $darkCoral;
     }
 
-    h3  + pre{
-      margin: 0 0 2em;
-    }
-
-    hr{
-      background: $lightGrey;
-      border: 0;
-      height: 0.03333em;
+    h3 + pre{
+      margin: .5em 0 1.5em;
     }
 
     ul{
       align-self: center;
-      list-style: none;
-      margin: 0;
 
       li{
         color: $white;
-        margin: .5em 0;
+        margin-bottom: .25em;
 
         &:first-child{
-          margin-top: 0;
+          margin-top: .75em;
         }
 
         &:last-child{
@@ -125,7 +116,6 @@ $heading4Size: 1.0294493726em;
     li{
       font-family: $mainFont;
       line-height: 1.2;
-      text-align: center;
       color: $mainColor;
     }
 
@@ -182,12 +172,8 @@ $heading4Size: 1.0294493726em;
     }
   }
 
-  .right{
-    text-align: right;
-  }
-
-  .bold{
-    font-weight: 700;
+  .invisible{
+    visibility: hidden;
   }
 
   blockquote{
@@ -196,9 +182,13 @@ $heading4Size: 1.0294493726em;
     text-align: left;
     width: 100%;
     box-shadow: none;
+    line-height: 1.618;
+    padding: 0 0 0 1em;
+    border-left: .125em solid transparentize($darkCoral, .25);
 
     code{
       font-style: normal;
+      font-size: .9em;
     }
 
     cite{
@@ -209,30 +199,16 @@ $heading4Size: 1.0294493726em;
     }
   }
 
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: .5em 0 0;
+  }
+
   th{
     code{
       font-weight: 400;
     }
-  }
-
-  .cursor{
-    animation: blink 1s infinite;
-  }
-}
-
-@keyframes blink{
-  0%,
-  49%{
-    opacity: 0;
-  }
-
-  50%,
-  99%{
-    opacity: 1;
-  }
-
-  100%{
-    opacity: 0;
   }
 }
 
@@ -240,11 +216,50 @@ body{
   background: $spaceCadet;
 }
 
+.title-card body{
+  background: url("/img/title-card.svg") $spaceCadet no-repeat;
+  background-size: cover;
+}
+
 .section-slide body{
   background: $darkCoral;
 
+  .unfocused-heading{
+    opacity: 0.25;
+    filter: blur(.0675em);
+
+    &.prev,
+    &.next{
+      position: relative;
+    }
+
+    &.prev{
+      left: -1em;
+    }
+
+    &.next{
+      left: 1em;
+    }
+
+    h4{
+      color: $onyx;
+    }
+  }
+
+  .focused-heading{
+    margin: 1.375em 0;
+  }
+
   .accent{
     color: $onyx;
+  }
+}
+
+.warning body{
+  background: $darkTerraCotta;
+
+  .accent{
+    color: $spaceCadet;
   }
 }
 
