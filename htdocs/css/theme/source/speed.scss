@@ -34,6 +34,8 @@ $heading1Size: 2.309em;
 $heading2Size: 1.7639419404em;
 $heading3Size: 1.3475492287em;
 $heading4Size: 1.0294493726em;
+$heading5Size: .7864395513em;
+$heading6Size: .6007941568em;
 
 // Theme template
 @import "../template/theme";
@@ -46,6 +48,10 @@ $heading4Size: 1.0294493726em;
 
   pre{
     width: 100%;
+  }
+
+  .update{
+    position: fixed;
   }
 
   .slides{
@@ -66,6 +72,30 @@ $heading4Size: 1.0294493726em;
       &:hover{
         color: $white;
       }
+    }
+
+    h1{
+      font-size: $heading1Size;
+    }
+
+    h2{
+      font-size: $heading2Size;
+    }
+
+    h3{
+      font-size: $heading3Size;
+    }
+
+    h4{
+      font-size: $heading4Size;
+    }
+
+    h5{
+      font-size: $heading5Size;
+    }
+
+    h6{
+      font-size: $heading6Size;
     }
 
     h1,
@@ -134,10 +164,6 @@ $heading4Size: 1.0294493726em;
       }
 
       &.stretch{
-        &.large{
-          max-width: 40%;
-        }
-
         &.larger{
           max-width: 60%;
         }
@@ -210,6 +236,15 @@ $heading4Size: 1.0294493726em;
       font-weight: 400;
     }
   }
+
+  .scroll-container{
+    overflow-x: scroll;
+    width: 100%;
+
+    & > img{
+      max-width: none;
+    }
+  }
 }
 
 body{
@@ -228,19 +263,6 @@ body{
     opacity: 0.25;
     filter: blur(.0675em);
 
-    &.prev,
-    &.next{
-      position: relative;
-    }
-
-    &.prev{
-      left: -1em;
-    }
-
-    &.next{
-      left: 1em;
-    }
-
     h4{
       color: $onyx;
     }
@@ -255,11 +277,32 @@ body{
   }
 }
 
+.statement-slide{
+  h1,
+  h2,
+  h3,
+  h4{
+    text-shadow: 1.5em .5em 1em transparentize($darkCoral, .625);
+  }
+}
+
 .warning body{
   background: $darkTerraCotta;
 
+  a{
+    color: $spaceCadet;
+  }
+
   .accent{
     color: $spaceCadet;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  li{
+    text-shadow: 1.5em .5em 1em transparentize($spaceCadet, .625);
   }
 }
 

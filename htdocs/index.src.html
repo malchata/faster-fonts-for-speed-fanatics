@@ -15,6 +15,7 @@
       [2.0] - Host fonts on your server
       [3.0] - `font-display`
       [4.0] - `rel=preload`
+      [5.0] - `Save-Data`
     -->
     <div class="reveal">
       <div class="slides">
@@ -42,7 +43,7 @@
             </div>
           </section>
           <!-- [1.2] - The truth about font rendering -->
-          <section>
+          <section class="statement-slide">
             <h2>Fonts load differently than</h2>
             <h2 class="accent">other resources do</h2>
           </section>
@@ -95,12 +96,12 @@
               <h3 class="accent">render</h3>
           </section>
           <!-- [1.13] - Rendering block is a matter of priorities -->
-          <section>
+          <section class="statement-slide">
             <h2>Render blocking is</h2>
             <h2 class="accent">all about priorities</h2>
           </section>
           <!-- [1.14] - Browser speculate about fonts -->
-          <section>
+          <section class="statement-slide">
             <h2>When it comes to fonts</h2>
             <h2 class="accent">browsers speculate</h2>
           </section>
@@ -137,7 +138,7 @@
             <h3>2.42 s</h3>
           </section>
           <!-- [1.19] - Web fonts are ripe for fine-tuning -->
-          <section>
+          <section class="statement-slide">
             <h2>Web fonts are ripe for</h2>
             <h2 class="accent">performance tuning</h2>
           </section>
@@ -168,33 +169,37 @@
             </video>
           </section>
           <!-- [2.3] - Hosting your own fonts can offer better performance -->
-          <section>
+          <section class="statement-slide">
               <h2>Host your own fonts</h2>
               <h2 class="accent">for performance</h2>
           </section>
           <!-- [2.4] - Less cross-origin requests can mean less latency -->
-          <section>
+          <section class="statement-slide">
             <h2>Less hosts means</h2>
             <h2 class="accent">less latency</h2>
           </section>
           <!-- [2.5] - Cross-origin font requests -->
           <section>
-            <h3>Cross-origin font requests:</h3>
+            <h2>Cross-origin fonts:</h2>
             <picture>
               <source srcset="/img/cross-origin-fonts.webp" type="image/webp">
               <img class="stretch" src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross-origin font requests.">
             </picture>
+            <h3>Speed Index: 3,798</h3>
+            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
           </section>
           <!-- [2.6] - Same-origin font requests -->
           <section>
-            <h3>Same-origin font requests:</h3>
+            <h2>Same-origin fonts:</h2>
             <picture>
               <source srcset="/img/same-origin-fonts.webp" type="image/webp">
               <img class="stretch" src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing reducing latency with same origin font requests.">
             </picture>
+            <h3>Speed Index: 2,474 <span class="fragment">(~35% improvement)</span></h3>
+            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
           </section>
           <!-- [2.7] - If you can't host your own fonts, use `rel=preconnect` -->
-          <section>
+          <section class="statement-slide">
             <h2>try <code>rel=preconnect</code> when hosting your own fonts</h2>
             <h2 class="accent">just isn't doable</h2>
           </section>
@@ -212,26 +217,28 @@
           </section>
           <!-- [2.9] - Without `rel=preconnect` -->
           <section>
-            <h3><code>rel=preconnect</code> absent:</h3>
+            <h2>Without <code>rel=preconnect</code>:</h2>
             <picture>
-              <source srcset="/img/no-preconnect-2x.webp 2x, /img/no-preconnect-1x.webp 1x" type="image/webp">
-              <source srcset="/img/no-preconnect-2x.png 2x, /img/no-preconnect-1x.png 1x" type="image/png">
-              <img class="stretch" src="/img/no-preconnect-1x.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
+              <source srcset="/img/no-preconnect.webp" type="image/webp">
+              <img src="/img/no-preconnect.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
             </picture>
+            <h3>Speed Index: 3,877</h3>
+            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
           </section>
           <!-- [2.10] - With `rel=preconnect` -->
           <section>
-            <h3><code>rel=preconnect</code> present:</h3>
+            <h2>With <code>rel=preconnect</code>:</h2>
             <picture>
-              <source srcset="/img/preconnect-2x.webp 2x, /img/preconnect-1x.webp 1x" type="image/webp">
-              <source srcset="/img/preconnect-2x.png 2x, /img/preconnect-1x.png 1x" type="image/png">
-              <img class="stretch" src="/img/preconnect-1x.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
+              <source srcset="/img/preconnect.webp" type="image/webp">
+              <img src="/img/preconnect.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
             </picture>
+            <h3>Speed Index: 3,619 <span class="fragment">(~7% improvement)</span></h3>
+            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
           </section>
           <!-- [2.11] - Friendly reminder: `crossorigin` is weird -->
           <section data-state="warning">
-            <h2>Friendly reminder:</h2>
-            <h3 class="accent"><code>crossorigin</code> is weird</h3>
+            <h2 class="accent">Friendly reminder:</h2>
+            <h3>Don't forget about the <code>crossorigin</code> attribute!</h3>
           </section>
           <!-- [2.12] - `rel=preconnect` Support -->
           <section>
@@ -243,15 +250,15 @@
             </picture>
           </section>
           <!-- [2.13] - Nothing bad will happen -->
-          <section>
+          <section class="statement-slide">
             <h2>
               Browser doesn't support<br>
               <code>rel=preconnect</code>?
             </h2>
             <h2 class="accent fragment">nothing bad will happen <span class="fragment">(promise)</span></h2>
           </section>
-          <!-- [2.14] - Nothing bad will happen -->
-          <section>
+          <!-- [2.14] - `rel=dns-prefetch` is also an option -->
+          <section class="statement-slide">
             <h2><code>rel=dns-prefetch</code></h2>
             <h2 class="accent">is also an option</h2>
           </section>
@@ -277,7 +284,7 @@
             </picture>
           </section>
           <!-- [2.17] - Hosting your own fonts offers more control -->
-          <section>
+          <section class="statement-slide">
               <h2>Hosting your own fonts</h2>
               <h2 class="accent">offers more control</h2>
           </section>
@@ -294,8 +301,8 @@
           </section>
           <!-- [2.19] - Friendly reminder: Mind licensing agreements -->
           <section data-state="warning">
-            <h2>Friendly reminder:</h2>
-            <h3 class="accent">mind licensing agreements</h3>
+            <h2 class="accent">Friendly reminder:</h2>
+            <h3>mind the licensing agreements!</h3>
           </section>
         </section>
         <!-- [3.0] - `font-display` -->
@@ -323,7 +330,7 @@
             </blockquote>
           </section>
           <!-- [3.3] - `font-display` overrides default browser rendering strategies of custom type faces -->
-          <section>
+          <section class="statement-slide">
             <h2 class="accent">In other words,</h2>
             <h3><code>font-display</code> overrides default browser rendering strategies of custom type faces</h3>
           </section>
@@ -348,7 +355,7 @@
           <!-- [3.6] - `font-display: swap` -->
           <section>
             <h3><code>font-display: swap;</code></h3>
-            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack, then swaps in custom typeface after it loads</h3>
+            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack<span class="fragment">, then swaps in custom typeface after it loads</span></h3>
           </section>
           <!-- [3.7] - FOIT vs. FOUT -->
           <section data-state="foit-vs-fout centered">
@@ -378,7 +385,7 @@
             <ul>
               <li class="fragment">Text is never blocked from being read</li>
               <li class="fragment">If fonts fail to download, text won't be blocked until the FOIT timeout</li>
-              <li class="fragment">First meaningful paint and Speed Index of a page can be boosted</li>
+              <li class="fragment">First meaningful paint and speed index metrics of a page can be boosted</li>
             </ul>
           </section>
           <!-- [3.9] Improvement stats -->
@@ -469,12 +476,12 @@
             </blockquote>
           </section>
           <!-- [4.3] - In other words -->
-          <section>
+          <section class="statement-slide">
             <h2 class="accent">In other words,</h2>
             <h3><code>rel=preload</code> initiates an early fetch for a resource before the browser knows it even needs it</h3>
           </section>
           <!-- [4.4] - A change of priorities -->
-          <section>
+          <section class="statement-slide">
             <h2><code>rel=preload</code></h2>
             <h2 class="accent">boosts priority</h2>
           </section>
@@ -542,21 +549,48 @@
           </section>
           <!-- [4.9] - Normal downloading of font assets (without `rel=preload`) -->
           <section>
-            <h3>Unassisted font retrieval:</h3>
+            <h3>Normal font retrieval:</h3>
             <picture>
-              <source srcset="/img/waterfall-no-preload-2x.webp 2x, /img/waterfall-no-preload-1x.webp 1x" type="image/webp">
-              <source srcset="/img/waterfall-no-preload-2x.png 2x, /img/waterfall-no-preload-1x.png 1x" type="image/png">
-              <img class="stretch" src="/img/waterfall-no-preload-1x.png" alt="A resource waterfall graph of a page with fonts downloaded in their natural order.">
+              <source srcset="/img/waterfall-no-preload.webp" type="image/webp">
+              <img class="stretch" src="/img/waterfall-no-preload.png" alt="A resource waterfall graph of a page with fonts downloaded in their natural order.">
             </picture>
           </section>
           <!-- [4.10] - Font assets reprioritized (with `rel=preload`) -->
           <section>
             <h3>Reprioritizing with <code>rel=preload</code>:</h3>
             <picture>
-              <source srcset="/img/waterfall-preload-2x.webp 2x, /img/waterfall-preload-1x.webp 1x" type="image/webp">
-              <source srcset="/img/waterfall-preload-2x.png 2x, /img/waterfall-preload-1x.png 1x" type="image/png">
-              <img class="stretch" src="/img/waterfall-preload-1x.png" alt="A resource waterfall graph of a page with fonts effectively reprioritized using `rel=preload`.">
+              <source srcset="/img/waterfall-preload.webp" type="image/webp">
+              <img class="stretch" src="/img/waterfall-preload.png" alt="A resource waterfall graph of a page with fonts effectively reprioritized using `rel=preload`.">
             </picture>
+          </section>
+          <!-- [4.11] - Timeline Comparison -->
+          <section>
+            <h3>Without <code>rel=preload</code> <span style="font-size: .625em;">⤵</span></h3>
+            <div class="scroll-container">
+              <picture class="scroll-container">
+                <source srcset="/img/preload-swap-timeline.webp" type="image/webp">
+                <img width="3310" height="472" src="/img/preload-swap-timeline.png" alt="A comparison of screenshot rolls of a page loading with fonts loading normally vs. loading via `rel=preload`.">
+              </picture>
+            </div>
+            <h3>With <code>rel=preload</code> <span style="font-size: .625em;">⤴</span></h3>
+          </section>
+          <!-- [4.12] - A Few Friendly Reminders -->
+          <section data-state="warning">
+            <h2 class="accent">Friendly reminders:</h2>
+            <ul>
+              <li class="fragment">Omitting the <code>as</code> attribute causes resources to be downloaded twice. Supply a value of <code>font</code> for fonts.</li>
+              <li class="fragment">Supply the resource's content type via the <code>type</code> attribute so browsers don't download resources they can't use.</li>
+              <li class="fragment">You <u>must</u> specify a <code>crossorigin</code> attribute for font resources. <span class="fragment">(<a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements" rel="noopener">Yes, even for fonts on your own server</a>.)</span></li>
+            </ul>
+          </section>
+          <!-- [4.13] - A few more things -->
+          <section data-state="warning">
+            <h2 class="accent">A few more things:</h2>
+            <ul>
+              <li class="fragment">Don't preload things you aren't going to use on the page! <span class="fragment">(Use <code>rel=prefetch</code> for that)</span></li>
+              <li class="fragment">Don't preload everything and the kitchen sink!</li>
+              <li class="fragment">If specifying <code>rel=preload</code> as an HTTP header, use the <code>nopush</code> flag to prevent server pushes you may not want. <span class="fragment">(<a href="https://jakearchibald.com/2017/h2-push-tougher-than-i-thought/" rel="noopener">Server push is kind of tough</a>.)</span></li>
+            </ul>
           </section>
         </section>
         <!-- [5.0] - `Save-Data` -->
@@ -584,7 +618,7 @@
             </blockquote>
           </section>
           <!-- [5.3] - In other words -->
-          <section>
+          <section class="statement-slide">
             <h2 class="accent">In other words,</h2>
             <h3><code>Save-Data</code> is a header sent by clients in a "data saver" mode. <span class="fragment">Applications can deliver less resources if it is present</code>.</h3>
           </section>
@@ -751,6 +785,10 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
             }
           }
         ]});
+
+        Reveal.addEventListener("slidechanged", function(e){
+          Reveal.setState(Reveal.getState());
+        });
 
         Reveal.addEventListener("raccoon", function(){
           document.getElementById("raccoon").play();
