@@ -24,7 +24,8 @@ $headingColor: $white;
 $mainFontSize: 42px;
 $mainFont: "Barlow Semi Condensed", sans-serif;
 $headingFont: "Barlow Semi Condensed", sans-serif;
-$accentFont: "Homemade Apple", cursive;
+//$accentFont: "Homemade Apple", cursive;
+$accentFont: "Seaweed Script", cursive;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -35,7 +36,6 @@ $heading2Size: 1.7639419404em;
 $heading3Size: 1.3475492287em;
 $heading4Size: 1.0294493726em;
 $heading5Size: .7864395513em;
-$heading6Size: .6007941568em;
 
 // Theme template
 @import "../template/theme";
@@ -48,10 +48,6 @@ $heading6Size: .6007941568em;
 
   pre{
     width: 100%;
-  }
-
-  .update{
-    position: fixed;
   }
 
   .slides{
@@ -67,7 +63,6 @@ $heading6Size: .6007941568em;
   section{
     a{
       color: $darkCoral;
-      text-decoration: underline;
 
       &:hover{
         color: $white;
@@ -94,14 +89,11 @@ $heading6Size: .6007941568em;
       font-size: $heading5Size;
     }
 
-    h6{
-      font-size: $heading6Size;
-    }
-
     h1,
     h2,
     h3,
-    h4{
+    h4,
+    h5{
       line-height: 1.2;
       text-align: left;
       font-weight: 400;
@@ -115,10 +107,6 @@ $heading6Size: .6007941568em;
     .accent{
       font-family: $accentFont;
       text-transform: none;
-      color: $darkCoral;
-    }
-
-    .accent-color{
       color: $darkCoral;
     }
 
@@ -198,10 +186,6 @@ $heading6Size: .6007941568em;
     }
   }
 
-  .invisible{
-    visibility: hidden;
-  }
-
   blockquote{
     background: none;
     color: $white;
@@ -245,19 +229,92 @@ $heading6Size: .6007941568em;
       max-width: none;
     }
   }
+
+  .people{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .person{
+    width: 32.6666666667%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+      font-size: .625em;
+      width: calc(100% - 90px);
+      text-align: left;
+    }
+
+    img{
+      border-radius: 50%;
+      box-shadow: .125em .125em .25em darken($darkCoral, 17.5%);
+      width: 75px;
+    }
+  }
 }
 
 body{
   background: $spaceCadet;
 }
 
+.bookend body{
+  background-color: $spaceCadet;
+
+  .accent{
+    color: $white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    color: $white;
+    text-align: center;
+  }
+}
+
+.end-card body{
+  background-image: linear-gradient(-8.4deg, $spaceCadet 0%, lighten($spaceCadet, 30%) 100%);
+
+  .end{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-8.4deg);
+  }
+}
+
 .title-card body{
-  background: url("/img/title-card.svg") $spaceCadet no-repeat;
-  background-size: cover;
+  background-image: url("/img/title-card.svg"), linear-gradient(7.12deg, $spaceCadet 0%, lighten($spaceCadet, 30%) 100%);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .title-container{
+    position: absolute;
+    right: 0;
+    top: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    text-shadow: .25em .25em .625em lighten($spaceCadet, 3.75%);
+  }
 }
 
 .section-slide body{
-  background: $darkCoral;
+  background-color: $darkCoral;
+  background-image: url("/img/jetpack.svg");
+  background-position: bottom 5% right 2.5%;
+  background-repeat: no-repeat;
+  background-size: 18% auto;
 
   .unfocused-heading{
     opacity: 0.25;
@@ -268,21 +325,16 @@ body{
     }
   }
 
+  a{
+    color: $onyx;
+  }
+
   .focused-heading{
     margin: 1.375em 0;
   }
 
   .accent{
     color: $onyx;
-  }
-}
-
-.statement-slide{
-  h1,
-  h2,
-  h3,
-  h4{
-    text-shadow: 1.5em .5em 1em transparentize($darkCoral, .625);
   }
 }
 
@@ -296,14 +348,6 @@ body{
   .accent{
     color: $spaceCadet;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  li{
-    text-shadow: 1.5em .5em 1em transparentize($spaceCadet, .625);
-  }
 }
 
 .blackboard body{
@@ -312,7 +356,8 @@ body{
   h1,
   h2,
   h3,
-  h4{
+  h4,
+  h5{
     color: $white;
 
     & + img{
@@ -334,6 +379,7 @@ body{
   h2,
   h3,
   h4,
+  h5,
   li,
   p{
     text-align: center;

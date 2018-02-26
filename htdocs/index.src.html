@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Faster Fonts for Speed Fanatics</title>
+    <link href="https://fonts.googleapis.com/css?family=Seaweed+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/speed.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -22,92 +23,98 @@
         <!-- [0.0] - Intro -->
         <section>
           <!-- [0.1] - Title Card -->
-          <section data-state="title-card">
+          <section data-state="bookend title-card">
+            <div class="title-container">
+              <h1 class="accent">Faster Fonts</h1>
+              <h3 class="accent">&mdash; for &mdash;</h3>
+              <h1 class="accent">Speed Fanatics</h1>
+              <h5>Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" rel="noopener">@malchata</a></h5>
+            </div>
           </section>
         </section>
         <!-- [1.0] - How Browsers Render Fonts -->
         <section>
           <!-- [1.1] - How Browsers Render Fonts -->
           <section data-state="section-slide">
-            <div class="unfocused-heading invisible">
+            <div class="unfocused-heading">
               <h4>&nbsp;</h4>
-              <h4 class="accent">&nbsp;</h4>
+              <h3 class="accent">&nbsp;</h3>
             </div>
             <div class="focused-heading">
               <h2>How browsers</h2>
-              <h2 class="accent">render fonts</h2>
+              <h1 class="accent">render fonts</h1>
             </div>
             <div class="unfocused-heading">
               <h4>Host your own fonts</h4>
-              <h4 class="accent">for performance</h4>
+              <h3 class="accent">for performance</h3>
             </div>
           </section>
           <!-- [1.2] - The truth about font rendering -->
           <section class="statement-slide">
-            <h2>Fonts load differently than</h2>
-            <h2 class="accent">other resources do</h2>
+            <h2>Fonts load differently</h2>
+            <h1 class="accent">than other resources do</h1>
           </section>
           <!-- [1.3] - A story about resource loading -->
           <section data-state="blackboard centered">
             <h2>A quick recap of</h2>
-            <h2 class="accent">resource loading</h2>
+            <h1 class="accent">resource loading</h1>
           </section>
           <!-- [1.4] - Meet the crew -->
           <section data-state="blackboard centered">
-            <h2 class="accent">meet the crew</h2>
+            <h1 class="accent">meet the crew</h1>
           </section>
           <!-- [1.5] - Web server -->
           <section data-state="blackboard centered">
             <img src="/img/server.svg" alt="A cartoony drawing of a web server.">
-            <h3 class="accent">server</h3>
+            <h2 class="accent">server</h2>
           </section>
           <!-- [1.6] - Browser -->
           <section data-state="blackboard centered">
             <img src="/img/browser.svg" alt="A cartoony drawing of a browser.">
-            <h3 class="accent">browser</h3>
+            <h2 class="accent">browser</h2>
           </section>
           <!-- [1.7] - Resource -->
           <section data-state="blackboard centered">
             <img src="/img/resource.svg" alt="A cartoony drawing of a page resource.">
-            <h3 class="accent">resource</h3>
+            <h2 class="accent">resource</h2>
           </section>
           <!-- [1.8] - Witness the action -->
           <section data-state="blackboard centered">
-            <h2 class="accent">witness the action</h2>
+            <h1 class="accent">witness the action</h1>
           </section>
           <!-- [1.9] - The browser requests a resource -->
           <section data-state="blackboard centered">
             <img src="/img/request.svg" alt="A cartoony drawing of a browser requesting a resource.">
-            <h3 class="accent">request</h3>
+            <h2 class="accent">request</h2>
           </section>
           <!-- [1.10] - Server responds -->
           <section data-state="blackboard centered">
             <img src="/img/response.svg" alt="A cartoony drawing of a web server sending a response.">
-            <h3 class="accent">response</h3>
+            <h2 class="accent">response</h2>
           </section>
           <!-- [1.11] - Intermission -->
           <section data-state="blackboard centered">
             <h2>render blocking</h2>
-            <h3 class="accent">in progress</h3>
+            <h1 class="accent">in progress...</h1>
           </section>
           <!-- [1.12] - The page begins painting -->
           <section data-state="blackboard centered">
               <img src="/img/paint.svg" alt="A cartoony drawing of a browser holding up a paint brush.">
-              <h3 class="accent">render</h3>
+              <h2 class="accent">render</h2>
           </section>
           <!-- [1.13] - Rendering block is a matter of priorities -->
           <section class="statement-slide">
             <h2>Render blocking is</h2>
-            <h2 class="accent">all about priorities</h2>
+            <h1 class="accent">all about priorities</h1>
           </section>
           <!-- [1.14] - Browser speculate about fonts -->
           <section class="statement-slide">
             <h2>When it comes to fonts</h2>
-            <h2 class="accent">browsers speculate</h2>
+            <h1 class="accent">browsers speculate</h1>
           </section>
           <!-- [1.15] - The font loading process -->
           <section data-state="blackboard centered">
-            <h3 class="accent">The font loading process</h3>
+            <h1 class="accent">The font loading process</h1>
             <img class="stretch diagram" src="/img/font-loading.svg" alt="A rather complex diagram of how font loading works.">
           </section>
           <!-- [1.16] - Font loading in pictures (Pt. I) -->
@@ -140,7 +147,7 @@
           <!-- [1.19] - Web fonts are ripe for fine-tuning -->
           <section class="statement-slide">
             <h2>Web fonts are ripe for</h2>
-            <h2 class="accent">performance tuning</h2>
+            <h1 class="accent">performance tuning</h1>
           </section>
         </section>
         <!-- [2.0] - Hosting your own fonts-->
@@ -149,15 +156,15 @@
           <section data-state="section-slide">
             <div class="unfocused-heading">
               <h4>How browsers</h4>
-              <h4 class="accent">render fonts</h4>
+              <h3 class="accent">render fonts</h3>
             </div>
             <div class="focused-heading">
-              <h2>Host fonts on</h2>
-              <h2 class="accent">your own server</h2>
+              <h2>Host fonts</h2>
+              <h1 class="accent">on your own server</h1>
             </div>
             <div class="unfocused-heading">
               <h4><code>font-display</code></h4>
-              <h4 class="accent">for rendering control</h4>
+              <h3 class="accent">for rendering control</h3>
             </div>
           </section>
           <!-- [2.2] - What we usually do -->
@@ -167,16 +174,17 @@
               <source src="/video/raccoon.mp4" type="video/mp4">
               <source src="/video/raccoon.ogv" type="video/ogg">
             </video>
+            <h3>What we often do</h3>
           </section>
           <!-- [2.3] - Hosting your own fonts can offer better performance -->
           <section class="statement-slide">
               <h2>Host your own fonts</h2>
-              <h2 class="accent">for performance</h2>
+              <h1 class="accent">for performance</h1>
           </section>
           <!-- [2.4] - Less cross-origin requests can mean less latency -->
           <section class="statement-slide">
             <h2>Less hosts means</h2>
-            <h2 class="accent">less latency</h2>
+            <h1 class="accent">less latency</h1>
           </section>
           <!-- [2.5] - Cross-origin font requests -->
           <section>
@@ -186,7 +194,7 @@
               <img class="stretch" src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross-origin font requests.">
             </picture>
             <h3>Speed Index: 3,798</h3>
-            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
+            <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
           </section>
           <!-- [2.6] - Same-origin font requests -->
           <section>
@@ -196,12 +204,12 @@
               <img class="stretch" src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing reducing latency with same origin font requests.">
             </picture>
             <h3>Speed Index: 2,474 <span class="fragment">(~35% improvement)</span></h3>
-            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
+            <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
           </section>
           <!-- [2.7] - If you can't host your own fonts, use `rel=preconnect` -->
           <section class="statement-slide">
             <h2>try <code>rel=preconnect</code> when hosting your own fonts</h2>
-            <h2 class="accent">just isn't doable</h2>
+            <h1 class="accent">just isn't doable</h1>
           </section>
           <!-- [2.8] - Using `rel=preconnect` -->
           <section>
@@ -223,7 +231,7 @@
               <img src="/img/no-preconnect.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
             </picture>
             <h3>Speed Index: 3,877</h3>
-            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
+            <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
           </section>
           <!-- [2.10] - With `rel=preconnect` -->
           <section>
@@ -233,12 +241,12 @@
               <img src="/img/preconnect.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
             </picture>
             <h3>Speed Index: 3,619 <span class="fragment">(~7% improvement)</span></h3>
-            <h6>(WebPagetest, Slow 3G, Dulles, VA, Motorola G (Gen4)</h6>
+            <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
           </section>
           <!-- [2.11] - Friendly reminder: `crossorigin` is weird -->
           <section data-state="warning">
-            <h2 class="accent">Friendly reminder:</h2>
-            <h3>Don't forget about the <code>crossorigin</code> attribute!</h3>
+            <h1 class="accent">Friendly reminder:</h1>
+            <h3>Don't forget about <code>crossorigin</code></h3>
           </section>
           <!-- [2.12] - `rel=preconnect` Support -->
           <section>
@@ -255,12 +263,12 @@
               Browser doesn't support<br>
               <code>rel=preconnect</code>?
             </h2>
-            <h2 class="accent fragment">nothing bad will happen <span class="fragment">(promise)</span></h2>
+            <h1 class="accent fragment">nothing bad will happen</h1>
           </section>
           <!-- [2.14] - `rel=dns-prefetch` is also an option -->
           <section class="statement-slide">
             <h2><code>rel=dns-prefetch</code></h2>
-            <h2 class="accent">is also an option</h2>
+            <h1 class="accent">is also an option</h1>
           </section>
           <!-- [2.15] - `rel=dns-prefetch` is an option, too! -->
           <section>
@@ -286,7 +294,7 @@
           <!-- [2.17] - Hosting your own fonts offers more control -->
           <section class="statement-slide">
               <h2>Hosting your own fonts</h2>
-              <h2 class="accent">offers more control</h2>
+              <h1 class="accent">offers more control</h1>
           </section>
           <!-- [2.18] - What you retain control of when you host your own fonts -->
           <section>
@@ -301,7 +309,7 @@
           </section>
           <!-- [2.19] - Friendly reminder: Mind licensing agreements -->
           <section data-state="warning">
-            <h2 class="accent">Friendly reminder:</h2>
+            <h1 class="accent">Friendly reminder:</h1>
             <h3>mind the licensing agreements!</h3>
           </section>
         </section>
@@ -311,15 +319,15 @@
           <section data-state="section-slide">
             <div class="unfocused-heading">
               <h4>Host fonts on</h4>
-              <h4 class="accent">your own server</h4>
+              <h3 class="accent">on your own server</h3>
             </div>
             <div class="focused-heading">
               <h2><code>font-display</code></h2>
-              <h2 class="accent">for rendering control</h2>
+              <h1 class="accent">for rendering control</h1>
             </div>
             <div class="unfocused-heading">
               <h4><code>rel=preload</code></h4>
-              <h4 class="accent">for faster font loading</h4>
+              <h3 class="accent">for faster font loading</h3>
             </div>
           </section>
           <!-- [3.2] - What does `font-display` do? -->
@@ -331,7 +339,7 @@
           </section>
           <!-- [3.3] - `font-display` overrides default browser rendering strategies of custom type faces -->
           <section class="statement-slide">
-            <h2 class="accent">In other words,</h2>
+            <h1 class="accent">In other words,</h1>
             <h3><code>font-display</code> overrides default browser rendering strategies of custom type faces</h3>
           </section>
           <!-- [3.4] - Quick `font-display` example -->
@@ -359,7 +367,6 @@
           </section>
           <!-- [3.7] - FOIT vs. FOUT -->
           <section data-state="foit-vs-fout centered">
-            <h2>FOIT <span class="accent">versus</span> FOUT</h2>
             <div class="flex-item-container">
               <div>
                 <video muted loop id="foit">
@@ -381,7 +388,7 @@
           </section>
           <!-- [3.8] - Embrace the FOUT -->
           <section>
-            <h2>Embrace the FOUT</h2>
+            <h2>Embrace the Flash of Unstyled Text</h2>
             <ul>
               <li class="fragment">Text is never blocked from being read</li>
               <li class="fragment">If fonts fail to download, text won't be blocked until the FOIT timeout</li>
@@ -431,6 +438,7 @@
               <source src="/video/font-style-matcher.mp4" type="video/mp4">
             </video>
             <h3><a href="https://meowni.ca/font-style-matcher/" rel="noopener">meowni.ca/font-style-matcher</a></h3>
+            <h5>by <a href="https://twitter.com/notwaldorf" rel="noopener">Monica Dinculescu</a></h5>
           </section>
           <!-- [3.12] - `font-display: optional` -->
           <section>
@@ -450,6 +458,23 @@
             </picture>
             <h3><a href="https://css-tricks.com/font-display-masses/" rel="noopener">css-tricks.com/font-display-masses</a></h3>
           </section>
+          <!-- [3.14] - `font-display` support -->
+          <section>
+            <h3><code>font-display</code> support:</h3>
+            <picture>
+              <source srcset="/img/font-display-support-2x.webp 2x, /img/font-display-support-1x.webp 1x" type="image/webp">
+              <source srcset="/img/font-display-support-2x.png 2x, /img/font-display-support-1x.png 1x" type="image/png">
+              <img src="/img/font-display-support-1x.png" alt="Browser suppport matrix for `font-display` on caniuse.com">
+            </picture>
+          </section>
+          <!-- [3.15] - Nothing bad will happen -->
+          <section class="statement-slide">
+            <h2>
+              Browser doesn't support<br>
+              <code>font-display</code>?
+            </h2>
+            <h1 class="accent fragment">nothing bad will happen</h1>
+          </section>
         </section>
         <!-- [4.0] - `rel=preload` -->
         <section>
@@ -457,15 +482,15 @@
           <section data-state="section-slide">
             <div class="unfocused-heading">
               <h4><code>font-display</code></h4>
-              <h4 class="accent">for rendering control</h4>
+              <h3 class="accent">for rendering control</h3>
             </div>
             <div class="focused-heading">
               <h2><code>rel=preload</code></h2>
-              <h2 class="accent">for faster font loading</h2>
+              <h1 class="accent">for faster font loading</h1>
             </div>
             <div class="unfocused-heading">
-              <h4><code>Save-Data</code> and</h4>
-              <h4 class="accent">skip unnecessary fonts</h4>
+              <h4><code>Save-Data</code></h4>
+              <h3 class="accent">and skip unnecessary fonts</h3>
             </div>
           </section>
           <!-- [4.2] - What is `rel=preload`? -->
@@ -477,13 +502,13 @@
           </section>
           <!-- [4.3] - In other words -->
           <section class="statement-slide">
-            <h2 class="accent">In other words,</h2>
+            <h1 class="accent">In other words,</h1>
             <h3><code>rel=preload</code> initiates an early fetch for a resource before the browser knows it even needs it</h3>
           </section>
           <!-- [4.4] - A change of priorities -->
           <section class="statement-slide">
             <h2><code>rel=preload</code></h2>
-            <h2 class="accent">boosts priority</h2>
+            <h1 class="accent">boosts priority</h1>
           </section>
           <!-- [4.5] - Reprioritized assets -->
           <section>
@@ -554,6 +579,7 @@
               <source srcset="/img/waterfall-no-preload.webp" type="image/webp">
               <img class="stretch" src="/img/waterfall-no-preload.png" alt="A resource waterfall graph of a page with fonts downloaded in their natural order.">
             </picture>
+            <h5>WebPagetest: 2G. Mumbai. Emulated Motorola G (Gen1)</h5>
           </section>
           <!-- [4.10] - Font assets reprioritized (with `rel=preload`) -->
           <section>
@@ -562,6 +588,7 @@
               <source srcset="/img/waterfall-preload.webp" type="image/webp">
               <img class="stretch" src="/img/waterfall-preload.png" alt="A resource waterfall graph of a page with fonts effectively reprioritized using `rel=preload`.">
             </picture>
+            <h5>WebPagetest: 2G. Mumbai. Emulated Motorola G (Gen1)</h5>
           </section>
           <!-- [4.11] - Timeline Comparison -->
           <section>
@@ -576,7 +603,7 @@
           </section>
           <!-- [4.12] - A Few Friendly Reminders -->
           <section data-state="warning">
-            <h2 class="accent">Friendly reminders:</h2>
+            <h1 class="accent">Friendly reminders:</h1>
             <ul>
               <li class="fragment">Omitting the <code>as</code> attribute causes resources to be downloaded twice. Supply a value of <code>font</code> for fonts.</li>
               <li class="fragment">Supply the resource's content type via the <code>type</code> attribute so browsers don't download resources they can't use.</li>
@@ -585,7 +612,7 @@
           </section>
           <!-- [4.13] - A few more things -->
           <section data-state="warning">
-            <h2 class="accent">A few more things:</h2>
+            <h1 class="accent">A few more things:</h1>
             <ul>
               <li class="fragment">Don't preload things you aren't going to use on the page! <span class="fragment">(Use <code>rel=prefetch</code> for that)</span></li>
               <li class="fragment">Don't preload everything and the kitchen sink!</li>
@@ -599,15 +626,15 @@
           <section data-state="section-slide">
             <div class="unfocused-heading">
               <h4><code>rel=preload</code></h4>
-              <h4 class="accent">for faster font loading</h4>
+              <h3 class="accent">for faster font loading</h3>
             </div>
             <div class="focused-heading">
-              <h2><code>Save-Data</code> and</h2>
-              <h2 class="accent">skip unnecessary fonts</h2>
+              <h2><code>Save-Data</code></h2>
+              <h1 class="accent">and skip unnecessary fonts</h1>
             </div>
-            <div class="unfocused-heading invisible">
-              <h4>&nbsp;</h4>
-              <h4 class="accent">&nbsp;</h4>
+            <div class="unfocused-heading">
+              <h4>Time to</h4>
+              <h3 class="accent">wrap it up</h3>
             </div>
           </section>
           <!-- [5.2] - What is `Save-Data`? -->
@@ -619,7 +646,7 @@
           </section>
           <!-- [5.3] - In other words -->
           <section class="statement-slide">
-            <h2 class="accent">In other words,</h2>
+            <h1 class="accent">In other words,</h1>
             <h3><code>Save-Data</code> is a header sent by clients in a "data saver" mode. <span class="fragment">Applications can deliver less resources if it is present</code>.</h3>
           </section>
           <!-- [5.4] - How `Save-Data` works (Pt. I) -->
@@ -688,13 +715,24 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
     }
   &lt;/style&gt;
 &lt;?php } ?&gt;</code></pre>
-            <h3>(Method 1)</h3>
           </section>
           <!-- [5.9] - Conditionally serve `@font-faces` (Method 2) -->
           <section>
             <h2>Conditionally serve fonts:</h2>
-            <!-- // TODO -->
-            <h3>(Method 2)</h3>
+            <h3>HTML/PHP:</h3>
+            <pre><code class="php">&lt;html class=&quot;&lt;?php if($saveData === true) : echo(&quot;save-data&quot;); endif; ?&gt;&quot;&gt;</code></pre>
+            <div class="fragment">
+              <h3>CSS:</h3>
+              <pre><code class="css">/* Normal conditions */
+  h1, h2, h3, p{
+    font-family: "Sooo Important Sans", "Helvetica", sans-serif;
+  }
+
+  /* `Save-Data` enabled: */
+  .save-data h1, .save-data h2, .save-data h3, .save-data p{
+    font-family: "Helvetica", serif;
+  }</code></pre>
+            </div>
           </section>
           <!-- [5.10] - `Save-Data` kicks in -->
           <section>
@@ -753,12 +791,76 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
         <!-- [6.0] - Closing -->
         <section>
           <!-- [6.1] - Wrap it up -->
-          <section data-state="wrap-it-up centered">
-            <video class="stretch" muted id="wrap-it-up">
-              <source src="/video/wrap-it-up.webm" type="video/webm">
-              <source src="/video/wrap-it-up.mp4" type="video/mp4">
-              <source src="/video/wrap-it-up.ogv" type="video/ogg">
-            </video>
+          <section data-state="section-slide">
+            <div class="unfocused-heading">
+              <h4><code>Save-Data</code></h4>
+              <h3 class="accent">and skip unnecessary fonts</h3>
+            </div>
+            <div class="focused-heading">
+              <h2>Time to</h2>
+              <h1 class="accent">wrap it up</h1>
+            </div>
+            <div class="unfocused-heading">
+              <h4>&nbsp;</h4>
+              <h3 class="accent">&nbsp;</h3>
+            </div>
+          </section>
+          <!-- [6.2] - Thanks to these fine people -->
+          <section data-state="section-slide centered">
+            <h1 class="accent">Thanks to these fine people:</h1>
+            <div class="people">
+              <div class="person">
+                <img src="/img/people/ben-schwarz.jpg" alt="Ben Schwarz">
+                <p>
+                  Ben Schwarz<br>
+                  <a href="https://twitter.com/benschwarz" rel="noopener">@benschwarz</a>
+                </p>
+              </div>
+              <div class="person">
+                <img src="/img/people/karolina-szczur.jpg" alt="Karolina Szczur">
+                <p>
+                  Karolina Szczur<br>
+                  <a href="https://twitter.com/fox" rel="noopener">@fox</a>
+                </p>
+              </div>
+              <div class="person">
+                <img src="/img/people/zach-leatherman.jpg" alt="Zach Leatherman">
+                <p>
+                  Zach Leatherman<br>
+                  <a href="https://twitter.com/zachleat" rel="noopener">@zachleat</a>
+                </p>
+              </div>
+              <div class="person">
+                <img src="/img/people/addy-osmani.jpg" alt="Addy Osmani">
+                <p>
+                  Addy Osmani<br>
+                  <a href="https://twitter.com/addyosmani" rel="noopener">@addyosmani</a>
+                </p>
+              </div>
+              <div class="person">
+                <img src="/img/people/monica-dinculescu.jpg" alt="Monica Dinculescu">
+                <p>
+                  Monica Dinculescu<br>
+                  <a href="https://twitter.com/notwaldorf" rel="noopener">@notwaldorf</a>
+                </p>
+              </div>
+              <div class="person">
+                <img src="/img/people/ilya-grigorik.jpg" alt="Ilya Grigorik">
+                <p>
+                  Ilya Grigorik<br>
+                  <a href="https://twitter.com/igrigorik" rel="noopener">@igrigorik</a>
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- [6.3] - ...and thank you! -->
+          <section data-state="section-slide centered">
+            <h1 class="accent">...and thank you!</h1>
+          </section>
+          <!-- [6.4] - End -->
+          <section data-state="bookend end-card centered">
+            <img class="stretch" src="/img/end-card.svg" alt="A man flying through the sky on a jet pack.">
+            <h1 class="accent end">End</h1>
           </section>
         </section>
       </div>
@@ -801,10 +903,6 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
         Reveal.addEventListener("foit-vs-fout", function(){
           document.getElementById("foit").play();
           document.getElementById("fout").play();
-        });
-
-        Reveal.addEventListener("wrap-it-up", function(){
-          document.getElementById("wrap-it-up").play();
         });
     </script>
     <script src="/js/jquery.js"></script>
