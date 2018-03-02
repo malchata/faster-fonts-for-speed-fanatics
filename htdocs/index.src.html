@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, nocache">
     <title>Faster Fonts for Speed Fanatics</title>
-    <link href="https://fonts.googleapis.com/css?family=Seaweed+Script" rel="stylesheet">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/speed.css">
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -25,10 +25,10 @@
           <!-- [0.1] - Title Card -->
           <section data-state="bookend title-card">
             <div class="title-container">
-              <h1 class="accent">Faster Fonts</h1>
+              <h2 class="accent">Faster Fonts</h2>
               <h3 class="accent">&mdash; for &mdash;</h3>
-              <h1 class="accent">Speed Fanatics</h1>
-              <h5>Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" rel="noopener">@malchata</a></h5>
+              <h2 class="accent">Speed Fanatics</h2>
+              <h5><br>Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" rel="noopener">@malchata</a></h5>
             </div>
           </section>
         </section>
@@ -45,16 +45,16 @@
               <h1 class="accent">render fonts</h1>
             </div>
             <div class="unfocused-heading">
-              <h4>Host your own fonts</h4>
-              <h3 class="accent">for performance</h3>
+              <h4>Host fonts</h4>
+              <h3 class="accent">on your own server</h3>
             </div>
           </section>
-          <!-- [1.2] - The truth about font rendering -->
+          <!-- [1.2] - Fonts load differently than other resources -->
           <section class="statement-slide">
-            <h2>Fonts load differently</h2>
-            <h1 class="accent">than other resources do</h1>
+            <h2>Fonts load differently than</h2>
+            <h1 class="accent">other resources</h1>
           </section>
-          <!-- [1.3] - A story about resource loading -->
+          <!-- [1.3] - A quick recap of resource loading -->
           <section data-state="blackboard centered">
             <h2>A quick recap of</h2>
             <h1 class="accent">resource loading</h1>
@@ -65,17 +65,17 @@
           </section>
           <!-- [1.5] - Web server -->
           <section data-state="blackboard centered">
-            <img src="/img/server.svg" alt="A cartoony drawing of a web server.">
+            <img src="img/server.svg" alt="A cartoony drawing of a web server.">
             <h2 class="accent">server</h2>
           </section>
           <!-- [1.6] - Browser -->
           <section data-state="blackboard centered">
-            <img src="/img/browser.svg" alt="A cartoony drawing of a browser.">
+            <img src="img/browser.svg" alt="A cartoony drawing of a browser.">
             <h2 class="accent">browser</h2>
           </section>
           <!-- [1.7] - Resource -->
           <section data-state="blackboard centered">
-            <img src="/img/resource.svg" alt="A cartoony drawing of a page resource.">
+            <img src="img/resource.svg" alt="A cartoony drawing of a page resource.">
             <h2 class="accent">resource</h2>
           </section>
           <!-- [1.8] - Witness the action -->
@@ -84,12 +84,12 @@
           </section>
           <!-- [1.9] - The browser requests a resource -->
           <section data-state="blackboard centered">
-            <img src="/img/request.svg" alt="A cartoony drawing of a browser requesting a resource.">
+            <img src="img/request.svg" alt="A cartoony drawing of a browser requesting a resource.">
             <h2 class="accent">request</h2>
           </section>
           <!-- [1.10] - Server responds -->
           <section data-state="blackboard centered">
-            <img src="/img/response.svg" alt="A cartoony drawing of a web server sending a response.">
+            <img src="img/response.svg" alt="A cartoony drawing of a web server sending a response.">
             <h2 class="accent">response</h2>
           </section>
           <!-- [1.11] - Intermission -->
@@ -99,7 +99,7 @@
           </section>
           <!-- [1.12] - The page begins painting -->
           <section data-state="blackboard centered">
-              <img src="/img/paint.svg" alt="A cartoony drawing of a browser holding up a paint brush.">
+              <img src="img/paint.svg" alt="A cartoony drawing of a browser holding up a paint brush.">
               <h2 class="accent">render</h2>
           </section>
           <!-- [1.13] - Rendering block is a matter of priorities -->
@@ -114,15 +114,15 @@
           </section>
           <!-- [1.15] - The font loading process -->
           <section data-state="blackboard centered">
-            <h1 class="accent">The font loading process</h1>
-            <img class="stretch diagram" src="/img/font-loading.svg" alt="A rather complex diagram of how font loading works.">
+            <h2 class="accent">The font loading process</h2>
+            <img class="stretch diagram" src="img/font-loading.svg" alt="A rather complex diagram of how font loading works.">
           </section>
           <!-- [1.16] - Font loading in pictures (Pt. I) -->
           <section>
             <h2>Font loading in pictures:</h2>
             <picture>
-              <source srcset="/img/font-loading-01.webp" type="image/webp">
-              <img src="/img/font-loading-01.jpg" alt="A web browser loading fonts on a page, with no text visible yet.">
+              <source srcset="img/font-loading-01.webp" type="image/webp">
+              <img src="img/font-loading-01.jpg" alt="A web browser loading fonts on a page, with no text visible yet.">
             </picture>
             <h3>1.89 s</h3>
           </section>
@@ -130,8 +130,8 @@
           <section>
             <h2>Font loading in pictures:</h2>
             <picture>
-              <source srcset="/img/font-loading-02.webp" type="image/webp">
-              <img src="/img/font-loading-02.jpg" alt="A web browser loading fonts on a page, with only heading text visible (but not body copy).">
+              <source srcset="img/font-loading-02.webp" type="image/webp">
+              <img src="img/font-loading-02.jpg" alt="A web browser loading fonts on a page, with only heading text visible (but not body copy).">
             </picture>
             <h3>2.31 s</h3>
           </section>
@@ -139,8 +139,8 @@
           <section>
             <h2>Font loading in pictures:</h2>
             <picture>
-              <source srcset="/img/font-loading-03.webp" type="image/webp">
-              <img src="/img/font-loading-03.jpg" alt="A web browser after loading all fonts on a page, with all text now visible.">
+              <source srcset="img/font-loading-03.webp" type="image/webp">
+              <img src="img/font-loading-03.jpg" alt="A web browser after loading all fonts on a page, with all text now visible.">
             </picture>
             <h3>2.42 s</h3>
           </section>
@@ -163,16 +163,16 @@
               <h1 class="accent">on your own server</h1>
             </div>
             <div class="unfocused-heading">
-              <h4><code>font-display</code></h4>
-              <h3 class="accent">for rendering control</h3>
+              <h4><code>font-display</code> for better</h4>
+              <h3 class="accent">rendering control</h3>
             </div>
           </section>
           <!-- [2.2] - What we usually do -->
           <section data-state="raccoon centered">
             <video muted id="raccoon">
-              <source src="/video/raccoon.webm" type="video/webm">
-              <source src="/video/raccoon.mp4" type="video/mp4">
-              <source src="/video/raccoon.ogv" type="video/ogg">
+              <source src="video/raccoon.webm" type="video/webm">
+              <source src="video/raccoon.mp4" type="video/mp4">
+              <source src="video/raccoon.ogv" type="video/ogg">
             </video>
             <h3>What we often do</h3>
           </section>
@@ -190,8 +190,8 @@
           <section>
             <h2>Cross-origin fonts:</h2>
             <picture>
-              <source srcset="/img/cross-origin-fonts.webp" type="image/webp">
-              <img class="stretch" src="/img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross-origin font requests.">
+              <source srcset="img/cross-origin-fonts.webp" type="image/webp">
+              <img class="stretch" src="img/cross-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing the latency involved with cross-origin font requests.">
             </picture>
             <h3>Speed Index: 3,798</h3>
             <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
@@ -200,8 +200,8 @@
           <section>
             <h2>Same-origin fonts:</h2>
             <picture>
-              <source srcset="/img/same-origin-fonts.webp" type="image/webp">
-              <img class="stretch" src="/img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing reducing latency with same origin font requests.">
+              <source srcset="img/same-origin-fonts.webp" type="image/webp">
+              <img class="stretch" src="img/same-origin-fonts.png" alt="A waterfall chart in Chrome dev tools showing reducing latency with same origin font requests.">
             </picture>
             <h3>Speed Index: 2,474 <span class="fragment">(~35% improvement)</span></h3>
             <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
@@ -227,8 +227,8 @@
           <section>
             <h2>Without <code>rel=preconnect</code>:</h2>
             <picture>
-              <source srcset="/img/no-preconnect.webp" type="image/webp">
-              <img src="/img/no-preconnect.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
+              <source srcset="img/no-preconnect.webp" type="image/webp">
+              <img src="img/no-preconnect.png" alt="A browser trace showing increased latency for font requests without `rel=preconnect` in use.">
             </picture>
             <h3>Speed Index: 3,877</h3>
             <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
@@ -237,8 +237,8 @@
           <section>
             <h2>With <code>rel=preconnect</code>:</h2>
             <picture>
-              <source srcset="/img/preconnect.webp" type="image/webp">
-              <img src="/img/preconnect.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
+              <source srcset="img/preconnect.webp" type="image/webp">
+              <img src="img/preconnect.png" alt="A browser trace showing decreased latency for font requests without `rel=preconnect` in use.">
             </picture>
             <h3>Speed Index: 3,619 <span class="fragment">(~7% improvement)</span></h3>
             <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
@@ -252,9 +252,9 @@
           <section>
             <h3><code>rel=preconnect</code> support:</h3>
             <picture>
-              <source srcset="/img/preconnect-support-2x.webp 2x, /img/preconnect-support-1x.webp 1x" type="image/webp">
-              <source srcset="/img/preconnect-support-2x.png 2x, /img/preconnect-support-1x.png 1x" type="image/png">
-              <img src="/img/preconnect-support-1x.png" alt="Browser suppport matrix for rel=preconnect on caniuse.com">
+              <source srcset="img/preconnect-support-2x.webp 2x, img/preconnect-support-1x.webp 1x" type="image/webp">
+              <source srcset="img/preconnect-support-2x.png 2x, img/preconnect-support-1x.png 1x" type="image/png">
+              <img src="img/preconnect-support-1x.png" alt="Browser suppport matrix for rel=preconnect on caniuse.com">
             </picture>
           </section>
           <!-- [2.13] - Nothing bad will happen -->
@@ -263,7 +263,7 @@
               Browser doesn't support<br>
               <code>rel=preconnect</code>?
             </h2>
-            <h1 class="accent fragment">nothing bad will happen</h1>
+            <h1 class="accent fragment">nothing bad is going to happen</h1>
           </section>
           <!-- [2.14] - `rel=dns-prefetch` is also an option -->
           <section class="statement-slide">
@@ -286,15 +286,15 @@
           <section>
             <h3><code>rel=dns-prefetch</code> support:</h3>
             <picture>
-              <source srcset="/img/dns-prefetch-support-2x.webp 2x, /img/dns-prefetch-support-1x.webp 1x" type="image/webp">
-              <source srcset="/img/dns-prefetch-support-2x.png 2x, /img/dns-prefetch-support-1x.png 1x" type="image/png">
-              <img src="/img/dns-prefetch-support-1x.png" alt="Browser suppport matrix for rel=dns-prefetch on caniuse.com">
+              <source srcset="img/dns-prefetch-support-2x.webp 2x, img/dns-prefetch-support-1x.webp 1x" type="image/webp">
+              <source srcset="img/dns-prefetch-support-2x.png 2x, img/dns-prefetch-support-1x.png 1x" type="image/png">
+              <img src="img/dns-prefetch-support-1x.png" alt="Browser suppport matrix for rel=dns-prefetch on caniuse.com">
             </picture>
           </section>
-          <!-- [2.17] - Hosting your own fonts offers more control -->
+          <!-- [2.17] - Hosting your own fonts gives you more control -->
           <section class="statement-slide">
               <h2>Hosting your own fonts</h2>
-              <h1 class="accent">offers more control</h1>
+              <h1 class="accent">gives you control</h1>
           </section>
           <!-- [2.18] - What you retain control of when you host your own fonts -->
           <section>
@@ -322,12 +322,12 @@
               <h3 class="accent">on your own server</h3>
             </div>
             <div class="focused-heading">
-              <h2><code>font-display</code></h2>
-              <h1 class="accent">for rendering control</h1>
+              <h2><code>font-display</code> for better</h2>
+              <h1 class="accent">rendering control</h1>
             </div>
             <div class="unfocused-heading">
-              <h4><code>rel=preload</code></h4>
-              <h3 class="accent">for faster font loading</h3>
+              <h4><code>rel=preload</code> for</h4>
+              <h3 class="accent">faster font loading</h3>
             </div>
           </section>
           <!-- [3.2] - What does `font-display` do? -->
@@ -370,17 +370,17 @@
             <div class="flex-item-container">
               <div>
                 <video muted loop id="foit">
-                  <source src="/video/foit.webm" type="video/webm">
-                  <source src="/video/foit.mp4" type="video/mp4">
-                  <source src="/video/foit.ogv" type="video/ogg">
+                  <source src="video/foit.webm" type="video/webm">
+                  <source src="video/foit.mp4" type="video/mp4">
+                  <source src="video/foit.ogv" type="video/ogg">
                 </video>
                 <h3>FOIT</h3>
               </div>
               <div>
                 <video muted loop id="fout">
-                  <source src="/video/fout.webm" type="video/webm">
-                  <source src="/video/fout.mp4" type="video/mp4">
-                  <source src="/video/fout.ogv" type="video/ogg">
+                  <source src="video/fout.webm" type="video/webm">
+                  <source src="video/fout.mp4" type="video/mp4">
+                  <source src="video/fout.ogv" type="video/ogg">
                 </video>
                 <h3>FOUT</h3>
               </div>
@@ -433,9 +433,9 @@
           <!-- [3.11] - Font style matcher -->
           <section data-state="font-style-matcher centered">
             <video muted loop id="font-style-matcher">
-              <source src="/video/font-style-matcher.webm" type="video/webm">
-              <source src="/video/font-style-matcher.ogv" type="video/ogg">
-              <source src="/video/font-style-matcher.mp4" type="video/mp4">
+              <source src="video/font-style-matcher.webm" type="video/webm">
+              <source src="video/font-style-matcher.ogv" type="video/ogg">
+              <source src="video/font-style-matcher.mp4" type="video/mp4">
             </video>
             <h3><a href="https://meowni.ca/font-style-matcher/" rel="noopener">meowni.ca/font-style-matcher</a></h3>
             <h5>by <a href="https://twitter.com/notwaldorf" rel="noopener">Monica Dinculescu</a></h5>
@@ -452,9 +452,9 @@
               <code>font-display</code> on the web:
             </h2>
             <picture>
-              <source srcset="/img/css-tricks-font-display-2x.webp 2x, /img/css-tricks-font-display-1x.webp 1x" type="image/webp">
-              <source srcset="/img/css-tricks-font-display-2x.png 2x, /img/css-tricks-font-display-1x.png 1x" type="image/png">
-              <img src="/img/css-tricks-font-display-1x.png" alt="Screenshot of CSS-Tricks `font-display` article in the browser.">
+              <source srcset="img/css-tricks-font-display-2x.webp 2x, img/css-tricks-font-display-1x.webp 1x" type="image/webp">
+              <source srcset="img/css-tricks-font-display-2x.png 2x, img/css-tricks-font-display-1x.png 1x" type="image/png">
+              <img src="img/css-tricks-font-display-1x.png" alt="Screenshot of CSS-Tricks `font-display` article in the browser.">
             </picture>
             <h3><a href="https://css-tricks.com/font-display-masses/" rel="noopener">css-tricks.com/font-display-masses</a></h3>
           </section>
@@ -462,9 +462,9 @@
           <section>
             <h3><code>font-display</code> support:</h3>
             <picture>
-              <source srcset="/img/font-display-support-2x.webp 2x, /img/font-display-support-1x.webp 1x" type="image/webp">
-              <source srcset="/img/font-display-support-2x.png 2x, /img/font-display-support-1x.png 1x" type="image/png">
-              <img src="/img/font-display-support-1x.png" alt="Browser suppport matrix for `font-display` on caniuse.com">
+              <source srcset="img/font-display-support-2x.webp 2x, img/font-display-support-1x.webp 1x" type="image/webp">
+              <source srcset="img/font-display-support-2x.png 2x, img/font-display-support-1x.png 1x" type="image/png">
+              <img src="img/font-display-support-1x.png" alt="Browser suppport matrix for `font-display` on caniuse.com">
             </picture>
           </section>
           <!-- [3.15] - Nothing bad will happen -->
@@ -473,7 +473,7 @@
               Browser doesn't support<br>
               <code>font-display</code>?
             </h2>
-            <h1 class="accent fragment">nothing bad will happen</h1>
+            <h1 class="accent fragment">nothing bad is going to happen</h1>
           </section>
         </section>
         <!-- [4.0] - `rel=preload` -->
@@ -481,16 +481,16 @@
           <!-- [4.1] - Accelerate font rendering with `rel=preload` -->
           <section data-state="section-slide">
             <div class="unfocused-heading">
-              <h4><code>font-display</code></h4>
-              <h3 class="accent">for rendering control</h3>
+              <h4><code>font-display</code> for better</h4>
+              <h3 class="accent">rendering control</h3>
             </div>
             <div class="focused-heading">
-              <h2><code>rel=preload</code></h2>
-              <h1 class="accent">for faster font loading</h1>
+              <h2><code>rel=preload</code> for</h2>
+              <h1 class="accent">faster font loading</h1>
             </div>
             <div class="unfocused-heading">
-              <h4><code>Save-Data</code></h4>
-              <h3 class="accent">and skip unnecessary fonts</h3>
+              <h4><code>Save-Data</code> and skip</h4>
+              <h3 class="accent">unnecessary fonts</h3>
             </div>
           </section>
           <!-- [4.2] - What is `rel=preload`? -->
@@ -515,15 +515,15 @@
             <div>
               <h3>Without <code>rel=preload</code>:</h3>
               <picture>
-                <source srcset="/img/low-asset-priority.webp" type="image/webp">
-                <img src="/img/low-asset-priority.png" alt="A listing of a page resource in Chrome's network panel, showing a low priority.">
+                <source srcset="img/low-asset-priority.webp" type="image/webp">
+                <img src="img/low-asset-priority.png" alt="A listing of a page resource in Chrome's network panel, showing a low priority.">
               </picture>
             </div>
             <div class="fragment">
               <h3>With <code>rel=preload</code>:</h3>
               <picture>
-                <source srcset="/img/high-asset-priority.webp" type="image/webp">
-                <img src="/img/high-asset-priority.png" alt="A listing of a page resource in Chrome's network panel, now showing a high priority due to use of rel=preload to load the asset.">
+                <source srcset="img/high-asset-priority.webp" type="image/webp">
+                <img src="img/high-asset-priority.png" alt="A listing of a page resource in Chrome's network panel, now showing a high priority due to use of rel=preload to load the asset.">
               </picture>
             </div>
           </section>
@@ -531,9 +531,9 @@
           <section>
             <h3><code>rel=preload</code> support:</h3>
             <picture>
-              <source srcset="/img/preload-support-2x.webp 2x, /img/preload-support-1x.webp 1x" type="image/webp">
-              <source srcset="/img/preload-support-2x.png 2x, /img/preload-support-1x.png 1x" type="image/png">
-              <img src="/img/preload-support-1x.png" alt="Browser suppport matrix for rel=preload on caniuse.com">
+              <source srcset="img/preload-support-2x.webp 2x, img/preload-support-1x.webp 1x" type="image/webp">
+              <source srcset="img/preload-support-2x.png 2x, img/preload-support-1x.png 1x" type="image/png">
+              <img src="img/preload-support-1x.png" alt="Browser suppport matrix for rel=preload on caniuse.com">
             </picture>
           </section>
           <!-- [4.6] - Using `rel=preload` -->
@@ -555,9 +555,9 @@
                 font preloading:
             </h3>
             <picture>
-              <source srcset="/img/crp-no-preload-2x.webp 2x, /img/crp-no-preload-1x.webp 1x" type="image/webp">
-              <source srcset="/img/crp-no-preload-2x.png 2x, /img/crp-no-preload-1x.png 1x" type="image/png">
-              <img class="stretch" src="/img/crp-no-preload-1x.png" alt="A suboptimal critical request chain as audited by Lighthouse.">
+              <source srcset="img/crp-no-preload-2x.webp 2x, img/crp-no-preload-1x.webp 1x" type="image/webp">
+              <source srcset="img/crp-no-preload-2x.png 2x, img/crp-no-preload-1x.png 1x" type="image/png">
+              <img class="stretch" src="img/crp-no-preload-1x.png" alt="A suboptimal critical request chain as audited by Lighthouse.">
             </picture>
           </section>
           <!-- [4.8] - Critical request chain with `rel=preload` -->
@@ -567,17 +567,17 @@
                 font preloading:
             </h3>
             <picture>
-              <source srcset="/img/crp-preload-2x.webp 2x, /img/crp-preload-1x.webp 1x" type="image/webp">
-              <source srcset="/img/crp-preload-2x.png 2x, /img/crp-preload-1x.png 1x" type="image/png">
-              <img class="stretch" src="/img/crp-preload-1x.png" alt="An optimized critical request chain as audited by Lighthouse.">
+              <source srcset="img/crp-preload-2x.webp 2x, img/crp-preload-1x.webp 1x" type="image/webp">
+              <source srcset="img/crp-preload-2x.png 2x, img/crp-preload-1x.png 1x" type="image/png">
+              <img class="stretch" src="img/crp-preload-1x.png" alt="An optimized critical request chain as audited by Lighthouse.">
             </picture>
           </section>
           <!-- [4.9] - Normal downloading of font assets (without `rel=preload`) -->
           <section>
             <h3>Normal font retrieval:</h3>
             <picture>
-              <source srcset="/img/waterfall-no-preload.webp" type="image/webp">
-              <img class="stretch" src="/img/waterfall-no-preload.png" alt="A resource waterfall graph of a page with fonts downloaded in their natural order.">
+              <source srcset="img/waterfall-no-preload.webp" type="image/webp">
+              <img class="stretch" src="img/waterfall-no-preload.png" alt="A resource waterfall graph of a page with fonts downloaded in their natural order.">
             </picture>
             <h5>WebPagetest: 2G. Mumbai. Emulated Motorola G (Gen1)</h5>
           </section>
@@ -585,8 +585,8 @@
           <section>
             <h3>Reprioritizing with <code>rel=preload</code>:</h3>
             <picture>
-              <source srcset="/img/waterfall-preload.webp" type="image/webp">
-              <img class="stretch" src="/img/waterfall-preload.png" alt="A resource waterfall graph of a page with fonts effectively reprioritized using `rel=preload`.">
+              <source srcset="img/waterfall-preload.webp" type="image/webp">
+              <img class="stretch" src="img/waterfall-preload.png" alt="A resource waterfall graph of a page with fonts effectively reprioritized using `rel=preload`.">
             </picture>
             <h5>WebPagetest: 2G. Mumbai. Emulated Motorola G (Gen1)</h5>
           </section>
@@ -595,8 +595,8 @@
             <h3>Without <code>rel=preload</code> <span style="font-size: .625em;">⤵</span></h3>
             <div class="scroll-container">
               <picture class="scroll-container">
-                <source srcset="/img/preload-swap-timeline.webp" type="image/webp">
-                <img width="3310" height="472" src="/img/preload-swap-timeline.png" alt="A comparison of screenshot rolls of a page loading with fonts loading normally vs. loading via `rel=preload`.">
+                <source srcset="img/preload-swap-timeline.webp" type="image/webp">
+                <img width="3310" height="472" src="img/preload-swap-timeline.png" alt="A comparison of screenshot rolls of a page loading with fonts loading normally vs. loading via `rel=preload`.">
               </picture>
             </div>
             <h3>With <code>rel=preload</code> <span style="font-size: .625em;">⤴</span></h3>
@@ -625,12 +625,12 @@
           <!-- [5.1] - Skip "nice to have" fonts using `Save-Data` -->
           <section data-state="section-slide">
             <div class="unfocused-heading">
-              <h4><code>rel=preload</code></h4>
-              <h3 class="accent">for faster font loading</h3>
+              <h4><code>rel=preload</code> for</h4>
+              <h3 class="accent">faster font loading</h3>
             </div>
             <div class="focused-heading">
-              <h2><code>Save-Data</code></h2>
-              <h1 class="accent">and skip unnecessary fonts</h1>
+              <h2><code>Save-Data</code> and skip</h2>
+              <h1 class="accent">unnecessary fonts</h1>
             </div>
             <div class="unfocused-heading">
               <h4>Time to</h4>
@@ -653,18 +653,18 @@
           <section>
             <h3>Toggle data saver:</h3>
             <picture>
-              <source srcset="/img/data-saver-android-2x.webp 2x, /img/data-saver-android-1x.webp 1x" type="image/webp">
-              <source srcset="/img/data-saver-android-2x.png 2x, /img/data-saver-android-1x.png 1x" type="image/png">
-              <img src="/img/data-saver-android-1x.png" alt="A settings screen in Chrome where a user can toggle the data saver mode, along with a readout of bytes saved.">
+              <source srcset="img/data-saver-android-2x.webp 2x, img/data-saver-android-1x.webp 1x" type="image/webp">
+              <source srcset="img/data-saver-android-2x.png 2x, img/data-saver-android-1x.png 1x" type="image/png">
+              <img src="img/data-saver-android-1x.png" alt="A settings screen in Chrome where a user can toggle the data saver mode, along with a readout of bytes saved.">
             </picture>
           </section>
           <!-- [5.5] - How `Save-Data` works (Pt. II) -->
           <section>
             <h3>browser sends a <code>Save-Data</code> header with a value of <code>On</code> for every request:</h3>
             <picture>
-              <source srcset="/img/save-data-header-2x.webp 2x, /img/save-data-header-1x.webp 1x" type="image/webp">
-              <source srcset="/img/save-data-header-2x.png 2x, /img/save-data-header-1x.png 1x" type="image/png">
-              <img class="stretch larger" src="/img/save-data-header-1x.png" alt="Request headers for an asset shown in Chrome dev tools, with the `Save-Data` header at the bottom of the list.">
+              <source srcset="img/save-data-header-2x.webp 2x, img/save-data-header-1x.webp 1x" type="image/webp">
+              <source srcset="img/save-data-header-2x.png 2x, img/save-data-header-1x.png 1x" type="image/png">
+              <img class="stretch larger" src="img/save-data-header-1x.png" alt="Request headers for an asset shown in Chrome dev tools, with the `Save-Data` header at the bottom of the list.">
             </picture>
           </section>
           <!-- [5.6] - `Save-Data` use cases -->
@@ -739,17 +739,17 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
             <div>
               <h3>Without:</h3>
               <picture>
-                <source srcset="/img/save-data-off-2x.webp 2x, /img/save-data-off-1x.webp 1x" type="image/webp">
-                <source srcset="/img/save-data-off-2x.png 2x, /img/save-data-off-1x.png 1x" type="image/png">
-                <img class="stretch larger" src="/img/save-data-off-1x.png" alt="A list of font resources in Chrome's network panel, showing all fonts downloaded when `Save-Data` is off.">
+                <source srcset="img/save-data-off-2x.webp 2x, img/save-data-off-1x.webp 1x" type="image/webp">
+                <source srcset="img/save-data-off-2x.png 2x, img/save-data-off-1x.png 1x" type="image/png">
+                <img class="stretch larger" src="img/save-data-off-1x.png" alt="A list of font resources in Chrome's network panel, showing all fonts downloaded when `Save-Data` is off.">
               </picture>
             </div>
             <div class="fragment">
               <h3>With:</h3>
               <picture>
-                <source srcset="/img/save-data-on-2x.webp 2x, /img/save-data-on-1x.webp 1x" type="image/webp">
-                <source srcset="/img/save-data-on-2x.png 2x, /img/save-data-on-1x.png 1x" type="image/png">
-                <img class="stretch larger" src="/img/save-data-on-1x.png" alt="A list of font resources in Chrome's network panel, showing only a few fonts downloaded because `Save-Data` is on.">
+                <source srcset="img/save-data-on-2x.webp 2x, img/save-data-on-1x.webp 1x" type="image/webp">
+                <source srcset="img/save-data-on-2x.png 2x, img/save-data-on-1x.png 1x" type="image/png">
+                <img class="stretch larger" src="img/save-data-on-1x.png" alt="A list of font resources in Chrome's network panel, showing only a few fonts downloaded because `Save-Data` is on.">
               </picture>
             </div>
           </section>
@@ -759,17 +759,17 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
               <div>
                 <h3>Without:</h3>
                 <picture>
-                  <source srcset="/img/more-typefaces-2x.webp 2x, /img/more-typefaces-1x.webp 1x" type="image/webp">
-                  <source srcset="/img/more-typefaces-2x.png 2x, /img/more-typefaces-1x.png 1x" type="image/png">
-                  <img class="full" src="/img/more-typefaces-1x.png" alt="A page rendering with the body copy in a custom typeface.">
+                  <source srcset="img/more-typefaces-2x.webp 2x, img/more-typefaces-1x.webp 1x" type="image/webp">
+                  <source srcset="img/more-typefaces-2x.png 2x, img/more-typefaces-1x.png 1x" type="image/png">
+                  <img class="full" src="img/more-typefaces-1x.png" alt="A page rendering with the body copy in a custom typeface.">
                 </picture>
               </div>
               <div class="fragment">
                 <h3>With:</h3>
                 <picture>
-                  <source srcset="/img/less-typefaces-2x.webp 2x, /img/less-typefaces-1x.webp 1x" type="image/webp">
-                  <source srcset="/img/less-typefaces-2x.png 2x, /img/less-typefaces-1x.png 1x" type="image/png">
-                  <img class="full" src="/img/less-typefaces-1x.png" alt="A page rendering with the body copy in a system typeface because `Save-Data` is on.">
+                  <source srcset="img/less-typefaces-2x.webp 2x, img/less-typefaces-1x.webp 1x" type="image/webp">
+                  <source srcset="img/less-typefaces-2x.png 2x, img/less-typefaces-1x.png 1x" type="image/png">
+                  <img class="full" src="img/less-typefaces-1x.png" alt="A page rendering with the body copy in a system typeface because `Save-Data` is on.">
                 </picture>
               </div>
             </div>
@@ -781,9 +781,9 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
               <code>Save-Data</code> on the web:
             </h2>
             <picture>
-              <source srcset="/img/css-tricks-save-data-2x.webp 2x, /img/css-tricks-save-data-1x.webp 1x" type="image/webp">
-              <source srcset="/img/css-tricks-save-data-2x.png 2x, /img/css-tricks-save-data-1x.png 1x" type="image/png">
-              <img src="/img/css-tricks-save-data-1x.png" alt="Screenshot of CSS-Tricks `Save-Data` article in the browser.">
+              <source srcset="img/css-tricks-save-data-2x.webp 2x, img/css-tricks-save-data-1x.webp 1x" type="image/webp">
+              <source srcset="img/css-tricks-save-data-2x.png 2x, img/css-tricks-save-data-1x.png 1x" type="image/png">
+              <img src="img/css-tricks-save-data-1x.png" alt="Screenshot of CSS-Tricks `Save-Data` article in the browser.">
             </picture>
             <h3><a href="https://css-tricks.com/help-users-save-data/" rel="noopener">css-tricks.com/help-users-save-data</a></h3>
           </section>
@@ -793,8 +793,8 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
           <!-- [6.1] - Wrap it up -->
           <section data-state="section-slide">
             <div class="unfocused-heading">
-              <h4><code>Save-Data</code></h4>
-              <h3 class="accent">and skip unnecessary fonts</h3>
+              <h4><code>Save-Data</code> and skip</h4>
+              <h3 class="accent">unnecessary fonts</h3>
             </div>
             <div class="focused-heading">
               <h2>Time to</h2>
@@ -805,47 +805,47 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
               <h3 class="accent">&nbsp;</h3>
             </div>
           </section>
-          <!-- [6.2] - Thanks to these fine people -->
+          <!-- [6.2] - Special thanks to -->
           <section data-state="section-slide centered">
-            <h1 class="accent">Thanks to these fine people:</h1>
+            <h1 class="accent">Special thanks to:</h1>
             <div class="people">
               <div class="person">
-                <img src="/img/people/ben-schwarz.jpg" alt="Ben Schwarz">
+                <img src="img/people/ben-schwarz.jpg" alt="Ben Schwarz">
                 <p>
                   Ben Schwarz<br>
                   <a href="https://twitter.com/benschwarz" rel="noopener">@benschwarz</a>
                 </p>
               </div>
               <div class="person">
-                <img src="/img/people/karolina-szczur.jpg" alt="Karolina Szczur">
+                <img src="img/people/karolina-szczur.jpg" alt="Karolina Szczur">
                 <p>
                   Karolina Szczur<br>
                   <a href="https://twitter.com/fox" rel="noopener">@fox</a>
                 </p>
               </div>
               <div class="person">
-                <img src="/img/people/zach-leatherman.jpg" alt="Zach Leatherman">
+                <img src="img/people/zach-leatherman.jpg" alt="Zach Leatherman">
                 <p>
                   Zach Leatherman<br>
                   <a href="https://twitter.com/zachleat" rel="noopener">@zachleat</a>
                 </p>
               </div>
               <div class="person">
-                <img src="/img/people/addy-osmani.jpg" alt="Addy Osmani">
+                <img src="img/people/addy-osmani.jpg" alt="Addy Osmani">
                 <p>
                   Addy Osmani<br>
                   <a href="https://twitter.com/addyosmani" rel="noopener">@addyosmani</a>
                 </p>
               </div>
               <div class="person">
-                <img src="/img/people/monica-dinculescu.jpg" alt="Monica Dinculescu">
+                <img src="img/people/monica-dinculescu.jpg" alt="Monica Dinculescu">
                 <p>
                   Monica Dinculescu<br>
                   <a href="https://twitter.com/notwaldorf" rel="noopener">@notwaldorf</a>
                 </p>
               </div>
               <div class="person">
-                <img src="/img/people/ilya-grigorik.jpg" alt="Ilya Grigorik">
+                <img src="img/people/ilya-grigorik.jpg" alt="Ilya Grigorik">
                 <p>
                   Ilya Grigorik<br>
                   <a href="https://twitter.com/igrigorik" rel="noopener">@igrigorik</a>
@@ -859,8 +859,8 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
           </section>
           <!-- [6.4] - End -->
           <section data-state="bookend end-card centered">
-            <img class="stretch" src="/img/end-card.svg" alt="A man flying through the sky on a jet pack.">
-            <h1 class="accent end">End</h1>
+            <img class="stretch" src="img/end-card.svg" alt="A man flying through the sky on a jet pack.">
+            <h2 class="accent end">End!</h2>
           </section>
         </section>
       </div>
@@ -905,6 +905,6 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
           document.getElementById("fout").play();
         });
     </script>
-    <script src="/js/jquery.js"></script>
+    <script src="js/jquery.js"></script>
   </body>
 </html>

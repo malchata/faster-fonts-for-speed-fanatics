@@ -24,8 +24,7 @@ $headingColor: $white;
 $mainFontSize: 42px;
 $mainFont: "Barlow Semi Condensed", sans-serif;
 $headingFont: "Barlow Semi Condensed", sans-serif;
-//$accentFont: "Homemade Apple", cursive;
-$accentFont: "Seaweed Script", cursive;
+$accentFont: "Permanent Marker", cursive;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -289,7 +288,7 @@ body{
 }
 
 .title-card body{
-  background-image: url("/img/title-card.svg"), linear-gradient(7.12deg, $spaceCadet 0%, lighten($spaceCadet, 30%) 100%);
+  background-image: url("../../img/title-card.svg"), linear-gradient(7.12deg, $spaceCadet 0%, lighten($spaceCadet, 30%) 100%);
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -311,10 +310,6 @@ body{
 
 .section-slide body{
   background-color: $darkCoral;
-  background-image: url("/img/jetpack.svg");
-  background-position: bottom 5% right 2.5%;
-  background-repeat: no-repeat;
-  background-size: 18% auto;
 
   .unfocused-heading{
     opacity: 0.25;
@@ -335,6 +330,10 @@ body{
 
   .accent{
     color: $onyx;
+  }
+
+  code{
+    font-size: 1.05em;
   }
 }
 
