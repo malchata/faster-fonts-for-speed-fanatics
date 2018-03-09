@@ -107,6 +107,11 @@ $heading5Size: .7864395513em;
       font-family: $accentFont;
       text-transform: none;
       color: $darkCoral;
+      // background-image: linear-gradient(45deg, $darkCoral 0%, #cf4c21 100%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      // background-clip: text;
+      // text-fill-color: transparent;
     }
 
     h3 + pre{
@@ -257,10 +262,31 @@ $heading5Size: .7864395513em;
 
 body{
   background: $spaceCadet;
+  background: linear-gradient(45deg, $spaceCadet 0%, #132d61 100%);
+
+  .twitter{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    color: $white;
+    text-decoration: none;
+    font-family: $accentFont;
+    font-size: 2em;
+    bottom: 2%;
+    right: 1.25%;
+    line-height: 1;
+    display: block;
+    opacity: .5;
+    z-index: 5;
+  }
 }
 
 .bookend body{
   background-color: $spaceCadet;
+
+  .twitter{
+    display: none;
+  }
 
   .accent{
     color: $white;
@@ -298,18 +324,11 @@ body{
     right: 0;
     top: auto;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5{
-    text-shadow: .25em .25em .625em lighten($spaceCadet, 3.75%);
-  }
 }
 
 .section-slide body{
   background-color: $darkCoral;
+  background: linear-gradient(45deg, $darkCoral 0%, #cf4c21 100%);
 
   .unfocused-heading{
     opacity: 0.25;
@@ -339,6 +358,7 @@ body{
 
 .warning body{
   background: $darkTerraCotta;
+  background: linear-gradient(45deg, $darkTerraCotta 0%, #db3d4d 100%);
 
   a{
     color: $spaceCadet;
@@ -351,6 +371,7 @@ body{
 
 .blackboard body{
   background: $onyx;
+  background: linear-gradient(45deg, $onyx 0%, #3b2839 100%);
 
   h1,
   h2,

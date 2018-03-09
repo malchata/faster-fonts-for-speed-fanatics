@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="lib/css/zenburn.css">
   </head>
   <body>
+    <a class="twitter" href="https://twitter.com/malchata" rel="noopener">@malchata</a>
     <!--
       [0.0] - Intro
       [1.0] - How Browsers Render Fonts
@@ -28,7 +29,6 @@
               <h2 class="accent">Faster Fonts</h2>
               <h3 class="accent">&mdash; for &mdash;</h3>
               <h2 class="accent">Speed Fanatics</h2>
-              <h5><br>Jeremy Wagner &mdash; <a href="https://twitter.com/malchata" rel="noopener">@malchata</a></h5>
             </div>
           </section>
         </section>
@@ -112,11 +112,6 @@
             <h2>When it comes to fonts</h2>
             <h1 class="accent">browsers speculate</h1>
           </section>
-          <!-- [1.15] - The font loading process -->
-          <section data-state="blackboard centered">
-            <h2 class="accent">The font loading process</h2>
-            <img class="stretch diagram" src="img/font-loading.svg" alt="A rather complex diagram of how font loading works.">
-          </section>
           <!-- [1.16] - Font loading in pictures (Pt. I) -->
           <section>
             <h2>Font loading in pictures:</h2>
@@ -181,9 +176,9 @@
               <h2>Host your own fonts</h2>
               <h1 class="accent">for performance</h1>
           </section>
-          <!-- [2.4] - Less cross-origin requests can mean less latency -->
+          <!-- [2.4] - Fewer hosts incur less latency -->
           <section class="statement-slide">
-            <h2>Less hosts means</h2>
+            <h2>Fewers hosts incur</h2>
             <h1 class="accent">less latency</h1>
           </section>
           <!-- [2.5] - Cross-origin font requests -->
@@ -215,12 +210,21 @@
           <section>
             <div>
               <h3>In HTML:</h3>
-              <pre><code class="html">&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com/&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com/&quot; crossorigin=&quot;anonymous&quot;&gt;</code></pre>
+              <pre><code class="html">&lt;link rel=&quot;preconnect&quot;
+      href=&quot;https://fonts.googleapis.com/&quot;
+      crossorigin&gt;
+&lt;link rel=&quot;preconnect&quot;
+      href=&quot;https://fonts.gstatic.com/&quot;
+      crossorigin&gt;</code></pre>
             </div>
             <div class="fragment">
               <h3>As an HTTP response header:</h3>
-              <pre><code class="http">Link: &lt;https://fonts.googleapis.com/&gt;; rel=preconnect; crossorigin=anonymous, &lt;https://fonts.gstatic.com/&gt;; rel=preconnect; crossorigin=anonymous</code></pre>
+              <pre><code class="http">Link: &lt;https://fonts.googleapis.com/&gt;;
+      rel=preconnect;
+      crossorigin,
+      &lt;https://fonts.gstatic.com/&gt;;
+      rel=preconnect;
+      crossorigin</code></pre>
             </div>
           </section>
           <!-- [2.9] - Without `rel=preconnect` -->
@@ -243,7 +247,7 @@
             <h3>Speed Index: 3,619 <span class="fragment">(~7% improvement)</span></h3>
             <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
           </section>
-          <!-- [2.11] - Friendly reminder: `crossorigin` is weird -->
+          <!-- [2.11] - Friendly reminder: Don't forget about `crossorigin` -->
           <section data-state="warning">
             <h1 class="accent">Friendly reminder:</h1>
             <h3>Don't forget about <code>crossorigin</code></h3>
@@ -270,17 +274,44 @@
             <h2><code>rel=dns-prefetch</code></h2>
             <h1 class="accent">is also an option</h1>
           </section>
-          <!-- [2.15] - `rel=dns-prefetch` is an option, too! -->
+          <!-- [2.15] - Using `rel=dns-prefetch` -->
           <section>
             <div>
               <h3>In HTML:</h3>
-              <pre><code class="html">&lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://fonts.googleapis.com/&quot;&gt;
-&lt;link rel=&quot;dns-prefetch&quot; href=&quot;https://fonts.gstatic.com/&quot;&gt;</code></pre>
+              <pre><code class="html">&lt;link rel=&quot;dns-prefetch&quot;
+      href=&quot;https://fonts.googleapis.com/&quot;
+      crossorigin&gt;
+&lt;link rel=&quot;dns-prefetch&quot;
+      href=&quot;https://fonts.gstatic.com/&quot;
+      crossorigin&gt;</code></pre>
             </div>
             <div class="fragment">
               <h3>As an HTTP response header:</h3>
-              <pre><code class="http">Link: &lt;https://fonts.googleapis.com/&gt;; rel=dns-prefetch, &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</code></pre>
+              <pre><code class="http">Link: &lt;https://fonts.googleapis.com/&gt;;
+      rel=dns-prefetch;
+      crossorigin,
+      &lt;https://fonts.gstatic.com/&gt;;
+      rel=dns-prefetch;
+      crossorigin</code></pre>
             </div>
+          </section>
+          <!-- [2.9] - Without `rel=dns-prefetch` -->
+          <section>
+            <h2>Without <code>rel=preconnect</code>:</h2>
+            <picture>
+              <source srcset="img/no-dns-prefetch.webp" type="image/webp">
+              <img src="img/no-dns-prefetch.png" alt="A browser trace showing typical DNS lookup latency for font requests without `rel=dns-prefetch` in use.">
+            </picture>
+            <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
+          </section>
+          <!-- [2.10] - With `rel=dns-prefetch` -->
+          <section>
+            <h2>With <code>rel=dns-prefetch</code>:</h2>
+            <picture>
+              <source srcset="img/dns-prefetch.webp" type="image/webp">
+              <img src="img/dns-prefetch.png" alt="A browser trace showing decreased DNS lookup latency for font requests without `rel=dns-prefetch` in use.">
+            </picture>
+            <h5>WebPagetest: Slow 3G. Dulles, VA. Emulated Motorola G (Gen4)</h5>
           </section>
           <!-- [2.16] - `rel=dns-prefetch` Support -->
           <section>
@@ -350,8 +381,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/economica-regular.woff2") format("woff2"),
-       url("../fonts/economica-regular.woff") format("woff"),
-       url("../fonts/economica-regular.ttf") format("truetype");
+       url("../fonts/economica-regular.woff") format("woff");
   font-display: swap; /* &lt;-- T h e  g o o d  s t u f f */
 }</code></pre>
           </section>
@@ -424,10 +454,9 @@
           <section>
             <h2>Considerations with <code>swap</code></h2>
             <ul>
-              <li class="fragment">Don't use it for icon fonts (use <code>block</code> for those)</li>
-              <li class="fragment"><a href="https://www.sarasoueidan.com/blog/icon-fonts-to-svg/" rel="noopener">Don't use icon fonts</a> <span class="fragment">(if that's cool, I mean)</span></li>
+              <li class="fragment">Don't use it for icon fonts (use <code>font-display: block;</code> instead)</li>
+              <li class="fragment"><a href="https://www.sarasoueidan.com/blog/icon-fonts-to-svg/" rel="noopener">Don't use icon fonts</a> <span class="fragment">(if that's cool)</span></li>
               <li class="fragment">Typeface swapping causes layout shifting</li>
-              <li class="fragment">Layout shifting causes reflows/repaints</li>
             </ul>
           </section>
           <!-- [3.11] - Font style matcher -->
@@ -508,24 +537,7 @@
           <!-- [4.4] - A change of priorities -->
           <section class="statement-slide">
             <h2><code>rel=preload</code></h2>
-            <h1 class="accent">boosts priority</h1>
-          </section>
-          <!-- [4.5] - Reprioritized assets -->
-          <section>
-            <div>
-              <h3>Without <code>rel=preload</code>:</h3>
-              <picture>
-                <source srcset="img/low-asset-priority.webp" type="image/webp">
-                <img src="img/low-asset-priority.png" alt="A listing of a page resource in Chrome's network panel, showing a low priority.">
-              </picture>
-            </div>
-            <div class="fragment">
-              <h3>With <code>rel=preload</code>:</h3>
-              <picture>
-                <source srcset="img/high-asset-priority.webp" type="image/webp">
-                <img src="img/high-asset-priority.png" alt="A listing of a page resource in Chrome's network panel, now showing a high priority due to use of rel=preload to load the asset.">
-              </picture>
-            </div>
+            <h1 class="accent">reprioritizes resources</h1>
           </section>
           <!-- [4.5] - `rel=preload` support -->
           <section>
@@ -540,12 +552,21 @@
           <section>
             <div>
               <h3>In HTML:</h3>
-              <pre><code class="html">&lt;link rel=&quot;preload&quot; href=&quot;/css/styles.css&quot; rel=&quot;preload&quot; as=&quot;style&quot; type=&quot;text/css&quot;&gt;
-&lt;link rel=&quot;preload&quot; href=&quot;/css/fonts/firasans-regular.woff2&quot; rel=&quot;preload&quot; as=&quot;font&quot; type=&quot;font/woff2&quot; crossorigin&gt;</code></pre>
+              <pre><code class="html">&lt;link rel=&quot;preload&quot;
+      href=&quot;/css/fonts/firasans-regular.woff2&quot;
+      rel=&quot;preload&quot;
+      as=&quot;font&quot;
+      type=&quot;font/woff2&quot;
+      crossorigin&gt;</code></pre>
             </div>
             <div class="fragment">
               <h3>As an HTTP response header:</h3>
-              <pre><code class="http">Link: &lt;/css/styles.css&gt;; rel=preload; as=style; type=text/css; nopush, &lt;/css/fonts/firasans-regular.woff2&gt;; rel=preload; as=font; type=font/woff2; crossorigin=anonymous; nopush,</code></pre>
+              <pre><code class="http">Link: &lt;/css/fonts/firasans-regular.woff2&gt;;
+  rel=preload;
+  as=font;
+  type=font/woff2;
+  crossorigin;
+  nopush</code></pre>
             </div>
           </section>
           <!-- [4.7] - Critical request chain without `rel=preload` -->
@@ -664,7 +685,7 @@
             <picture>
               <source srcset="img/save-data-header-2x.webp 2x, img/save-data-header-1x.webp 1x" type="image/webp">
               <source srcset="img/save-data-header-2x.png 2x, img/save-data-header-1x.png 1x" type="image/png">
-              <img class="stretch larger" src="img/save-data-header-1x.png" alt="Request headers for an asset shown in Chrome dev tools, with the `Save-Data` header at the bottom of the list.">
+              <img class="stretch larger" src="img/save-data-header-1x.png" alt="Request headers for font resources shown in Chrome dev tools, with the `Save-Data` header at the bottom of the list.">
             </picture>
           </section>
           <!-- [5.6] - `Save-Data` use cases -->
@@ -698,8 +719,7 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
     font-family: "Sooo Important Sans";
     src: local("Sooo Important Sans"),
          url("/fonts/sooo-important.woff2") format("woff2"),
-         url("/fonts/sooo-important.woff") format("woff"),
-         url("/fonts/sooo-important.ttf") format("truetype");
+         url("/fonts/sooo-important.woff") format("woff");
   }
 &lt;/style&gt;
 
@@ -710,8 +730,7 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
       font-family: "Whatever Sans";
       src: local("Whatever Sans"),
            url("/fonts/whatever.woff2") format("woff2"),
-           url("/fonts/whatever.woff") format("woff"),
-           url("/fonts/whatever.ttf") format("truetype");
+           url("/fonts/whatever.woff") format("woff");
     }
   &lt;/style&gt;
 &lt;?php } ?&gt;</code></pre>
@@ -724,14 +743,14 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
             <div class="fragment">
               <h3>CSS:</h3>
               <pre><code class="css">/* Normal conditions */
-  h1, h2, h3, p{
-    font-family: "Sooo Important Sans", "Helvetica", sans-serif;
-  }
+h1, h2, h3, p{
+  font-family: "Sooo Important Sans", "Helvetica", sans-serif;
+}
 
-  /* `Save-Data` enabled: */
-  .save-data h1, .save-data h2, .save-data h3, .save-data p{
-    font-family: "Helvetica", serif;
-  }</code></pre>
+/* `Save-Data` enabled: */
+.save-data h1, .save-data h2, .save-data h3, .save-data p{
+  font-family: "Helvetica", serif;
+}</code></pre>
             </div>
           </section>
           <!-- [5.10] - `Save-Data` kicks in -->

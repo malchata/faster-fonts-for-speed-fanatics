@@ -9,7 +9,8 @@
   "scripts": {
     "watch": "npx gulp",
     "build": "npx gulp build",
-    "present": "npx gulp build&&node http.js",
+    "server": "node http.js",
+    "present": "npm run build && npm run server",
     "postinstall": "npx gulp build"
   },
   "repository": {
