@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="robots" content="noindex, nofollow, nocache">
     <title>Faster Fonts for Speed Fanatics</title>
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/speed.css">
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/reveal.css?v=1">
+    <link rel="stylesheet" href="css/theme/speed.css?v=1">
+    <link rel="stylesheet" href="lib/css/zenburn.css?v=1">
   </head>
   <body>
     <a class="twitter" href="https://twitter.com/malchata" rel="noopener">@malchata</a>
@@ -22,6 +22,10 @@
               <h3 class="accent">for</h3>
               <h2 class="accent">Speed Fanatics</h2>
             </div>
+          </section>
+          <!-- [0.2] - Hello! -->
+          <section data-state="centered">
+            <h1 class="accent">Hello!</h1>
           </section>
         </section>
         <!-- [1.0] - How Browsers Render Fonts -->
@@ -126,7 +130,7 @@
           <section data-state="centered">
             <h2>Font loading in pictures:</h2>
             <picture>
-              <source srcset="img/f ont-loading-03.webp" type="image/webp">
+              <source srcset="img/font-loading-03.webp" type="image/webp">
               <img class="stretch" src="img/font-loading-03.jpg" alt="A web browser after loading all fonts on a page, with all text now visible.">
             </picture>
             <h3>2.42 s</h3>
@@ -385,7 +389,7 @@
           <!-- [3.6] - `font-display: swap` -->
           <section>
             <h3><code>font-display: swap;</code></h3>
-            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack<span class="fragment">, then swaps in custom typeface after it loads.</span></h3>
+            <h3>The browser displays the first locally installed font in a <code>font-family</code> stack<span class="fragment">, then swaps in web font after it loads.</span></h3>
           </section>
           <!-- [3.7] - FOIT vs. FOUT -->
           <section data-state="foit-vs-fout centered">
@@ -448,7 +452,7 @@
             <ul>
               <li class="fragment">Don't use it for icon fonts (use <code>font-display: block;</code> instead).</li>
               <li class="fragment"><a href="https://css-tricks.com/icon-fonts-vs-svg/" rel="noopener">Don't use icon fonts.</a> <span class="fragment">(If that's cool.)</span></li>
-              <li class="fragment">Typeface swapping causes layout shifting</li>
+              <li class="fragment">Font swapping causes layout shifting</li>
             </ul>
           </section>
           <!-- [3.11] - Font style matcher -->
@@ -674,7 +678,7 @@
               <li class="fragment">Stream lower quality video.</li>
               <li class="fragment">Opt out of server pushes.</li>
               <li class="fragment">Opt out of non-essential media.</li>
-              <li class="fragment">Opt out of &quot;nice-to-have&quot; typefaces.</li>
+              <li class="fragment">Opt out of &quot;nice-to-have&quot; web fonts.</li>
             </ul>
           </section>
           <!-- [5.7] - Detect `Save-Data` -->
@@ -683,7 +687,8 @@
             <pre><code class="php">&lt;?php
 $saveData = false;
 
-if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on"){
+if(isset($_SERVER["HTTP_SAVE_DATA"]) &&
+   strtolower($_SERVER["HTTP_SAVE_DATA"]) === "on") {
   $saveData = true;
 }
 ?&gt;</code></pre>
@@ -693,7 +698,7 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
             <h2>Conditionally serve fonts:</h2>
             <pre><code class="html">&lt;!-- We needs it --&gt;
 &lt;style&gt;
-  @font-face{
+  @font-face {
     font-family: "Sooo Important Sans";
     src: local("Sooo Important Sans"),
          url("/fonts/sooo-important.woff2") format("woff2"),
@@ -704,7 +709,7 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
 &lt;!-- Nice to have, but not a deal-breaker --&gt;
 &lt;?php if($saveData === false){ ?&gt;
   &lt;style&gt;
-    @font-face{
+    @font-face {
       font-family: "Whatever Sans";
       src: local("Whatever Sans"),
            url("/fonts/whatever.woff2") format("woff2"),
@@ -721,13 +726,13 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) && strtolower($_SERVER["HTTP_SAVE_DATA"]) =
             <div class="fragment">
               <h3>CSS:</h3>
               <pre><code class="css">/* Normal conditions */
-h1, h2, h3, p{
+h1, p {
   font-family: "Sooo Important Sans", "Helvetica", sans-serif;
 }
 
 /* `Save-Data` enabled: */
-.save-data h1, .save-data h2, .save-data h3, .save-data p{
-  font-family: "Helvetica", serif;
+.save-data h1, .save-data p {
+  font-family: "Helvetica", sans-serif;
 }</code></pre>
             </div>
           </section>
@@ -758,7 +763,7 @@ h1, h2, h3, p{
                 <picture>
                   <source srcset="img/more-typefaces-2x.webp 2x, img/more-typefaces-1x.webp 1x" type="image/webp">
                   <source srcset="img/more-typefaces-2x.png 2x, img/more-typefaces-1x.png 1x" type="image/png">
-                  <img class="full" src="img/more-typefaces-1x.png" alt="A page rendering with the body copy in a custom typeface.">
+                  <img class="full" src="img/more-typefaces-1x.png" alt="A page rendering with the body copy in a web font.">
                 </picture>
               </div>
               <div class="fragment">
@@ -766,7 +771,7 @@ h1, h2, h3, p{
                 <picture>
                   <source srcset="img/less-typefaces-2x.webp 2x, img/less-typefaces-1x.webp 1x" type="image/webp">
                   <source srcset="img/less-typefaces-2x.png 2x, img/less-typefaces-1x.png 1x" type="image/png">
-                  <img class="full" src="img/less-typefaces-1x.png" alt="A page rendering with the body copy in a system typeface because `Save-Data` is on.">
+                  <img class="full" src="img/less-typefaces-1x.png" alt="A page rendering with the body copy in a system font because `Save-Data` is on.">
                 </picture>
               </div>
             </div>
@@ -802,9 +807,9 @@ h1, h2, h3, p{
               <h3 class="accent">&nbsp;</h3>
             </div>
           </section>
-          <!-- [6.2] - Special thanks to -->
+          <!-- [6.2] - With thanks to -->
           <section data-state="section-slide centered">
-            <h1 class="accent">Special thanks to:</h1>
+            <h1 class="accent">With thanks to:</h1>
             <div class="people">
               <div class="person">
                 <img src="img/people/ben-schwarz.jpg" alt="Ben Schwarz">
@@ -864,6 +869,7 @@ h1, h2, h3, p{
     </div>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
+    <script src="js/jquery.js"></script>
     <script>
       Reveal.initialize({
         history: true,
@@ -902,6 +908,5 @@ h1, h2, h3, p{
           document.getElementById("fout").play();
         });
     </script>
-    <script src="js/jquery.js"></script>
   </body>
 </html>

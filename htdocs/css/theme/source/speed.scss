@@ -107,11 +107,11 @@ $heading5Size: .7864395513em;
       font-family: $accentFont;
       text-transform: none;
       color: $darkCoral;
-      // background-image: linear-gradient(45deg, $darkCoral 0%, #cf4c21 100%);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
-      // background-clip: text;
-      // text-fill-color: transparent;
+      background-image: linear-gradient(45deg, #cf7b5f 0%, #cf3d0c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
     }
 
     h3 + pre{
@@ -294,6 +294,7 @@ body{
 
   .accent{
     color: $white;
+    background-image: linear-gradient(45deg, #e3e1e1 0%, #fff 100%);
   }
 
   h1,
@@ -353,6 +354,7 @@ body{
 
   .accent{
     color: $onyx;
+    background-image: linear-gradient(45deg, #2e242d 0%, #3b2e3a 100%);
   }
 
   code{
@@ -370,6 +372,7 @@ body{
 
   .accent{
     color: $spaceCadet;
+    background-image: linear-gradient(45deg, #304161 0%, #0a2761 100%);
   }
 }
 
@@ -395,6 +398,7 @@ body{
 
   .accent{
     color: $white;
+    background-image: linear-gradient(45deg, #e3e1e1 0%, #fff 100%);
   }
 }
 
