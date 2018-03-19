@@ -35,6 +35,7 @@ $heading2Size: 1.7639419404em;
 $heading3Size: 1.3475492287em;
 $heading4Size: 1.0294493726em;
 $heading5Size: .7864395513em;
+$heading6Size: .6007941568em;
 
 // Theme template
 @import "../template/theme";
@@ -88,11 +89,16 @@ $heading5Size: .7864395513em;
       font-size: $heading5Size;
     }
 
+    h6{
+      font-size: $heading6Size;
+    }
+
     h1,
     h2,
     h3,
     h4,
-    h5{
+    h5,
+    h6{
       line-height: 1.2;
       text-align: left;
       font-weight: 400;
@@ -112,6 +118,17 @@ $heading5Size: .7864395513em;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+    }
+
+    .lowercase{
+      text-transform: none;
+    }
+
+    hr{
+      opacity: .5;
+      height: 1px;
+      border-style: none;
+      background: $white;
     }
 
     h3 + pre{
@@ -151,12 +168,12 @@ $heading5Size: .7864395513em;
       background: transparent;
       box-shadow: none;
 
-      &.diagram{
-        transform: scale(1.04);
-      }
-
       &.full{
         width: 100%;
+      }
+
+      &.small{
+        width: percentage(1 / 3);
       }
 
       &.stretch{
@@ -317,6 +334,20 @@ body{
     position: absolute;
     right: 0;
     top: auto;
+    transform: scale(1.125);
+    text-align: center;
+  }
+
+  .author-info{
+    border-radius: 16px;
+    background: $onyx;
+    padding: 6px 12px 8px;
+    margin: 24px 0 0;
+    display: inline-block;
+
+    *{
+      line-height: 1;
+    }
   }
 }
 
