@@ -8,7 +8,7 @@ Head over to http://jlwagner.net/talks/faster-fonts to see the slide deck. To bu
 
 ## Performances
 
-- **20 March, 2018:** [CSSConf AU](https://2018.cssconf.com.au/)
+- ~~**20 March, 2018:** [CSSConf AU](https://2018.cssconf.com.au/)~~
 - **5 June, 2018:** [Prairie Dev Con](http://www.prairiedevcon.com/)
 
 ## Want to book me?
