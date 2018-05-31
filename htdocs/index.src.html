@@ -26,10 +26,14 @@
               </div>
             </div>
           </section>
-          <!-- [0.2] - Hello! -->
+          <!-- [0.2] - Sponsor Logos -->
+          <section data-background="#ffffff" data-state="centered">
+            <img class="stretch" src="img/sponsor-logos.png" alt="Prairie Dev Con 2018 sponsors">
+          </section>
+          <!-- [0.3] - Hello! -->
           <section data-state="centered">
             <h3 class="accent">I'm Jeremy!</h3>
-            <img class="small" src="img/crapman.jpg" alt="It's me, Jeremy!">
+            <img class="stretch" src="img/me.jpg" alt="It's me, Jeremy!">
           </section>
         </section>
         <!-- [1.0] - How Browsers Render Fonts -->
@@ -165,10 +169,10 @@
           <!-- [2.2] - What we often do -->
           <section data-state="raccoon centered">
             <h3>What we often do</h3>
-            <video playsinline muted id="raccoon">
-              <source src="video/raccoon.webm" type="video/webm">
-              <source src="video/raccoon.mp4" type="video/mp4">
-            </video>
+            <picture id="raccoon">
+              <source srcset="img/raccoon.webp" type="image/webp">
+              <img src="img/raccoon.gif" alt="A raccoon stealing a literal font &lt;link&gt; tag from a bowl of cat food and running away.">
+            </picture>
           </section>
           <!-- [2.3] - Host your own fonts for performance -->
           <section class="statement-slide">
@@ -270,10 +274,10 @@
           </section>
           <!-- [2.14] - Catastrophe! -->
           <section class="statement-slide" data-state="centered catastrophe">
-            <video playsinline muted id="catastrophe" class="stretch">
-              <source src="video/catastrophe.webm" type="video/webm">
-              <source src="video/catastrophe.mp4" type="video/mp4">
-            </video>
+            <picture id="catastrophe">
+              <source srcset="img/catastrophe.webp" type="image/webp">
+              <img src="img/catastrophe.gif" class="stretch" alt="A tractor launching its engine out of the chassis in an explosion.">
+            </picture>
           </section>
           <!-- [2.15] - `rel=dns-prefetch` is also an option -->
           <section class="statement-slide">
@@ -405,17 +409,17 @@
           <section data-state="foit-vs-fout centered">
             <div class="flex-item-container">
               <div>
-                <video playsinline muted loop id="foit">
-                  <source src="video/foit.webm" type="video/webm">
-                  <source src="video/foit.mp4" type="video/mp4">
-                </video>
+                <picture id="foit">
+                  <source srcset="img/foit.webp" type="image/webp">
+                  <img src="img/foit.gif" alt="A demonstration of the Flash of Invisible Text phenomenon (FOIT)">
+                </picture>
                 <h3>FOIT</h3>
               </div>
               <div>
-                <video playsinline muted loop id="fout">
-                  <source src="video/fout.webm" type="video/webm">
-                  <source src="video/fout.mp4" type="video/mp4">
-                </video>
+                <picture id="fout">
+                  <source srcset="img/fout.webp" type="image/webp">
+                  <img src="img/foit.gif" alt="A demonstration of the Flash of Unstyled Text phenomenon (FOUT)">
+                </picture>
                 <h3>FOUT</h3>
               </div>
             </div>
@@ -465,10 +469,10 @@
           </section>
           <!-- [3.11] - Font style matcher -->
           <section data-state="font-style-matcher centered">
-            <video playsinline muted loop id="font-style-matcher">
-              <source src="video/font-style-matcher.webm" type="video/webm">
-              <source src="video/font-style-matcher.mp4" type="video/mp4">
-            </video>
+            <picture id="font-style-matcher">
+              <source srcset="img/font-style-matcher.webp" type="image/webp">
+              <img src="img/font-style-matcher.gif" alt="@notwaldorf's font style matcher tool in action, comparing two fonts and attempting to align their line height and font size.">
+            </picture>
             <h3><a href="https://meowni.ca/font-style-matcher/" rel="noopener">meowni.ca/font-style-matcher</a></h3>
             <h5>by <a href="https://twitter.com/notwaldorf" rel="noopener">Monica Dinculescu</a></h5>
           </section>
@@ -656,7 +660,7 @@
           <!-- [5.3] - In other words -->
           <section class="statement-slide">
             <h1 class="accent">In other words,</h1>
-            <h3><code>Save-Data</code> is a header sent by clients in a "data saver" mode. <span class="fragment">Applications can deliver less resources if it is present</code>.</h3>
+            <h3><code>Save-Data</code> is a header sent by clients in a "data saver" mode. <span class="fragment">Applications can deliver less resources if it is present</span>.</h3>
           </section>
           <!-- [5.4] - How `Save-Data` works (Pt. I) -->
           <section data-state="centered">
@@ -698,7 +702,6 @@ if(isset($_SERVER["HTTP_SAVE_DATA"]) &&
   $saveData = true;
 }
 ?&gt;</code></pre>
-          </section>
           </section>
           <!-- [5.8] - Conditionally serve `@font-faces` -->
           <section>
@@ -886,23 +889,6 @@ if($saveData === true){
 
         Reveal.addEventListener("slidechanged", function(e){
           Reveal.setState(Reveal.getState());
-        });
-
-        Reveal.addEventListener("raccoon", function(){
-          document.getElementById("raccoon").play();
-        });
-
-        Reveal.addEventListener("catastrophe", function(){
-          document.getElementById("catastrophe").play();
-        });
-
-        Reveal.addEventListener("font-style-matcher", function(){
-          document.getElementById("font-style-matcher").play();
-        });
-
-        Reveal.addEventListener("foit-vs-fout", function(){
-          document.getElementById("foit").play();
-          document.getElementById("fout").play();
         });
     </script>
   </body>

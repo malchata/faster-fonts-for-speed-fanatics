@@ -135,7 +135,7 @@ $heading6Size: .6007941568em;
       margin: .5em 0 1.5em;
     }
 
-    h3 + video{
+    h3 + picture{
       margin-top: .5em;
     }
 
@@ -163,7 +163,7 @@ $heading6Size: .6007941568em;
     }
 
     img,
-    video{
+    picture{
       border: 0;
       background: transparent;
       box-shadow: none;
@@ -183,7 +183,7 @@ $heading6Size: .6007941568em;
       }
     }
 
-    video{
+    picture{
       max-width: 50%;
       width: 100%;
 
@@ -202,6 +202,17 @@ $heading6Size: .6007941568em;
         width: 48.75%;
         height: auto;
       }
+    }
+  }
+
+  #fout,
+  #foit,
+  #font-style-matcher {
+    & > img {
+      max-width: 65%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
