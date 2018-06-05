@@ -646,8 +646,8 @@
               <h1 class="accent">unnecessary fonts</h1>
             </div>
             <div class="unfocused-heading">
-              <h4>Time to</h4>
-              <h3 class="accent">wrap it up</h3>
+              <h4>Engage in</h4>
+              <h3 class="accent">targeted subsetting</h3>
             </div>
           </section>
           <!-- [5.2] - What is `Save-Data`? -->
@@ -782,13 +782,151 @@ if($saveData === true){
             <h3><a href="https://css-tricks.com/help-users-save-data/" rel="noopener">css-tricks.com/help-users-save-data</a></h3>
           </section>
         </section>
-        <!-- [6.0] - Closing -->
+        <!-- [6.0] - Engage in Targeted Subsetting -->
         <section>
-          <!-- [6.1] - Wrap it up -->
+          <!-- [6.1] - Engage in Targeted Subsetting -->
           <section data-state="section-slide">
             <div class="unfocused-heading">
               <h4><code>Save-Data</code> and skip</h4>
               <h3 class="accent">unnecessary fonts</h3>
+            </div>
+            <div class="focused-heading">
+              <h2>Engage in</h2>
+              <h1 class="accent">targeted subsetting</h1>
+            </div>
+            <div class="unfocused-heading">
+              <h4>Time to</h4>
+              <h3 class="accent">wrap it up</h3>
+            </div>
+          </section>
+          <!-- [6.2] - What the Hell is Targeted Subsetting -->
+          <section data-state="what-the-hell centered">
+            <h3>What the <em>hell</em> is</h3>
+            <picture id="what-the-hell">
+              <source srcset="img/what-the-hell.webp" type="image/webp">
+              <img src="img/what-the-hell.gif" alt="Krusty the Clown expressing disbelief.">
+            </picture>
+            <h3>targeted subsetting?</h3>
+          </section>
+          <!-- [6.3] - What is Targeted Subsetting? -->
+          <section class="statement-slide">
+            <h3>Targetted subsetting involves subsetting a font to include only characters that are</h3>
+            <h1 class="accent">utterly essential</h1>
+          </section>
+          <!-- [6.4] - Targeted Subsetting Use Cases -->
+          <section>
+            <h2>
+              Targetted subsetting<br>
+              is best used:
+            </h2>
+            <ul>
+              <li class="fragment">In a limited capacity.</li>
+              <li class="fragment">On sites that don't change often.</li>
+              <li class="fragment">For typographical design elements that never change.</li>
+            </ul>
+          </section>
+          <!-- [6.5] - Targeted Subsetting Example -->
+          <section data-state="centered">
+            <h2>Example use case:</h2>
+            <picture>
+              <source srcset="img/extreme-subsetting-candidate-2x.webp 2x, img/extreme-subsetting-candidate-1x.webp 1x" type="image/webp">
+              <source srcset="img/extreme-subsetting-candidate-2x.png 2x, img/extreme-subsetting-candidate-1x.png 1x" type="image/png">
+              <img src="img/extreme-subsetting-candidate-1x.png" alt="Screenshot of a typographical element using relatively few glyphs in a subset.">
+            </picture>
+          </section>
+          <!-- [6.6] - Used Glyphs -->
+          <section data-state="centered">
+            <h1>WEB DEV BLOG</h1>
+            <div class="fragment">
+              <h2>⬇</h2>
+              <h1>WEB DVLOG</h1>
+            </div>
+            <div class="fragment">
+              <br>
+              <h3>(That's 9 unique glyphs)</h3>
+            </div>
+          </section>
+          <!-- [6.6] - Unicode Range -->
+          <section data-state="centered">
+            <h2><code>
+              U+20,U+42,U+44,<br>
+              U+45,U+47,U+4C,<br>
+              U+4F,U+56,U+57&nbsp;
+            </code></h2>
+          </section>
+          <!-- [6.7] - Unicode Range -->
+          <section data-state="centered">
+            <h2>Subset with <code>pyftsubset</code>:</h2>
+            <pre><code class="bash">pyftsubset monoton.ttf \
+--unicodes="U+20,U+42,U+44,U+45,U+47,U+4C,U+4F,U+56,U+57" \
+--name-IDs='*' \
+--output-file=./monoton-subset.ttf</code></pre>
+          </section>
+          <!-- [6.8] - Perf Gains -->
+          <section data-state="centered">
+            <h2>File size reductions:</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Format</th>
+                  <th>KB Before</th>
+                  <th>KB After</th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>TTF</td>
+                    <td><code>50.39</code></td>
+                    <td><code>3.34</code></td>
+                  </tr>
+                  <tr>
+                    <td>WOFF</td>
+                    <td><code>26.15</code></td>
+                    <td><code>2.54</code></td>
+                  </tr>
+                  <tr>
+                    <td>WOFF2</td>
+                    <td><code>19.97</code></td>
+                    <td><code>1.83</code></td>
+                  </tr>
+                </tbody>
+            </table>
+          </section>
+          <!-- [6.9] - Give it a shot! -->
+          <section class="statement-slide">
+            <h3>If you think targeted subsetting might work for your site</h3>
+            <h1 class="accent fragment">give it a shot!</h1>
+          </section>
+          <!-- [6.10] - Unicode Range -->
+          <section data-state="centered">
+            <h2>BUT BE WARNED:</h2>
+            <picture>
+              <source srcset="img/extreme-subsetting-backfires-2x.webp 2x, img/extreme-subsetting-backfires-1x.webp 1x" type="image/webp">
+              <source srcset="img/extreme-subsetting-backfires-2x.png 2x, img/extreme-subsetting-backfires-1x.png 1x" type="image/png">
+              <img src="img/extreme-subsetting-backfires-1x.png" alt="Screenshot of a typographical element using an incomplete font subset.">
+            </picture>
+          </section>
+          <!-- [6.11] - Targeted Subsetting Using Google Fonts -->
+          <section>
+            <h2>Targeted subsetting in Google Fonts:</h2>
+            <pre><code class="php">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- Google Fonts users can get in on the fun, too! --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Monoton&text=WEB%20DEV%20BLOG&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Carry on, now... --&gt;
+  &lt;/body&gt;
+&lt;html&gt;</code></pre>
+          </section>
+        </section>
+        <!-- [7.0] - Closing -->
+        <section>
+          <!-- [7.1] - Wrap it up -->
+          <section data-state="section-slide">
+            <div class="unfocused-heading">
+              <h4>Engage in</h4>
+              <h3 class="accent">targeted subsetting</h3>
             </div>
             <div class="focused-heading">
               <h2>Time to</h2>
@@ -799,24 +937,10 @@ if($saveData === true){
               <h3 class="accent">&nbsp;</h3>
             </div>
           </section>
-          <!-- [6.2] - With thanks to -->
+          <!-- [7.2] - With thanks to -->
           <section data-state="section-slide centered">
             <h1 class="accent">With thanks to:</h1>
             <div class="people">
-              <div class="person">
-                <img src="img/people/ben-schwarz.jpg" alt="Ben Schwarz">
-                <p>
-                  Ben Schwarz<br>
-                  <a href="https://twitter.com/benschwarz" rel="noopener">@benschwarz</a>
-                </p>
-              </div>
-              <div class="person">
-                <img src="img/people/karolina-szczur.jpg" alt="Karolina Szczur">
-                <p>
-                  Karolina Szczur<br>
-                  <a href="https://twitter.com/fox" rel="noopener">@fox</a>
-                </p>
-              </div>
               <div class="person">
                 <img src="img/people/zach-leatherman.jpg" alt="Zach Leatherman">
                 <p>
@@ -832,13 +956,6 @@ if($saveData === true){
                 </p>
               </div>
               <div class="person">
-                <img src="img/people/monica-dinculescu.jpg" alt="Monica Dinculescu">
-                <p>
-                  Monica Dinculescu<br>
-                  <a href="https://twitter.com/notwaldorf" rel="noopener">@notwaldorf</a>
-                </p>
-              </div>
-              <div class="person">
                 <img src="img/people/ilya-grigorik.jpg" alt="Ilya Grigorik">
                 <p>
                   Ilya Grigorik<br>
@@ -847,16 +964,16 @@ if($saveData === true){
               </div>
             </div>
           </section>
-          <!-- [6.3] - ...and thank you! -->
+          <!-- [7.3] - ...and thank you! -->
           <section data-state="section-slide centered">
             <h1 class="accent">...and thank you!</h1>
           </section>
-          <!-- [6.4] - Slide deck link -->
+          <!-- [7.4] - Slide deck link -->
           <section data-state="section-slide centered">
             <h1 class="accent">Slide deck link:</h1>
             <h3><a href="http://jlwagner.net/talks/faster-fonts" rel="noopener">jlwagner.net/talks/faster-fonts</a></h3>
           </section>
-          <!-- [6.5] - End -->
+          <!-- [7.5] - End -->
           <section data-state="bookend end-card centered">
             <img class="stretch" src="img/end-card.svg" alt="A man flying through the sky on a jet pack.">
             <h2 class="accent end">End!</h2>
